@@ -5,26 +5,6 @@ interface WrapperProps {
   children: ReactChild;
 }
 
-// const duration = 0.5;
-
-// const variants = {
-//   initial: {
-//     opacity: 0,
-//   },
-//   enter: {
-//     opacity: 1,
-//     transition: {
-//       duration: duration,
-//       delay: duration,
-//       when: 'beforeChildren',
-//     },
-//   },
-//   exit: {
-//     opacity: 0,
-//     transition: {duration: duration},
-//   },
-// };
-
 const Wrapper: FC<WrapperProps> = ({children}) => {
   return (
     <motion.main

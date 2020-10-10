@@ -10,5 +10,9 @@ declare module 'styled-components' {
       orange: string;
     };
     font: {};
+    animation: {
+      swoop: string;
+      btn: string;
+    };
   }
 }

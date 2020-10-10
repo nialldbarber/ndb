@@ -23,8 +23,6 @@ const Logo = styled.div`
 const Navigation: FC = () => {
   const {pathname} = useLocation();
 
-  console.log(pathname === '/');
-
   return (
     <>
       <Logo>

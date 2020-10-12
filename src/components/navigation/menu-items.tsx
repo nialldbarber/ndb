@@ -1,50 +1,51 @@
 import React, {FC} from 'react';
-import {Link} from 'gatsby';
-import {AnimatePresence, motion} from 'framer-motion';
+import {motion} from 'framer-motion';
+import styled from 'styled-components';
 import useStore from 'store';
+import {navItems} from 'constants/theme';
+import SingleMenuItem from 'components/navigation/single-menu-item';
 
 const variants = {
   open: {
-    transition: {staggerChildren: 0.07, delayChildren: 1.3},
+    transition: {staggerChildren: 0.07, delayChildren: 0.3},
   },
   closed: {
     transition: {staggerChildren: 0.02, staggerDirection: -1},
   },
 };
 
+const List = styled(motion.ul)`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+
+  li {
+    a {
+      padding: 0.5rem;
+      display: inline-block;
+      text-align: center;
+      color: #fff;
+      font-size: 4rem;
+    }
+  }
+
+  &.open {
+    z-index: 6;
+  }
+`;
+
 const MenuItems: FC = () => {
   const {isMenuOpen} = useStore();
 
   return (
-    <AnimatePresence>
-      <motion.ul
-        variants={variants}
-        initial="open"
-        exit="closed"
-        style={{position: 'fixed', zIndex: isMenuOpen ? 999 : -1}}
-      >
-        <motion.li>
-          <Link to="/" activeClassName="active">
-            home
-          </Link>
-        </motion.li>
-        <motion.li>
-          <Link to="/about" activeClassName="active">
-            about
-          </Link>
-        </motion.li>
-        <motion.li>
-          <Link to="/blog" activeClassName="active">
-            blog
-          </Link>
-        </motion.li>
-        <motion.li>
-          <Link to="/contact" activeClassName="active">
-            contact
-          </Link>
-        </motion.li>
-      </motion.ul>
-    </AnimatePresence>
+    <List variants={variants} className={isMenuOpen ? 'open' : ''}>
+      {navItems.map(({id, url, name}) => (
+        <SingleMenuItem key={id} url={url} name={name} />
+      ))}
+    </List>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion';
+import styled, {keyframes} from 'styled-components';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
@@ -64,6 +65,25 @@ const end = {
   },
 };
 
+const shake = keyframes`
+  0% { transform: translate(0,0) rotate(0) }
+  1.78571% { transform: translate(5px,0) rotate(-10deg) }
+  3.57143% { transform: translate(0,0) }
+  5.35714% { transform: translate(5px,0) rotate(10deg) }
+  7.14286% { transform: translate(0,0) }
+  8.92857% { transform: translate(5px,0) }
+  10.71429% { transform: translate(0,0) }
+  100% { transform: translate(0,0) }
+`;
+
+const HangTenDude = styled.span`
+  display: inline-block;
+  animation-name: ${shake};
+  animation-duration: 4.72s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+`;
+
 const AboutPage = () => {
   return (
     <Wrapper>
@@ -78,7 +98,10 @@ const AboutPage = () => {
             <>
               <p>
                 Hey there! I’m a front end developer, specialising in React and
-                Vue...well, actually really anything JavaScript related 🤙
+                Vue...well, actually really anything JavaScript related{' '}
+                <HangTenDude>
+                  <span>🤙</span>
+                </HangTenDude>
               </p>
 
               <p>

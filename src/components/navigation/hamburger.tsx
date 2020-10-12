@@ -1,9 +1,10 @@
-import React, {FC} from 'react';
+import React, {FC, useRef} from 'react';
 import {motion} from 'framer-motion';
 import styled from 'styled-components';
 import useStore from 'store';
 import MenuItems from 'components/navigation/menu-items';
 import {MENU} from 'constants/theme';
+import useDimensions from 'hooks/useDimensions';
 
 interface HamburgerProps {}
 
@@ -11,7 +12,7 @@ const Burger = styled(motion.div)`
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  z-index: 1;
+  z-index: 4;
 `;
 
 const SpanBurger = styled.div`
@@ -89,11 +90,12 @@ const MenuBg = styled(motion.div)`
   );
   background-color: rgb(30, 39, 45);
   transform: translateZ(0);
+  z-index: 3;
 `;
 
 const duration = 0.2;
 
-const variants = {
+export const variants = {
   initial: {
     opacity: 0,
   },
@@ -111,11 +113,19 @@ const variants = {
 };
 
 const Hamburger: FC<HamburgerProps> = () => {
+  const containerRef = useRef<HTMLInputElement>(null);
   const {isMenuOpen, toggleMenu} = useStore();
+  const {height} = useDimensions(containerRef);
   const menuOpen: string = isMenuOpen ? MENU.OPEN : MENU.CLOSED;
 
   return (
-    <>
+    <motion.nav
+      initial={false}
+      animate={menuOpen}
+      custom={height}
+      ref={containerRef}
+      className={menuOpen}
+    >
       <Burger initial={{x: 200}} animate={{x: 0}} transition={{delay: 0.2}}>
         <SpanBurger className={menuOpen} onClick={toggleMenu}>
           <span />
@@ -124,17 +134,15 @@ const Hamburger: FC<HamburgerProps> = () => {
         </SpanBurger>
       </Burger>
       {isMenuOpen && (
-        <>
-          <MenuBg
-            variants={variants}
-            initial="initial"
-            animate="enter"
-            exit="exit"
-          />
-          <MenuItems />
-        </>
+        <MenuBg
+          variants={variants}
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        />
       )}
-    </>
+      <MenuItems />
+    </motion.nav>
   );
 };
 

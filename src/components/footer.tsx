@@ -16,6 +16,12 @@ const FooterWrapper = styled(motion.footer)`
 
 const SocialIcon = styled(motion.div)`
   margin: 0 0.5rem;
+  transform: scale(1);
+  transition: all 0.2s ease 0s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   &:last-child {
     margin-right: 0;

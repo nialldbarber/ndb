@@ -10,8 +10,18 @@ const Logo = styled.div`
   left: 1.5rem;
 
   a {
+    position: relative;
     font-size: 2.5rem;
     transition: 0.2s ease;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -1.5rem;
+      left: -1.5rem;
+      bottom: -1.5rem;
+      right: -1.5rem;
+    }
 
     span {
       position: relative;

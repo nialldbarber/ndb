@@ -9,8 +9,24 @@ const ListItem = styled(motion.li)`
   position: absolute;
 
   a {
+    position: relative;
+    display: inline-block;
     font-size: 1.5rem;
+    transform: scale(1);
     transition: 0.2s ease;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -1rem;
+      left: -1rem;
+      bottom: -1rem;
+      right: -1rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &.bottom-left {

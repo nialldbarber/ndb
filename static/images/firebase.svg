@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 256 351" style="enable-background:new 0 0 256 351;" xml:space="preserve">
+<path d="M0 282.998L2.12251 280.026L102.527 89.5119L102.739 87.4951L58.4788 4.35818C54.7706 -2.60604 44.3313 -0.845244 43.1143 6.95066L0 282.998Z" fill="#F95584"/>
+<path d="M1.25273 280.732L2.85834 277.601L102.211 89.0834L58.0613 5.60822C54.392 -1.28303 45.0741 0.473693 43.8699 8.18791L1.25273 280.732Z" fill="#FFA712"/>
+<g filter="url(#filter0_i)">
+<path d="M1.25273 280.732L2.85834 277.601L102.211 89.0834L58.0613 5.60822C54.392 -1.28303 45.0741 0.473693 43.8699 8.18791L1.25273 280.732Z" fill="#F95584"/>
+</g>
+<path d="M135.005 150.381L167.96 116.629L134.995 53.6993C131.866 47.7425 123.129 47.7253 120.033 53.6993L102.421 87.2881V90.1487L135.005 150.381Z" fill="#F95584"/>
+<path d="M134.417 148.974L166.456 116.162L134.417 55.1547C131.375 49.3636 123.984 48.7569 120.974 54.5647L103.269 88.6738L102.739 90.4176L134.417 148.974Z" fill="#FFA50E"/>
+<g filter="url(#filter1_i)">
+<path d="M134.417 148.974L166.456 116.162L134.417 55.1547C131.375 49.3636 123.984 48.7569 120.974 54.5647L103.269 88.6738L102.739 90.4176L134.417 148.974Z" fill="#F95584"/>
+</g>
+<path d="M0 282.998L0.962097 282.03L4.45771 280.61L132.935 152.61L134.563 148.179L102.513 87.1049L0 282.998Z" fill="#F95584"/>
+<path d="M139.121 347.551L255.396 282.704L222.192 78.2093C221.153 71.8113 213.304 69.2818 208.724 73.8694L0.000259399 282.998L115.608 347.546C122.915 351.625 131.813 351.627 139.121 347.551Z" fill="#F95584"/>
+<path d="M254.354 282.16L221.402 79.2179C220.371 72.8684 213.844 70.241 209.299 74.7938L1.28946 282.601L115.628 346.509C122.879 350.558 131.709 350.56 138.962 346.515L254.354 282.16Z" fill="#F95584"/>
+<path d="M139.121 345.641C131.813 349.716 122.915 349.715 115.608 345.635L0.931355 282.015L0.000198364 282.998L115.608 347.546C122.915 351.625 131.813 351.627 139.121 347.551L255.396 282.704L255.111 280.952L139.121 345.641Z" fill="#F95584"/>
+<defs>
+<filter id="filter0_i" x="1.25273" y="1.30139" width="100.958" height="279.43" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="17.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+</filter>
+<filter id="filter1_i" x="102.739" y="43.4985" width="64.7163" height="105.476" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="1" dy="-9"/>
+<feGaussianBlur stdDeviation="3.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+</filter>
+</defs>
+</svg>

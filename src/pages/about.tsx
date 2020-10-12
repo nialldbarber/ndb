@@ -4,6 +4,7 @@ import styled, {keyframes} from 'styled-components';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
+import Skills from 'components/skills';
 import {list} from 'pages/index';
 
 const height = window.innerHeight;
@@ -86,35 +87,43 @@ const HangTenDude = styled.span`
 
 const AboutPage = () => {
   return (
-    <Wrapper>
-      <>
+    <>
+      <Wrapper>
+        <section>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={list}
+          >
+            <PageLayout title="about">
+              <>
+                <p>
+                  Hey there! I’m a front end developer, specialising in React
+                  and Vue...well, actually really anything JavaScript related{' '}
+                  <HangTenDude>
+                    <span>🤙</span>
+                  </HangTenDude>
+                </p>
+
+                <p>Check out some of my skills below!</p>
+              </>
+            </PageLayout>
+          </motion.div>
+          <Dots start={start} middle={middle} end={end} />
+        </section>
+      </Wrapper>
+      <Wrapper>
         <motion.div
           initial="hidden"
           animate="visible"
           exit="exit"
           variants={list}
         >
-          <PageLayout title="about">
-            <>
-              <p>
-                Hey there! I’m a front end developer, specialising in React and
-                Vue...well, actually really anything JavaScript related{' '}
-                <HangTenDude>
-                  <span>🤙</span>
-                </HangTenDude>
-              </p>
-
-              <p>
-                My journey started the way most do; when I made my MySpace{' '}
-                <code>background-color: black</code> and since that day I’ve
-                never looked back
-              </p>
-            </>
-          </PageLayout>
+          <Skills />
         </motion.div>
-        <Dots start={start} middle={middle} end={end} />
-      </>
-    </Wrapper>
+      </Wrapper>
+    </>
   );
 };
 

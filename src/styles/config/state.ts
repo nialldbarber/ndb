@@ -1,6 +1,7 @@
 export const theme = {
   colors: {
     white: '#fff',
+    fadedWhite: 'rgba(238, 238, 238, 0.6)',
     black: '#111',
     green: 'rgb(102, 204, 204)',
     pink: 'rgba(249, 85, 132)',

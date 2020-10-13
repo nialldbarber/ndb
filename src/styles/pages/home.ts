@@ -16,7 +16,7 @@ const TitleWrapper = styled.div`
 
 const MainTitlesWrap = styled.div`
   position: fixed;
-  top: 50%;
+  top: 48.5%;
   transform: translateY(-50%);
 `;
 

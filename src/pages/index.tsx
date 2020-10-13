@@ -1,8 +1,10 @@
 import React, {FC} from 'react';
 import {motion} from 'framer-motion';
+import styled from 'styled-components';
 import HomeNavItems from 'components/navigation/home-nav-items';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
+import Socials from 'components/socials';
 import {HomeBg, TitleWrapper, MainTitlesWrap} from 'styles/pages/home';
 import {PageTitle, FirstName, LastName, SubHeader} from 'styles/typography';
 
@@ -101,6 +103,14 @@ const end = {
   },
 };
 
+const SocialContainer = styled(motion.div)`
+  position: fixed;
+  display: flex;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+`;
+
 const Home: FC = () => {
   return (
     <Wrapper>
@@ -140,6 +150,14 @@ const Home: FC = () => {
           </MainTitlesWrap>
         </HomeBg>
         <Dots start={start} middle={middle} end={end} />
+        <SocialContainer
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          variants={subheader}
+        >
+          <Socials />
+        </SocialContainer>
       </>
     </Wrapper>
   );

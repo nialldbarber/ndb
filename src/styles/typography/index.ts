@@ -25,7 +25,7 @@ const LastName = styled(motion.p)`
 const SubHeader = styled(motion.h3)`
   margin: 0;
   font-size: 4.1rem;
-  margin-top: -3.5rem;
+  margin-top: -2.5rem;
 `;
 
 export {PageTitle, FirstName, LastName, SubHeader};

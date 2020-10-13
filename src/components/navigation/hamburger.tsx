@@ -5,12 +5,12 @@ import useStore from 'store';
 import MenuItems from 'components/navigation/menu-items';
 import NavBg from 'components/navigation/nav-background';
 import {MENU} from 'constants/theme';
-import useDimensions from 'hooks/useDimensions';
+import useDimensions from 'hooks/useDimensions'; 
 
 interface HamburgerProps {}
 
 const Burger = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   top: 1.5rem;
   right: 1.5rem;
   z-index: 4;
@@ -76,25 +76,6 @@ const SpanBurger = styled.div`
     }
   }
 `;
-
-const duration = 0.2;
-
-export const variants = {
-  initial: {
-    opacity: 0,
-  },
-  enter: {
-    opacity: 1,
-    transition: {
-      duration: duration,
-      when: 'beforeChildren',
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: {duration: duration},
-  },
-};
 
 const Hamburger: FC<HamburgerProps> = () => {
   const containerRef = useRef<HTMLInputElement>(null);

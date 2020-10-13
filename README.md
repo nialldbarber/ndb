@@ -10,3 +10,7 @@
 
 - Loading spinner on page transition
   - But only after say 3 or 4 seconds
+
+## Accessibility 
+- Highlight buttons 
+- Research what left to do 

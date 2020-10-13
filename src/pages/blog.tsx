@@ -3,9 +3,7 @@ import {motion} from 'framer-motion';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
-import {list} from 'pages/index';
-
-const height = window.innerHeight;
+import {height, list} from 'utils/framer';
 
 // Dots
 const start = {

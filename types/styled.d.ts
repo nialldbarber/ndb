@@ -10,7 +10,12 @@ declare module 'styled-components' {
       pink: string;
       orange: string;
     };
-    font: {};
+    dimensions: {
+      maxWidth: string;
+    },
+    font: {
+      main: string;
+    };
     animation: {
       swoop: string;
       btn: string;

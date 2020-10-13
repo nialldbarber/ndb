@@ -1,5 +1,6 @@
 import React, {FC, ReactChild} from 'react';
 import styled from 'styled-components';
+import {titleClamp} from 'styles/config/mixins';
 
 interface PageLayoutProps {
   title: string;
@@ -11,7 +12,7 @@ const Layout = styled.section`
   grid-template-areas:
     'title title title-blank title-blank title-blank'
     'content-blank content-blank content content content';
-  grid-template-rows: 350px 1fr;
+  grid-template-rows: 3fr 4fr; 
   height: 100vh;
   padding: 0 2rem;
   max-width: 1000px;
@@ -22,8 +23,8 @@ const Title = styled.h1`
   grid-area: title;
   align-self: end;
   margin: 0;
-  font-size: 8rem;
   max-width: 330px;
+  ${titleClamp};
 `;
 
 const TitleBlank = styled.div`

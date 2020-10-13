@@ -7,28 +7,7 @@ import Dots from 'components/dots';
 import Socials from 'components/socials';
 import {HomeBg, TitleWrapper, MainTitlesWrap} from 'styles/pages/home';
 import {PageTitle, FirstName, LastName, SubHeader} from 'styles/typography';
-
-const transition = {duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9]};
-
-export const list = {
-  visible: {
-    opacity: 1,
-    transition: {
-      when: 'beforeChildren',
-      staggerChildren: 0.1,
-      delay: 0.3,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    transition: {
-      when: 'afterChildren',
-    },
-  },
-  exit: {
-    opacity: 0,
-  },
-};
+import {width, transition, list} from 'utils/framer';
 
 const item = {
   visible: {opacity: 1, y: 0, stiffness: 1000, velocity: -100},
@@ -56,8 +35,6 @@ const subheader = {
   },
   transition: {duration: 1, ...transition, delay: 0.3},
 };
-
-const width = window.innerWidth;
 
 // Dots
 const start = {

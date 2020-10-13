@@ -7,10 +7,15 @@ interface SkillsProps {}
 
 const Wrapper = styled.div`
   position: relative;
-  padding: 3rem 0;
-  max-width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 6rem;
+  width: 90%;
+  padding-top: 7rem;
+  max-width: ${({theme}) => theme?.dimensions?.maxWidth};
   background: ${({theme}) => theme?.colors?.white};
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
 
   &:before,
   &:after {
@@ -40,17 +45,21 @@ const Wrapper = styled.div`
   }
 
   h2 {
-    font-size: 3rem;
-    padding-left: 3.3rem;
+    display: inline-block;
+    margin: 0 auto 5rem 5rem;
+    padding: 0 1rem;
+    color: ${({theme}) => theme?.colors?.white};
+    border-radius: 5px;
+    font-size: 3.5rem;
 
     &.front {
-      color: ${({theme}) => theme?.colors?.green};
+      background: ${({theme}) => theme?.colors?.green};
     }
     &.back {
-      color: ${({theme}) => theme?.colors?.pink};
+      background: ${({theme}) => theme?.colors?.pink};
     }
     &.design {
-      color: ${({theme}) => theme?.colors?.orange};
+      background: ${({theme}) => theme?.colors?.orange};
     }
   }
 `;

@@ -5,9 +5,7 @@ import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
 import Skills from 'components/skills';
-import {list} from 'pages/index';
-
-const height = window.innerHeight;
+import {height, list} from 'utils/framer';
 
 // Dots
 const start = {
@@ -79,6 +77,7 @@ const shakeUp = keyframes`
 
 const PointDown = styled.div`
   position: absolute;
+  top: calc(100vh - 150px);
   left: 50%;
   transform: translateX(-50%);
   animation-name: ${shakeUp};

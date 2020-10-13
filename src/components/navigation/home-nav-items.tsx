@@ -48,7 +48,7 @@ const ListItem = styled(motion.li)`
   }
 
   &.top-right {
-    top: 1rem;
+    top: 1.5rem;
     right: 1.5rem;
 
     &:hover {

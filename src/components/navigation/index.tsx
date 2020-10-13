@@ -5,9 +5,10 @@ import styled from 'styled-components';
 import Hamburger from 'components/navigation/hamburger';
 
 const Logo = styled.div`
-  position: absolute;
-  top: 1rem;
+  position: fixed;
+  top: 1.5rem;
   left: 1.5rem;
+  z-index: 2;
 
   a {
     position: relative;

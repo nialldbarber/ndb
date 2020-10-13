@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {motion} from 'framer-motion';
 import styled from 'styled-components';
 import useLockBodyScroll from 'hooks/useLockBodyScroll';
-import {variants} from 'components/navigation/hamburger';
+import {variants} from 'utils/framer';
 
 interface NavBgProps {}
 

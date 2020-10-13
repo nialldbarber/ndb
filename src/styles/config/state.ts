@@ -7,7 +7,12 @@ export const theme = {
     pink: 'rgba(249, 85, 132)',
     orange: 'rgba(248, 155, 14)',
   },
-  font: {},
+  font: {
+    main: "'Cabin', sans-serif",
+  },
+  dimensions: {
+    maxWidth: '1150px',
+  },
   animation: {
     swoop: 'cubic-bezier(.215, .61, .355, 1)',
     btn: 'cubic-bezier(0, 0, 1, 1)',

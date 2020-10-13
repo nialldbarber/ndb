@@ -1,4 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
+import {noMarginOrPaddingMixin} from 'styles/config/mixins';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,11 +14,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     position: relative;
-    margin: 0;
-    padding: 0;
+    ${noMarginOrPaddingMixin};
     font-size: 16px;
     font-weight: bold;
-    font-family: 'Cabin', sans-serif;
+    font-family: ${({theme}) => theme?.font?.main};
     line-height: 1.5;
     background-color: ${({theme}) => theme?.colors?.white};
     color: ${({theme}) => theme?.colors?.black};
@@ -25,13 +25,14 @@ const GlobalStyle = createGlobalStyle`
 
     &:before {
       content: '';
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
       height: 7px;
       background-image: linear-gradient(to right, rgba(102, 204, 204, 0.8), rgba(249, 85, 132, 0.8), rgba(248, 155, 14, 0.8));
       background-color: rgb(30, 39, 45);
+      z-index: 2;
     }   
   }
 
@@ -43,8 +44,7 @@ const GlobalStyle = createGlobalStyle`
 
   ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    ${noMarginOrPaddingMixin};
   }
 
   button {

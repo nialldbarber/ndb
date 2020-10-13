@@ -30,12 +30,8 @@ const positionCenter = css`
   transform: translate(-50%, -50%);
 `;
 
-const marign404 = css`
-  margin: 0.5rem 0;
-`;
-
 const titleClamp = css`
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(4rem, 11vw,10rem);
 `;
 
 export {
@@ -44,6 +40,5 @@ export {
   noMarginOrPaddingMixin,
   fullSpacedMixin,
   positionCenter,
-  marign404,
   titleClamp,
 };

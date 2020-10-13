@@ -7,3 +7,6 @@
   - mdx?
 
 - Nav items increase in scale when hovered
+
+- Loading spinner on page transition
+  - But only after say 3 or 4 seconds

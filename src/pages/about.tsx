@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {motion} from 'framer-motion';
 import styled, {keyframes} from 'styled-components';
 import PageLayout from 'components/layouts/page';
@@ -66,26 +66,44 @@ const end = {
   },
 };
 
-const shake = keyframes`
-  0% { transform: translate(0,0) rotate(0) }
-  1.78571% { transform: translate(5px,0) rotate(-10deg) }
-  3.57143% { transform: translate(0,0) }
-  5.35714% { transform: translate(5px,0) rotate(10deg) }
-  7.14286% { transform: translate(0,0) }
-  8.92857% { transform: translate(5px,0) }
-  10.71429% { transform: translate(0,0) }
-  100% { transform: translate(0,0) }
+const shakeUp = keyframes`
+  0% { transform: translateY(0) } 
+  1.78571% { transform: translateY(5px) }
+  3.57143% { transform: translateY(0) }
+  5.35714% { transform: translateY(5px) }
+  7.14286% { transform: translateY(0) }
+  8.92857% { transform: translateY(5px) }
+  10.71429% { transform: translateY(0) }
+  100% { transform: translateY(0) }
 `;
 
-const HangTenDude = styled.span`
-  display: inline-block;
-  animation-name: ${shake};
+const PointDown = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: ${shakeUp};
   animation-duration: 4.72s;
   animation-iteration-count: infinite;
   transform-origin: 50% 50%;
+  z-index: 1;
+  cursor: pointer;
+
+  p {
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 
 const AboutPage = () => {
+  const ref = useRef<HTMLInputElement>();
+
+  const handleScroll = () => {
+    console.log('Clicked');
+    ref.current.scrollIntoView({behavior: 'smooth'});
+  };
+
   return (
     <>
       <Wrapper>
@@ -101,28 +119,32 @@ const AboutPage = () => {
                 <p>
                   Hey there! I’m a front end developer, specialising in React
                   and Vue...well, actually really anything JavaScript related{' '}
-                  <HangTenDude>
-                    <span>🤙</span>
-                  </HangTenDude>
+                  <span>🤙</span>
                 </p>
 
                 <p>Check out some of my skills below!</p>
+
+                <PointDown onClick={handleScroll}>
+                  <p>👇</p>
+                </PointDown>
               </>
             </PageLayout>
           </motion.div>
           <Dots start={start} middle={middle} end={end} />
         </section>
       </Wrapper>
-      <Wrapper>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          variants={list}
-        >
-          <Skills />
-        </motion.div>
-      </Wrapper>
+      <div ref={ref}>
+        <Wrapper>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={list}
+          >
+            <Skills />
+          </motion.div>
+        </Wrapper>
+      </div>
     </>
   );
 };

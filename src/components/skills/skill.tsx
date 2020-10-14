@@ -11,7 +11,7 @@ const ImgWrap = styled.div`
   align-items: center;
   justify-content: center;
   width: 25%;
-  border: 1px solid ${({theme}) => theme?.colors?.fadedWhite};
+  border: 1px solid ${({theme}) => theme.colors.fadedWhite};
   margin: 0;
   padding: 0;
 
@@ -23,6 +23,8 @@ const ImgWrap = styled.div`
 `;
 
 const Skill: FC<SkillProps> = ({icon, name}) => {
+  // hover here  
+
   return (
     <ImgWrap>
       <img src={icon} alt={name} />

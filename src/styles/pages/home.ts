@@ -38,13 +38,13 @@ const Dot = styled(motion.div)`
   border-radius: 50%;
 
   &.start {
-    background: ${({theme}) => theme?.colors?.green};
+    background: ${({theme}) => theme.colors.green};
   }
   &.middle {
-    background: ${({theme}) => theme?.colors?.orange};
+    background: ${({theme}) => theme.colors.orange};
   }
   &.end {
-    background: ${({theme}) => theme?.colors?.pink};
+    background: ${({theme}) => theme.colors.pink};
   }
 `;
 

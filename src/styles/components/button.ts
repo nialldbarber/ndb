@@ -11,23 +11,23 @@ const Btn = styled(motion.button)`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid ${({theme}) => theme?.colors?.black};
+    border: 2px solid ${({theme}) => theme.colors.black};
     padding: 0.5em 1em;
     font-weight: 500;
     line-height: 1.4;
     font-size: 1em;
-    background-color: ${({theme}) => theme?.colors?.black};
-    color: ${({theme}) => theme?.colors?.white};
+    background-color: ${({theme}) => theme.colors.black};
+    color: ${({theme}) => theme.colors.white};
     white-space: nowrap;
     border-radius: 4px;
-    transition: 0.2s ${({theme}) => theme?.animation?.btn};
+    transition: 0.2s ${({theme}) => theme.animation.btn};
     &:hover {
       background-color: ${lighten(0.1, '#111')};
       border-color: ${lighten(0.1, '#111')};
     }
     span {
       padding-right: 0;
-      transition: 0.2s ${({theme}) => theme?.animation?.btn};
+      transition: 0.2s ${({theme}) => theme.animation.btn};
       &.active {
         padding-right: 1rem;
       }

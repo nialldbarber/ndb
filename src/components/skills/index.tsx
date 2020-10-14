@@ -10,8 +10,8 @@ const Wrapper = styled.div`
   margin: 0 auto 6rem;
   width: 90%;
   padding-top: 7rem;
-  max-width: ${({theme}) => theme?.dimensions?.maxWidth};
-  background: ${({theme}) => theme?.colors?.white};
+  max-width: ${({theme}) => theme.dimensions.maxWidth};
+  background: ${({theme}) => theme.colors.white};
 
   &:last-child {
     margin-bottom: 1rem;
@@ -48,18 +48,18 @@ const Wrapper = styled.div`
     display: inline-block;
     margin: 0 auto 5rem 5rem;
     padding: 0 1rem;
-    color: ${({theme}) => theme?.colors?.white};
+    color: ${({theme}) => theme.colors.white};
     border-radius: 5px;
     font-size: 3.5rem;
 
     &.front {
-      background: ${({theme}) => theme?.colors?.green};
+      background: ${({theme}) => theme.colors.green};
     }
     &.back {
-      background: ${({theme}) => theme?.colors?.pink};
+      background: ${({theme}) => theme.colors.pink};
     }
     &.design {
-      background: ${({theme}) => theme?.colors?.orange};
+      background: ${({theme}) => theme.colors.orange};
     }
   }
 `;
@@ -68,7 +68,7 @@ const Grid = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  background: ${({theme}) => theme?.colors?.white};
+  background: ${({theme}) => theme.colors.white};
 
   &:before {
     content: '';
@@ -77,7 +77,7 @@ const Grid = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    border: 2px solid ${({theme}) => theme?.colors?.white};
+    border: 2px solid ${({theme}) => theme.colors.white};
   }
 `;
 

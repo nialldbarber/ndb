@@ -17,10 +17,10 @@ const GlobalStyle = createGlobalStyle`
     ${noMarginOrPaddingMixin};
     font-size: 16px;
     font-weight: bold;
-    font-family: ${({theme}) => theme?.font?.main};
+    font-family: ${({theme}) => theme.font.main};
     line-height: 1.5;
-    background-color: ${({theme}) => theme?.colors?.white};
-    color: ${({theme}) => theme?.colors?.black};
+    background-color: ${({theme}) => theme.colors.white};
+    color: ${({theme}) => theme.colors.black};
     min-height: 100vh;
 
     &:before {

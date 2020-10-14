@@ -15,7 +15,7 @@ const LoaderSpinner = styled.div`
   margin: 0 auto;
   &.loader {
     border: 2px solid ${rgba('#111', 0.4)};
-    border-top-color: ${({theme}) => theme?.colors?.white};
+    border-top-color: ${({theme}) => theme.colors.white};
     animation: ${spinner} 600ms linear infinite;
   }
 `;

@@ -92,7 +92,7 @@ const HomeNavItems: FC<HomeNavItemsProps> = () => {
         exit={{x: 200}}
         className="top-right"
       >
-        <Link to="/blog" activeClassName="active">
+        <Link to="/all-posts" activeClassName="active">
           blog
         </Link>
       </ListItem>

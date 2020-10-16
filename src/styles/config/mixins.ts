@@ -6,6 +6,10 @@ const flexCenterMixin = css`
   align-items: center;
 `;
 
+const contentMargin = css`
+  margin: 0 auto 6rem;
+`;
+
 const noBorderMixin = css`
   outline: none;
   border: none;
@@ -41,4 +45,5 @@ export {
   fullSpacedMixin,
   positionCenter,
   titleClamp,
+  contentMargin,
 };

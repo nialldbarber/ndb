@@ -19,7 +19,7 @@ export enum MENU {
 export const navItems: Array<Items> = [
   {id: 1, url: '/', name: 'home'},
   {id: 2, url: '/about', name: 'about'},
-  {id: 3, url: '/blog', name: 'blog'},
+  {id: 3, url: '/all-posts', name: 'blog'},
   {id: 4, url: '/contact', name: 'contact'},
 ];
 

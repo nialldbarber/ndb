@@ -2,12 +2,13 @@ import React, {FC} from 'react';
 import styled from 'styled-components';
 import Skill from 'components/skills/skill';
 import {frontEnd, backEnd, design} from 'constants/theme';
+import {contentMargin} from 'styles/config/mixins';
 
 interface SkillsProps {}
 
 const Wrapper = styled.div`
   position: relative;
-  margin: 0 auto 6rem;
+  ${contentMargin};
   width: 90%;
   padding-top: 7rem;
   max-width: ${({theme}) => theme.dimensions.maxWidth};

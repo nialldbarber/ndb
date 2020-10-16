@@ -4,6 +4,7 @@ import {titleClamp} from 'styles/config/mixins';
 
 interface PageLayoutProps {
   title: string;
+  post?: boolean;
   children: ReactChild;
 }
 
@@ -15,7 +16,7 @@ const Layout = styled.section`
   grid-template-rows: 3fr 4fr; 
   height: 100vh;
   padding: 0 2rem;
-  max-width: 1000px;
+  max-width: ${({theme}) => theme.dimensions.maxWidth};
   margin: 0 auto;
 `;
 
@@ -25,6 +26,11 @@ const Title = styled.h1`
   margin: 0;
   max-width: 330px;
   ${titleClamp};
+  white-space: nowrap;
+
+  &.post {
+    font-size: 5rem;    
+  }
 `;
 
 const TitleBlank = styled.div`
@@ -42,10 +48,10 @@ const Content = styled.div`
   }
 `;
 
-const PageLayout: FC<PageLayoutProps> = ({children, title}) => {
+const PageLayout: FC<PageLayoutProps> = ({title, post, children}) => {
   return (
     <Layout>
-      <Title>{title}</Title>
+      <Title className={post ? 'post' : ''}>{title}</Title>
       <TitleBlank />
       <ContentBlank />
       <Content>{children}</Content>

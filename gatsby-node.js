@@ -9,93 +9,48 @@ exports.onCreateWebpackConfig = ({stage, actions}) => {
   });
 };
 
-async function makePostsFromMdx({graphql, actions}) {
-  const blogPost = path.resolve('./src/pages/post.tsx');
-  const {errors, data} = await graphql(
-    `
-      {
-        allMdx(
-          filter: {fields: {collection: {eq: "post"}}}
-          sort: {fields: [frontmatter___date], order: DESC}
-        ) {
-          edges {
-            node {
-              body
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
+exports.createPages = async function ({actions, graphql}) {
+  const {data} = await graphql(`
+    query {
+      allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+        edges {
+          node {
+            frontmatter {
+              slug
             }
+            id
           }
         }
       }
-    `
-  );
-  if (errors) {
-    console.log(errors);
-    throw new Error('There was an error');
-  }
-  const posts = data.allMdx.edges;
-  posts.forEach((post, i) => {
-    const prev = posts[i - 1];
-    const next = posts[i + 1];
-    actions.createPage({
-      path: post.node.fields.slug,
-      component: blogPost,
-      context: {
-        slug: post.node.fields.slug,
-        collection: 'post',
-        prev,
-        next,
-        pathPrefix: '',
-      },
-    });
-  });
-}
+    }
+  `);
 
-async function paginate({graphql, actions, collection, pathPrefix, component}) {
-  const {errors, data} = await graphql(
-    `
-      {
-        allMdx(filter: { fields: { collection: { eq: "${collection}" } } }) {
-          totalCount
-        }
-      }
-    `
-  );
-  if (errors) {
-    console.log(errors);
-    throw new Error('There was an error');
-  }
-  const {totalCount} = data.allMdx;
-  const pages = Math.ceil(totalCount / 10);
+  // Create paginated pages for posts
+  const postsPerPage = 3;
+  const numPages = Math.ceil(data.allMdx.edges.length / postsPerPage);
 
-  Array.from({length: pages}).forEach((_, i) => {
-    // for each page, use the createPages api to dynamically create that page
+  Array.from({length: numPages}).forEach((_, i) => {
     actions.createPage({
-      path: `${pathPrefix}${i + 1}`,
-      component,
-      context: {
-        skip: i * 10,
+      path: i === 0 ? '/all-posts' : `/all-posts/${i + 1}`,
+      component: require.resolve('./src/templates/all-posts.tsx'),
+      context: { 
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
         currentPage: i + 1,
       },
     });
   });
-}
 
-exports.createPages = async ({graphql, actions}) => {
-  const {createPage} = actions;
-  await Promise.all([
-    makePostsFromMdx({graphql, actions}),
-    makeTipsFromMdx({graphql, actions}),
-    paginate({
-      graphql,
-      actions,
-      collection: 'post',
-      pathPrefix: '/blog/',
-      component: path.resolve('./src/pages/blog.js'),
-    }),
-  ]);
+  // Creates single blog post
+  data.allMdx.edges.forEach((edge) => {
+    const slug = edge.node.frontmatter.slug;
+    const id = edge.node.id;
+
+    actions.createPage({
+      path: slug,
+      component: require.resolve('./src/templates/post.tsx'),
+      context: {id},
+    });
+  });
 };

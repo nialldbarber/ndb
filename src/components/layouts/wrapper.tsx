@@ -3,13 +3,12 @@ import {motion} from 'framer-motion';
 
 interface WrapperProps {
   children: ReactChild;
-  location: any
 }
 
-const Wrapper: FC<WrapperProps> = ({children, location}) => {
+const Wrapper: FC<WrapperProps> = ({children}) => {
   return (
     <motion.main
-      key={location.pathname}
+      key={location.pathname ?? Math.random()}
       // variants={variants}
       initial="initial"
       animate="enter"

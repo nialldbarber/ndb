@@ -86,6 +86,7 @@ const Card = styled.div`
 `;
 
 const AllPosts: FC<PostProps> = ({pageContext, data}) => {
+  console.log(data);
   const {currentPage, numPages} = pageContext;
   const isFirst: boolean = currentPage === 1;
   const isLast: boolean = currentPage === numPages;
@@ -144,6 +145,7 @@ export const pageQuery = graphql`
             title
             date
             excerpt
+            tags
           }
           id
         }

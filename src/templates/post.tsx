@@ -103,6 +103,7 @@ export const pageQuery = graphql`
         excerpt
         title
         slug
+        tags
         # image {
         #   childImageSharp {
         #     fixed {

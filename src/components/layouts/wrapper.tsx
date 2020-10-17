@@ -3,9 +3,10 @@ import {motion} from 'framer-motion';
 
 interface WrapperProps {
   children: ReactChild;
+  location: any
 }
 
-const Wrapper: FC<WrapperProps> = ({children}) => {
+const Wrapper: FC<WrapperProps> = ({children, location}) => {
   return (
     <motion.main
       key={location.pathname}

@@ -113,7 +113,7 @@ const AllPosts: FC<PostProps> = ({pageContext, data}) => {
             const {slug, date, title, excerpt} = post.node.frontmatter;
 
             return (
-              <Link to={`/${slug}`}>
+              <Link key={slug} to={`/${slug}`}>
                 <Card key={slug}>
                   <h3>{title}</h3>
                   <p>{excerpt}</p>

@@ -99,7 +99,6 @@ const AboutPage = () => {
   const ref = useRef<HTMLInputElement>();
 
   const handleScroll = () => {
-    console.log('Clicked');
     ref.current.scrollIntoView({behavior: 'smooth'});
   };
 

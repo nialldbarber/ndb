@@ -12,8 +12,6 @@ import 'typeface-cabin';
 const MainLayout: FC<PageProps> = ({children}) => {
   const {pathname} = useLocation();
 
-  console.log(pathname === '/');
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />

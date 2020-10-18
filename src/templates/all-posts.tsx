@@ -86,7 +86,6 @@ const Card = styled.div`
 `;
 
 const AllPosts: FC<PostProps> = ({pageContext, data}) => {
-  console.log(data);
   const {currentPage, numPages} = pageContext;
   const isFirst: boolean = currentPage === 1;
   const isLast: boolean = currentPage === numPages;
@@ -112,8 +111,6 @@ const AllPosts: FC<PostProps> = ({pageContext, data}) => {
         <Grid>
           {posts.map((post: any) => {
             const {slug, date, title, excerpt} = post.node.frontmatter;
-
-            console.log(slug);
 
             return (
               <Link to={`/${slug}`}>

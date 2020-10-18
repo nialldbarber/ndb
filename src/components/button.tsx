@@ -25,8 +25,6 @@ const Button: FC<ButtonProps> = ({
   const [active, setActive] = useState<boolean>(false);
   const {isMenuOpen} = useStore();
 
-  console.log(isMenuOpen);
-
   return (
     <Btn
       type={type ?? 'button'}

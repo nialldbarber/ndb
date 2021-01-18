@@ -24,11 +24,33 @@ const List = styled(motion.ul)`
 
   li {
     a {
+      position: relative;
       padding: 0.5rem;
       display: inline-block;
       text-align: center;
       color: #fff;
       font-size: 4rem;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 0px;
+        height: 3px;
+        z-index: -1;
+        border-radius: 2px;
+        transform: translateX(-101%);
+        background: rgb(102, 204, 204);
+        transition: all 0.25s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0s;
+      }
+
+      &:hover {
+        &:before {
+          left: 100%;
+          width: 100%;
+        }
+      }
     }
   }
 

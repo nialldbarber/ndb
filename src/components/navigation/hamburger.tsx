@@ -5,7 +5,7 @@ import useStore from 'store';
 import MenuItems from 'components/navigation/menu-items';
 import NavBg from 'components/navigation/nav-background';
 import {MENU} from 'constants/theme';
-import useDimensions from 'hooks/useDimensions'; 
+import useDimensions from 'hooks/useDimensions';
 
 interface HamburgerProps {}
 

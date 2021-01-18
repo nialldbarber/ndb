@@ -1,6 +1,6 @@
 import {useEffect, useRef} from 'react';
 
-interface Dimensions {
+export interface Dimensions {
   width: number | null;
   height: number | null;
 }

@@ -16,14 +16,14 @@ export enum MENU {
   CLOSED = 'closed',
 }
 
-export const navItems: Array<Items> = [
+export const navItems: Items[] = [
   {id: 1, url: '/', name: 'home'},
   {id: 2, url: '/about', name: 'about'},
   {id: 3, url: '/all-posts', name: 'blog'},
   {id: 4, url: '/contact', name: 'contact'},
 ];
 
-export const socialLinks: Array<Social> = [
+export const socialLinks: Social[] = [
   {
     id: 1,
     link: 'https://github.com/nialldbarber',
@@ -50,7 +50,7 @@ export interface Skills {
   name: string;
 }
 
-const frontEnd: Array<Skills> = [
+export const frontEnd: Skills[] = [
   {id: 1, icon: '/images/html.svg', name: 'HTML'},
   {id: 2, icon: '/images/css.svg', name: 'CSS'},
   {id: 3, icon: '/images/sass.svg', name: 'Sass'},
@@ -65,7 +65,7 @@ const frontEnd: Array<Skills> = [
   {id: 12, icon: '/images/webpack.svg', name: 'Webpack'},
 ];
 
-const backEnd: Array<Skills> = [
+export const backEnd: Skills[] = [
   {id: 1, icon: '/images/node.svg', name: 'Node'},
   {id: 2, icon: '/images/graphql.svg', name: 'GraphQL'},
   {id: 3, icon: '/images/apollo.svg', name: 'Apollo Server'},
@@ -74,11 +74,9 @@ const backEnd: Array<Skills> = [
   {id: 6, icon: '/images/firebase.svg', name: 'Firebase'},
 ];
 
-const design: Array<Skills> = [
+export const design: Skills[] = [
   {id: 1, icon: '/images/illustrator.svg', name: 'Illustrator'},
   {id: 2, icon: '/images/photoshop.svg', name: 'Photoshop'},
   {id: 3, icon: '/images/figma.svg', name: 'Figma'},
   {id: 4, icon: '/images/zeplin.svg', name: 'Zeplin'},
 ];
-
-export {frontEnd, backEnd, design};

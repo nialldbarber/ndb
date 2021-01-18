@@ -68,6 +68,7 @@ const middle: Variants | any = {
     },
   },
 };
+
 const end: Variants | any = {
   ...start,
   visible: {

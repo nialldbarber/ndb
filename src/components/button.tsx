@@ -9,7 +9,7 @@ interface ButtonProps {
   className?: string;
   standardBtn?: boolean;
   toggledState?: boolean;
-  action?: () => void;
+  action: () => void;
   children?: ReactChild;
 }
 
@@ -28,12 +28,12 @@ const Button: FC<ButtonProps> = ({
   return (
     <Btn
       type={type ?? 'button'}
-      className={`${className} ${standardBtn ? 'standard' : ''}`}
+      className={`${className || ''} ${standardBtn ? 'standard' : ''}`}
       aria-pressed={toggledState}
       aria-expanded={toggledState}
       onClick={() => {
         setActive(!active);
-        action && action();
+        action();
       }}
     >
       <span className={`${active ? 'active' : ''}`}>{text || ''}</span>

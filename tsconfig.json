@@ -5,7 +5,7 @@
     "target": "ES2020",
     "strict": true,
     "moduleResolution": "node",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "resolveJsonModule": true,
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
@@ -21,6 +21,7 @@
     "isolatedModules": true,
     "baseUrl": "./src"
   },
+  "extends": "eslint-config-wesbos/tsconfig.json",
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

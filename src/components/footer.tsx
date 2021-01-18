@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import useStore from 'store';
 import Socials from 'components/socials';
 
-interface FooterProps {}
-
 const FooterWrapper = styled(motion.footer)`
   position: fixed;
   display: flex;
@@ -14,7 +12,7 @@ const FooterWrapper = styled(motion.footer)`
   z-index: 1;
 `;
 
-const Footer: FC<FooterProps> = () => {
+const Footer: FC = () => {
   const {isMenuOpen} = useStore();
 
   return !isMenuOpen ? (

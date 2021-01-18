@@ -23,7 +23,7 @@ const ImgWrap = styled.div`
 `;
 
 const Skill: FC<SkillProps> = ({icon, name}) => {
-  // hover here  
+  // hover here
 
   return (
     <ImgWrap>

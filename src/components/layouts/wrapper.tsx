@@ -1,14 +1,12 @@
 import React, {FC, ReactChild} from 'react';
 
-interface WrapperProps {
-  children: ReactChild;
-}
+type WrapperProps = {children: ReactChild};
 
 const Wrapper: FC<WrapperProps> = ({children}) => {
   return (
-    <main>
-      {children}
-    </main>
+    <>
+      <main>{children}</main>
+    </>
   );
 };
 

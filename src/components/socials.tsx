@@ -28,7 +28,7 @@ const Socials: FC<SocialsProps> = () => {
     <>
       {socialLinks.map(({id, link, src, alt}) => (
         <SocialIcon key={id}>
-          <a href={link} target="_blank" rel="noopener">
+          <a href={link} target="_blank" rel="noreferrer">
             <img src={src} alt={alt} />
           </a>
         </SocialIcon>

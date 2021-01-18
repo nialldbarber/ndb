@@ -13,7 +13,7 @@ const Layout = styled.section`
   grid-template-areas:
     'title title title-blank title-blank title-blank'
     'content-blank content-blank content content content';
-  grid-template-rows: 3fr 4fr; 
+  grid-template-rows: 3fr 4fr;
   height: 100vh;
   padding: 0 2rem;
   max-width: ${({theme}) => theme.dimensions.maxWidth};
@@ -29,7 +29,7 @@ const Title = styled.h1`
   white-space: nowrap;
 
   &.post {
-    font-size: 5rem;    
+    font-size: 5rem;
   }
 `;
 

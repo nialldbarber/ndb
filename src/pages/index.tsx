@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {motion} from 'framer-motion';
+import {motion, Variants} from 'framer-motion';
 import styled from 'styled-components';
 import HomeNavItems from 'components/navigation/home-nav-items';
 import Wrapper from 'components/layouts/wrapper';
@@ -9,13 +9,13 @@ import {HomeBg, TitleWrapper, MainTitlesWrap} from 'styles/pages/home';
 import {PageTitle, FirstName, LastName, SubHeader} from 'styles/typography';
 import {width, transition, list} from 'utils/framer';
 
-const item = {
+const item: Variants | any = {
   visible: {opacity: 1, y: 0, stiffness: 1000, velocity: -100},
   hidden: {opacity: 0, y: 200, stiffness: 1000, velocity: -100},
-  transition: {duration: 1, ...transition},
+  transition: {...transition, duration: 1},
 };
 
-const subheader = {
+const subheader: Variants | any = {
   visible: {
     opacity: 1,
     transition: {
@@ -33,11 +33,11 @@ const subheader = {
   exit: {
     opacity: 0,
   },
-  transition: {duration: 1, ...transition, delay: 0.3},
+  transition: {...transition, duration: 1, delay: 0.3},
 };
 
 // Dots
-const start = {
+const start: Variants | any = {
   visible: {
     x: 0,
     transition: {
@@ -57,7 +57,7 @@ const start = {
   },
 };
 
-const middle = {
+const middle: Variants | any = {
   ...start,
   visible: {
     x: 0,
@@ -68,7 +68,7 @@ const middle = {
     },
   },
 };
-const end = {
+const end: Variants | any = {
   ...start,
   visible: {
     x: 0,

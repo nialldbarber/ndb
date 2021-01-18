@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {motion} from 'framer-motion';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
@@ -62,7 +62,7 @@ const end = {
   },
 };
 
-const BlogPage = () => {
+const BlogPage: FC = () => {
   return (
     <Wrapper>
       <>

@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {FC, useRef, MutableRefObject} from 'react';
 import {motion} from 'framer-motion';
 import styled, {keyframes} from 'styled-components';
 import PageLayout from 'components/layouts/page';
@@ -65,7 +65,7 @@ const end = {
 };
 
 const shakeUp = keyframes`
-  0% { transform: translateY(0) } 
+  0% { transform: translateY(0) }
   1.78571% { transform: translateY(5px) }
   3.57143% { transform: translateY(0) }
   5.35714% { transform: translateY(5px) }
@@ -95,8 +95,8 @@ const PointDown = styled.div`
   }
 `;
 
-const AboutPage = () => {
-  const ref = useRef<HTMLInputElement>();
+const AboutPage: FC = () => {
+  const ref = useRef() as MutableRefObject<HTMLDivElement>;
 
   const handleScroll = () => {
     ref.current.scrollIntoView({behavior: 'smooth'});

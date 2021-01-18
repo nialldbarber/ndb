@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, {FC} from 'react';
 import {graphql} from 'gatsby';
 import {MDXRenderer} from 'gatsby-plugin-mdx';
 import {motion} from 'framer-motion';
@@ -7,9 +7,7 @@ import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
 import {height, list} from 'utils/framer';
 
-interface PostProps {
-  data: any
-}
+type PostProps = {data: any};
 
 // Dots
 const start = {
@@ -84,19 +82,17 @@ const Post: FC<PostProps> = ({data}) => {
           <PageLayout title={title} post>
             <h3>{excerpt}</h3>
           </PageLayout>
-          <MDXRenderer>
-            {data.mdx.body}
-          </MDXRenderer>
+          <MDXRenderer>{data?.mdx?.body}</MDXRenderer>
         </motion.div>
         <Dots start={start} middle={middle} end={end} />
       </>
     </Wrapper>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
-    query SinglePost($id: String!) {
-      mdx(id: {eq: $id}) {
+  query SinglePost($id: String!) {
+    mdx(id: {eq: $id}) {
       body
       frontmatter {
         date

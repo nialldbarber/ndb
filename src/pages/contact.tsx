@@ -3,6 +3,7 @@ import {motion} from 'framer-motion';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
+import Form from 'components/form';
 import {list, height} from 'utils/framer';
 
 // Dots
@@ -73,9 +74,7 @@ const ContactPage: FC = () => {
           variants={list}
         >
           <PageLayout title="contact">
-            <>
-              <p>Contact form here...</p>
-            </>
+            <Form />
           </PageLayout>
         </motion.div>
         <Dots start={start} middle={middle} end={end} />

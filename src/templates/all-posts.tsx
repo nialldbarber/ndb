@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
+import Badge from 'components/badge';
 import {list, height} from 'utils/framer';
 import {contentMargin} from 'styles/config/mixins';
 
@@ -82,9 +83,9 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background: ${({theme}) => theme.colors.white};
-  border: 1px solid ${({theme}) => theme.colors.black};
-  border-radius: 5px;
+  background: ${({theme}) => theme.colors.darkerBlack};
+  border-bottom-right-radius: 15px;
+  color: ${({theme}) => theme.colors.white};
 `;
 
 const AllPosts: FC<PostProps> = ({pageContext, data}) => {
@@ -112,13 +113,19 @@ const AllPosts: FC<PostProps> = ({pageContext, data}) => {
         </motion.div>
         <Grid>
           {posts.map((post: any) => {
-            const {slug, date, title, excerpt} = post.node.frontmatter;
+            const {slug, date, title, excerpt, tags} = post.node.frontmatter;
+            console.log(tags);
 
             return (
               <Link key={slug} to={`/${slug}`}>
                 <Card key={slug}>
                   <h3>{title}</h3>
                   <p>{excerpt}</p>
+                  <div>
+                    {tags.map((tag, i) => (
+                      <Badge key={i} text={tag} />
+                    ))}
+                  </div>
                 </Card>
               </Link>
             );

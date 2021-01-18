@@ -4,6 +4,7 @@ export const theme = {
     fadedWhite: 'rgba(238, 238, 238, 0.6)',
     black: '#111',
     darkBlack: '#222831',
+    darkerBlack: '#1a1d24',
     green: 'rgb(102, 204, 204)',
     pink: 'rgba(249, 85, 132)',
     orange: 'rgba(248, 155, 14)',

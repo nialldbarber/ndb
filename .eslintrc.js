@@ -10,6 +10,8 @@ module.exports = {
     'no-use-before-define': 0,
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-unsafe-assignment': 0,
+    '@typescript-eslint/no-inferrable-types': 0,
+    'import/no-mutable-exports': 0,
   },
   parserOptions: {
     project: './tsconfig.json',

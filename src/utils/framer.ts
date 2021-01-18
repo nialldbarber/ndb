@@ -40,12 +40,12 @@ export const variants = {
   enter: {
     opacity: 1,
     transition: {
-      duration: duration,
+      duration,
       when: 'beforeChildren',
     },
   },
   exit: {
     opacity: 0,
-    transition: {duration: duration},
+    transition: {duration},
   },
 };

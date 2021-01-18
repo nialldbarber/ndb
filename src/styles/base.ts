@@ -19,8 +19,8 @@ const GlobalStyle = createGlobalStyle`
     font-weight: bold;
     font-family: ${({theme}) => theme.font.main};
     line-height: 1.5;
-    background-color: ${({theme}) => theme.colors.white};
-    color: ${({theme}) => theme.colors.black};
+    background-color: ${({theme}) => theme.colors.darkBlack};
+    color: ${({theme}) => theme.colors.white};
     min-height: 100vh;
 
     &:before {
@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
       background-image: linear-gradient(to right, rgba(102, 204, 204, 0.8), rgba(249, 85, 132, 0.8), rgba(248, 155, 14, 0.8));
       background-color: rgb(30, 39, 45);
       z-index: 2;
-    }   
+    }
   }
 
   a {

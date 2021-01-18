@@ -72,6 +72,7 @@ const end = {
 
 const Grid = styled.div`
   display: grid;
+  grid-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
   ${contentMargin};
   max-width: ${({theme}) => theme.dimensions.maxWidth};
@@ -80,6 +81,7 @@ const Grid = styled.div`
 const Card = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 1rem;
   background: ${({theme}) => theme.colors.white};
   border: 1px solid ${({theme}) => theme.colors.black};
   border-radius: 5px;

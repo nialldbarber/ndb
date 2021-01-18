@@ -5,6 +5,7 @@ declare module 'styled-components' {
     colors: {
       white: string;
       fadedWhite: string;
+      darkBlack: string;
       black: string;
       green: string;
       pink: string;
@@ -12,7 +13,7 @@ declare module 'styled-components' {
     };
     dimensions: {
       maxWidth: string;
-    },
+    };
     font: {
       main: string;
     };

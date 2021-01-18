@@ -74,7 +74,7 @@ const BlogPage: FC = () => {
         >
           <PageLayout title="blog">
             <>
-              <p>Get your thinking hat on and search a topic!</p>
+              <p>Get your thinking hat on and search a topic! test</p>
             </>
           </PageLayout>
         </motion.div>

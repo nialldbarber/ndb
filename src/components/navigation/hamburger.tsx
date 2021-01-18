@@ -30,7 +30,7 @@ const SpanBurger = styled.div`
     position: absolute;
     height: 5px;
     width: 100%;
-    background: ${({theme}) => theme.colors.black};
+    background: ${({theme}) => theme.colors.pink};
     border-radius: 9px;
     opacity: 1;
     left: 0;

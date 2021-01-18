@@ -5,6 +5,7 @@ import {titleClamp} from 'styles/config/mixins';
 interface PageLayoutProps {
   title: string;
   post?: boolean;
+  color?: string;
   children: ReactChild;
 }
 
@@ -31,6 +32,10 @@ const Title = styled.h1`
   &.post {
     font-size: 5rem;
   }
+
+  &.pink {
+    color: ${({theme}) => theme.colors.pink};
+  }
 `;
 
 const TitleBlank = styled.div`
@@ -48,10 +53,10 @@ const Content = styled.div`
   }
 `;
 
-const PageLayout: FC<PageLayoutProps> = ({title, post, children}) => {
+const PageLayout: FC<PageLayoutProps> = ({title, post, color, children}) => {
   return (
     <Layout>
-      <Title className={post ? 'post' : ''}>{title}</Title>
+      <Title className={`${post ? 'post' : ''} ${color || ''}`}>{title}</Title>
       <TitleBlank />
       <ContentBlank />
       <Content>{children}</Content>

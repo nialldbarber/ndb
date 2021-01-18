@@ -116,8 +116,8 @@ const AboutPage: FC = () => {
               <>
                 <p>
                   Hey there! I’m a front end developer, specialising in React
-                  and Vue...well, actually really anything JavaScript related{' '}
-                  <span>🤙</span>
+                  and Vue...well, actually really anything JavaScript/Typescript
+                  related <span>🤙</span>
                 </p>
 
                 <p>Check out some of my skills below!</p>

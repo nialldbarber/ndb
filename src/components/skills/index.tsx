@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   width: 90%;
   padding-top: 7rem;
   max-width: ${({theme}) => theme.dimensions.maxWidth};
-  background: ${({theme}) => theme.colors.white};
+  background: ${({theme}) => theme.colors.darkBlack};
 
   &:last-child {
     margin-bottom: 1rem;
@@ -31,8 +31,8 @@ const Wrapper = styled.div`
     top: -7.5rem;
     background: linear-gradient(
       to top,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
+      rgba(34, 40, 49, 1) 0%,
+      rgba(34, 40, 49, 0) 100%
     );
   }
 
@@ -40,8 +40,8 @@ const Wrapper = styled.div`
     bottom: -7.5rem;
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
+      rgba(34, 40, 49, 1) 0%,
+      rgba(34, 40, 49, 0) 100%
     );
   }
 
@@ -69,7 +69,7 @@ const Grid = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  background: ${({theme}) => theme.colors.white};
+  background: ${({theme}) => theme.colors.darkBlack};
 
   &:before {
     content: '';
@@ -78,7 +78,7 @@ const Grid = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    border: 2px solid ${({theme}) => theme.colors.white};
+    border: 2px solid ${({theme}) => theme.colors.darkBlack};
   }
 `;
 

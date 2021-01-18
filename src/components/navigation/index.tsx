@@ -26,7 +26,7 @@ const Logo = styled.div`
 
     span {
       position: relative;
-      color: ${({theme}) => theme.colors.black};
+      color: ${({theme}) => theme.colors.white};
     }
   }
 `;

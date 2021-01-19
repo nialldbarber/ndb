@@ -114,7 +114,6 @@ const AllPosts: FC<PostProps> = ({pageContext, data}) => {
         <Grid>
           {posts.map((post: any) => {
             const {slug, date, title, excerpt, tags} = post.node.frontmatter;
-            console.log(tags);
 
             return (
               <Link key={slug} to={`/${slug}`}>

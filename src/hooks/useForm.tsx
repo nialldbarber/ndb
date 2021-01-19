@@ -17,6 +17,7 @@ interface Inputs {
 }
 
 const useForm = (): any => {
+  const [honeypot, setHoneypot] = useState<boolean>(true);
   const [status, setStatus] = useState<Status>({
     submitted: false,
     submitting: false,

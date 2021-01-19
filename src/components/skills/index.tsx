@@ -70,16 +70,6 @@ const Grid = styled.div`
   display: flex;
   flex-wrap: wrap;
   background: ${({theme}) => theme.colors.darkBlack};
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border: 2px solid ${({theme}) => theme.colors.darkBlack};
-  }
 `;
 
 const Skills: FC<SkillsProps> = () => {
@@ -88,24 +78,24 @@ const Skills: FC<SkillsProps> = () => {
       <Wrapper>
         <h2 className="front">front end</h2>
         <Grid>
-          {frontEnd.map(({id, icon, name}) => (
-            <Skill key={id} icon={icon} name={name} />
+          {frontEnd.map(({id, icon, name, link}) => (
+            <Skill key={id} icon={icon} name={name} link={link} />
           ))}
         </Grid>
       </Wrapper>
       <Wrapper>
         <h2 className="back">back end</h2>
         <Grid>
-          {backEnd.map(({id, icon, name}) => (
-            <Skill key={id} icon={icon} name={name} />
+          {backEnd.map(({id, icon, name, link}) => (
+            <Skill key={id} icon={icon} name={name} link={link} />
           ))}
         </Grid>
       </Wrapper>
       <Wrapper>
         <h2 className="design">design</h2>
         <Grid>
-          {design.map(({id, icon, name}) => (
-            <Skill key={id} icon={icon} name={name} />
+          {design.map(({id, icon, name, link}) => (
+            <Skill key={id} icon={icon} name={name} link={link} />
           ))}
         </Grid>
       </Wrapper>

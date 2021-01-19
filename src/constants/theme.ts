@@ -48,35 +48,136 @@ export interface Skills {
   id: number;
   icon: string;
   name: string;
+  link: string;
 }
 
 export const frontEnd: Skills[] = [
-  {id: 1, icon: '/images/html.svg', name: 'HTML'},
-  {id: 2, icon: '/images/css.svg', name: 'CSS'},
-  {id: 3, icon: '/images/sass.svg', name: 'Sass'},
-  {id: 4, icon: '/images/js.svg', name: 'JavaScript'},
-  {id: 5, icon: '/images/ts.svg', name: 'TypeScript'},
-  {id: 6, icon: '/images/react.svg', name: 'React'},
-  {id: 7, icon: '/images/vue.svg', name: 'Vue'},
-  {id: 8, icon: '/images/svelte.svg', name: 'Svelte'},
-  {id: 9, icon: '/images/redux.svg', name: 'Redux'},
-  {id: 10, icon: '/images/framer-motion.svg', name: 'Framer Motion'},
-  {id: 11, icon: '/images/git.svg', name: 'Git'},
-  {id: 12, icon: '/images/webpack.svg', name: 'Webpack'},
+  {
+    id: 1,
+    icon: '/images/html.svg',
+    name: 'HTML',
+    link: 'https://html.spec.whatwg.org/multipage/',
+  },
+  {
+    id: 2,
+    icon: '/images/css.svg',
+    name: 'CSS',
+    link: 'https://www.w3.org/Style/CSS/',
+  },
+  {
+    id: 3,
+    icon: '/images/sass.svg',
+    name: 'Sass',
+    link: 'https://sass-lang.com/',
+  },
+  {
+    id: 4,
+    icon: '/images/js.svg',
+    name: 'JavaScript',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+  },
+  {
+    id: 5,
+    icon: '/images/ts.svg',
+    name: 'TypeScript',
+    link: 'https://www.typescriptlang.org/',
+  },
+  {
+    id: 6,
+    icon: '/images/react.svg',
+    name: 'React',
+    link: 'https://reactjs.org/',
+  },
+  {id: 7, icon: '/images/vue.svg', name: 'Vue', link: 'https://vuejs.org/'},
+  {
+    id: 8,
+    icon: '/images/svelte.svg',
+    name: 'Svelte',
+    link: 'https://svelte.dev/',
+  },
+  {
+    id: 9,
+    icon: '/images/redux.svg',
+    name: 'Redux',
+    link: 'https://redux.js.org/',
+  },
+  {
+    id: 10,
+    icon: '/images/framer-motion.svg',
+    name: 'Framer Motion',
+    link: 'https://www.framer.com/motion/',
+  },
+  {id: 11, icon: '/images/git.svg', name: 'Git', link: 'https://git-scm.com/'},
+  {
+    id: 12,
+    icon: '/images/webpack.svg',
+    name: 'Webpack',
+    link: 'https://webpack.js.org/',
+  },
 ];
 
 export const backEnd: Skills[] = [
-  {id: 1, icon: '/images/node.svg', name: 'Node'},
-  {id: 2, icon: '/images/graphql.svg', name: 'GraphQL'},
-  {id: 3, icon: '/images/apollo.svg', name: 'Apollo Server'},
-  {id: 4, icon: '/images/express.svg', name: 'Express'},
-  {id: 5, icon: '/images/mongodb.svg', name: 'Mongo'},
-  {id: 6, icon: '/images/firebase.svg', name: 'Firebase'},
+  {
+    id: 1,
+    icon: '/images/node.svg',
+    name: 'Node',
+    link: 'https://nodejs.org/en/',
+  },
+  {
+    id: 2,
+    icon: '/images/graphql.svg',
+    name: 'GraphQL',
+    link: 'https://graphql.org/',
+  },
+  {
+    id: 3,
+    icon: '/images/apollo.svg',
+    name: 'Apollo',
+    link: 'https://www.apollographql.com/',
+  },
+  {
+    id: 4,
+    icon: '/images/express.svg',
+    name: 'Express',
+    link: 'https://expressjs.com/',
+  },
+  {
+    id: 5,
+    icon: '/images/mongodb.svg',
+    name: 'MongoDB',
+    link: 'https://www.mongodb.com/',
+  },
+  {
+    id: 6,
+    icon: '/images/firebase.svg',
+    name: 'Firebase',
+    link: 'https://firebase.google.com/',
+  },
 ];
 
 export const design: Skills[] = [
-  {id: 1, icon: '/images/illustrator.svg', name: 'Illustrator'},
-  {id: 2, icon: '/images/photoshop.svg', name: 'Photoshop'},
-  {id: 3, icon: '/images/figma.svg', name: 'Figma'},
-  {id: 4, icon: '/images/zeplin.svg', name: 'Zeplin'},
+  {
+    id: 1,
+    icon: '/images/illustrator.svg',
+    name: 'Illustrator',
+    link: 'https://www.adobe.com/uk/products/illustrator.html',
+  },
+  {
+    id: 2,
+    icon: '/images/photoshop.svg',
+    name: 'Photoshop',
+    link: 'https://www.adobe.com/uk/products/photoshop.html',
+  },
+  {
+    id: 3,
+    icon: '/images/figma.svg',
+    name: 'Figma',
+    link: 'https://www.figma.com/files/recent',
+  },
+  {
+    id: 4,
+    icon: '/images/zeplin.svg',
+    name: 'Zeplin',
+    link: 'https://zeplin.io/',
+  },
 ];

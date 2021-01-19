@@ -127,7 +127,7 @@ const Home: FC = () => {
             </motion.div>
           </MainTitlesWrap>
         </HomeBg>
-        <Dots start={start} middle={middle} end={end} />
+        <Dots start={start} middle={middle} end={end} styleType="home" />
         <SocialContainer
           initial="hidden"
           animate="visible"

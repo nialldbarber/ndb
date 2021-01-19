@@ -36,6 +36,7 @@ const Dot = styled(motion.div)`
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  opacity: 0.3;
 
   &.start {
     background: ${({theme}) => theme.colors.green};
@@ -45,6 +46,9 @@ const Dot = styled(motion.div)`
   }
   &.end {
     background: ${({theme}) => theme.colors.pink};
+  }
+  &.home {
+    opacity: 1;
   }
 `;
 

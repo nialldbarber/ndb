@@ -5,27 +5,28 @@ interface DotsProps {
   start: any;
   middle: any;
   end: any;
+  styleType?: string;
 }
 
-const Dots: FC<DotsProps> = ({start, middle, end}) => {
+const Dots: FC<DotsProps> = ({start, middle, end, styleType}) => {
   return (
     <DotWrapper>
       <Dot
-        className="start"
+        className={`start ${styleType || ''}`}
         variants={start}
         initial="hidden"
         animate="visible"
         exit="exit"
       />
       <Dot
-        className="middle"
+        className={`middle ${styleType || ''}`}
         variants={middle}
         initial="hidden"
         animate="visible"
         exit="exit"
       />
       <Dot
-        className="end"
+        className={`end ${styleType || ''}`}
         variants={end}
         initial="hidden"
         animate="visible"

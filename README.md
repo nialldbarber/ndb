@@ -14,6 +14,9 @@
 
 - Page refresh, go to top of page
 
+- Fix hamburger menu animation
+  - its disappearing instantly but the nav items are animating correctly
+
 ---
 
 - Add next js, gatsby to front end skills

@@ -6,7 +6,7 @@
 
   - its disappearing instantly but the nav items are animating correctly
 
-- Animate logo
+- [x] Animate logo
 
 - Complete form styles
 
@@ -17,8 +17,6 @@
 - Complete blog page styles
 
 - Complete blog post page styles
-
-- Page refresh, go to top of page
 
 - When you click a page and you're on that page - you'll get a toast message
 

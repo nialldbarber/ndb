@@ -2,11 +2,21 @@
 
 - [x] Increase scale of hamburger when you hover over it
 
-- Fix hamburger menu animation
+- [ ] Fix hamburger menu animation
 
   - its disappearing instantly but the nav items are animating correctly
 
 - Animate logo
+
+- Complete form styles
+
+- Complete contact page styles
+
+- Complete about page styles
+
+- Complete blog page styles
+
+- Complete blog post page styles
 
 - Page refresh, go to top of page
 

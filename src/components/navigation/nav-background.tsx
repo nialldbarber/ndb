@@ -2,7 +2,6 @@ import React, {FC} from 'react';
 import {motion} from 'framer-motion';
 import styled from 'styled-components';
 import useLockBodyScroll from 'hooks/useLockBodyScroll';
-import {variants} from 'utils/framer';
 
 interface NavBgProps {}
 
@@ -26,9 +25,7 @@ const MenuBg = styled(motion.div)`
 const NavBg: FC<NavBgProps> = () => {
   useLockBodyScroll();
 
-  return (
-    <MenuBg variants={variants} initial="initial" animate="enter" exit="exit" />
-  );
+  return <MenuBg />;
 };
 
 export default NavBg;

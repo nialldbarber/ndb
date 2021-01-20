@@ -1,7 +1,7 @@
 import {createGlobalStyle} from 'styled-components';
 import {noMarginOrPaddingMixin} from 'styles/config/mixins';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Normalise = createGlobalStyle`
+export const Normalise = createGlobalStyle`
   html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -239,5 +239,3 @@ const Normalise = createGlobalStyle`
     display: none;
   }
 `;
-
-export {GlobalStyle, Normalise};

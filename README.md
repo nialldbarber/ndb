@@ -12,6 +12,8 @@
 
 - Responsive design
 
+- Page refresh, go to top of page
+
 ## Bugs
 
 - 3 dots appear on all pages on first load

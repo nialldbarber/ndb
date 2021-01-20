@@ -7,7 +7,7 @@ const spinner = keyframes`
   }
 `;
 
-const LoaderSpinner = styled.div`
+export const LoaderSpinner = styled.div`
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -19,5 +19,3 @@ const LoaderSpinner = styled.div`
     animation: ${spinner} 600ms linear infinite;
   }
 `;
-
-export {LoaderSpinner};

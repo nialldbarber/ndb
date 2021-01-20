@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import {lighten} from 'polished';
 import {flexCenterMixin} from 'styles/config/mixins';
 
-const Btn = styled(motion.button)`
+export const Btn = styled(motion.button)`
   border: none;
 
   &.standard {
@@ -44,8 +44,6 @@ const Btn = styled(motion.button)`
   }
 `;
 
-const BackHomeBtn = styled.a`
+export const BackHomeBtn = styled.a`
   ${flexCenterMixin};
 `;
-
-export {Btn, BackHomeBtn};

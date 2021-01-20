@@ -227,3 +227,5 @@ export const design: Skills[] = [
     link: 'https://zeplin.io/',
   },
 ];
+
+export const FORM_ENDPOINT: string = 'https://formspree.io/f/myyboyrl';

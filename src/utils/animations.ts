@@ -1,5 +1,13 @@
 export type Colors = string[];
 
+/**
+ * Takes an array and cycles through
+ * each item until the end is reached.
+ * Perfect for spitting out a new colour
+ * for the logo
+ *
+ * @constructor
+ */
 class CycledColors {
   count: number;
   colorChoice: string;

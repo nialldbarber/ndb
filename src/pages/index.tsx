@@ -10,9 +10,22 @@ import {PageTitle, FirstName, LastName, SubHeader} from 'styles/typography';
 import {width, transition, list} from 'utils/framer';
 
 const item: Variants | any = {
-  visible: {opacity: 1, y: 0, stiffness: 1000, velocity: -100},
-  hidden: {opacity: 0, y: 200, stiffness: 1000, velocity: -100},
-  transition: {...transition, duration: 1},
+  visible: {
+    opacity: 1,
+    y: 0,
+    stiffness: 1000,
+    velocity: -100,
+  },
+  hidden: {
+    opacity: 0,
+    y: 200,
+    stiffness: 1000,
+    velocity: -100,
+  },
+  transition: {
+    ...transition,
+    duration: 1,
+  },
 };
 
 const subheader: Variants | any = {

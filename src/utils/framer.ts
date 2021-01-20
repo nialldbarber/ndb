@@ -1,6 +1,10 @@
 export let height: number;
 export let width: number;
 
+// If window is not undefined
+// we want to set the size of
+// the hamburger menu background
+// to be the size of the screen
 if (typeof window !== 'undefined') {
   height = window.innerHeight;
   width = window.innerWidth;

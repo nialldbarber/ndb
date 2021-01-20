@@ -1,6 +1,6 @@
 import {useState, FormEvent} from 'react';
 import axios from 'axios';
-import {FORM_ENDPOINT} from 'utils/config';
+import {FORM_ENDPOINT} from 'constants/theme';
 
 interface Status {
   submitted?: boolean;

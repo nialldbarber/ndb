@@ -22,8 +22,12 @@ const SpanBurger = styled.div`
   width: 60px;
   height: 45px;
   transform: rotate(0deg) scale(0.5);
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(0.55);
+  }
 
   span {
     display: block;

@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {graphql, Link} from 'gatsby';
 import {motion} from 'framer-motion';
 import styled from 'styled-components';
@@ -110,13 +110,22 @@ const BadgeContainer = styled.div`
   align-self: center;
 `;
 
+const BadgeSelectContainer = styled.div`
+  margin: 0 auto 150px;
+  max-width: ${({theme}) => theme.dimensions.maxWidth};
+`;
+
 const AllPosts: FC<PostProps> = ({pageContext, data}) => {
+  const [selectedTag, setSelectedTag] = useState('all');
+
   const {currentPage, numPages} = pageContext;
   const isFirst: boolean = currentPage === 1;
   const isLast: boolean = currentPage === numPages;
   const prevPage: string = currentPage - 1 === 1 ? '/' : `/${currentPage - 1}`;
   const nextPage: string = `/${currentPage + 1}`;
   const posts = data.allMdx.edges;
+
+  // filter posts by post tag selected
 
   return (
     <Wrapper>
@@ -126,17 +135,33 @@ const AllPosts: FC<PostProps> = ({pageContext, data}) => {
           animate="visible"
           exit="exit"
           variants={list}
+          style={{marginBottom: -200}}
         >
           <PageLayout title="blog">
-            <>
-              <p>Get your thinking hat on and search a topic!</p>
-            </>
+            <p>Get your thinking hat on and search a topic!</p>
+            <p>The selected tag is {selectedTag || ''}</p>
           </PageLayout>
         </motion.div>
-        <div>hello</div>
+
+        <BadgeSelectContainer>
+          {posts.map((post) => {
+            const {tags} = post.node.frontmatter;
+
+            return tags.map((tag, i) => (
+              <>
+                <Badge
+                  key={i * 10}
+                  text={tag}
+                  action={() => setSelectedTag(tag)}
+                />
+              </>
+            ));
+          })}
+        </BadgeSelectContainer>
+
         <Grid>
-          {posts.map((post: any) => {
-            const {slug, date, title, excerpt, tags} = post.node.frontmatter;
+          {posts.map((post) => {
+            const {slug, title, excerpt, tags} = post.node.frontmatter;
 
             return (
               <Link key={slug} to={`/${slug}`}>

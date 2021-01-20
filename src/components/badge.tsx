@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 interface BadgeProps {
   text: string;
+  action?: () => void;
 }
 
 const BadgeContainer = styled.span`
@@ -10,6 +11,7 @@ const BadgeContainer = styled.span`
   padding: 0.3rem 0.5rem;
   border: 1px solid ${({theme}) => theme.colors.pink};
   border-radius: 5px;
+  cursor: pointer;
 
   span {
     color: ${({theme}) => theme.colors.pink};
@@ -17,9 +19,9 @@ const BadgeContainer = styled.span`
   }
 `;
 
-const Badge: FC<BadgeProps> = ({text}) => {
+const Badge: FC<BadgeProps> = ({text, action}) => {
   return (
-    <BadgeContainer>
+    <BadgeContainer onClick={action}>
       <span>{text}</span>
     </BadgeContainer>
   );

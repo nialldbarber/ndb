@@ -8,6 +8,10 @@ export const theme = {
     green: 'rgb(102, 204, 204)',
     pink: 'rgba(249, 85, 132)',
     orange: 'rgba(248, 155, 14)',
+    react: 'rgba(97, 218, 251, 0.7)',
+    vue: 'rgba(65, 184, 131, 0.8)',
+    js: 'rgba(252, 220, 0, 0.8)',
+    ts: 'rgba(48, 116, 192, 0.8)',
   },
   font: {
     main: "'Cabin', sans-serif",

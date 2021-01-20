@@ -1,10 +1,10 @@
 import React, {FC, useRef, MutableRefObject} from 'react';
 import {motion} from 'framer-motion';
-import styled, {keyframes} from 'styled-components';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
 import Skills from 'components/skills';
+import {PointDown, SkillName} from 'styles/pages/about';
 import {height, list} from 'utils/framer';
 
 // Dots
@@ -64,37 +64,6 @@ const end = {
   },
 };
 
-const shakeUp = keyframes`
-  0% { transform: translateY(0) }
-  1.78571% { transform: translateY(5px) }
-  3.57143% { transform: translateY(0) }
-  5.35714% { transform: translateY(5px) }
-  7.14286% { transform: translateY(0) }
-  8.92857% { transform: translateY(5px) }
-  10.71429% { transform: translateY(0) }
-  100% { transform: translateY(0) }
-`;
-
-const PointDown = styled.div`
-  position: absolute;
-  top: calc(100vh - 150px);
-  left: 50%;
-  transform: translateX(-50%);
-  animation-name: ${shakeUp};
-  animation-duration: 4.72s;
-  animation-iteration-count: infinite;
-  transform-origin: 50% 50%;
-  z-index: 1;
-  cursor: pointer;
-
-  p {
-    font-size: 3rem;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-`;
-
 const AboutPage: FC = () => {
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -115,8 +84,12 @@ const AboutPage: FC = () => {
             <PageLayout title="about">
               <>
                 <p>
-                  Hey there! I’m a front end developer, specialising in React
-                  and Vue...well, actually really anything JavaScript/Typescript
+                  Hey there! I’m a front end developer, specialising in{' '}
+                  <SkillName className="react"> React </SkillName>
+                  and <SkillName className="vue"> Vue</SkillName>...well,
+                  actually really anything{' '}
+                  <SkillName className="js">JavaScript</SkillName>/
+                  <SkillName className="ts">Typescript </SkillName>
                   related <span>🤙</span>
                 </p>
 

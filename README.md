@@ -14,6 +14,11 @@
 
 - Page refresh, go to top of page
 
+---
+
+- Add next js, gatsby to front end skills
+- Add postgresql to backend skills
+
 ## Bugs
 
 - 3 dots appear on all pages on first load

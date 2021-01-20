@@ -11,6 +11,10 @@ declare module 'styled-components' {
       green: string;
       pink: string;
       orange: string;
+      react: string;
+      vue: string;
+      js: string;
+      ts: string;
     };
     dimensions: {
       maxWidth: string;

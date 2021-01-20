@@ -15,7 +15,10 @@
 - Page refresh, go to top of page
 
 - Fix hamburger menu animation
+
   - its disappearing instantly but the nav items are animating correctly
+
+- Increase scale of hamburger when you hover over it
 
 ---
 

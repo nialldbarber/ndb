@@ -2,10 +2,10 @@ import React, {FC, useRef} from 'react';
 import {motion} from 'framer-motion';
 import styled from 'styled-components';
 import useStore from 'store';
+import useDimensions from 'hooks/useDimensions';
 import MenuItems from 'components/navigation/menu-items';
 import NavBg from 'components/navigation/nav-background';
 import {MENU} from 'constants/theme';
-import useDimensions from 'hooks/useDimensions';
 
 interface HamburgerProps {}
 
@@ -87,16 +87,6 @@ const Hamburger: FC<HamburgerProps> = () => {
   const {height} = useDimensions(containerRef);
   const menuOpen: string = isMenuOpen ? MENU.OPEN : MENU.CLOSED;
 
-  const tagVariants = {
-    hidden: {
-      opacity: 0,
-      transition: {
-        duration: 1.2,
-        ease: [0.83, 0, 0.17, 1],
-      },
-    },
-  };
-
   return (
     <motion.nav
       initial={false}
@@ -105,12 +95,7 @@ const Hamburger: FC<HamburgerProps> = () => {
       ref={containerRef}
       className={menuOpen}
     >
-      <Burger
-        initial={{x: 200}}
-        animate={{x: 0}}
-        transition={{delay: 0.2}}
-        exit={tagVariants.hidden}
-      >
+      <Burger initial={{x: 200}} animate={{x: 0}} transition={{delay: 0.2}}>
         <SpanBurger className={menuOpen} onClick={toggleMenu}>
           <span />
           <span />

@@ -10,7 +10,7 @@
 
 - Complete form styles
 
-- Complete contact page styles
+- [ ] Complete contact page styles
 
 - Complete about page styles
 

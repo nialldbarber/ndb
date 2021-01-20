@@ -133,6 +133,7 @@ const AllPosts: FC<PostProps> = ({pageContext, data}) => {
             </>
           </PageLayout>
         </motion.div>
+        <div>hello</div>
         <Grid>
           {posts.map((post: any) => {
             const {slug, date, title, excerpt, tags} = post.node.frontmatter;

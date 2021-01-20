@@ -7,10 +7,12 @@ import {navItems} from 'constants/theme';
 
 const variants = {
   open: {
+    opacity: 1,
     transition: {staggerChildren: 0.07, delayChildren: 0.3},
   },
   closed: {
-    transition: {staggerChildren: 0.02, staggerDirection: -1},
+    opacity: 0,
+    transition: {staggerChildren: 0, staggerDirection: 0},
   },
 };
 

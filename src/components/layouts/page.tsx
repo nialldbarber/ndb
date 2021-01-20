@@ -6,6 +6,7 @@ interface PageLayoutProps {
   title: string;
   post?: boolean;
   color?: string;
+  height?: number;
   children: ReactChild;
 }
 
@@ -15,7 +16,7 @@ const Layout = styled.section`
     'title title title-blank title-blank title-blank'
     'content-blank content-blank content content content';
   grid-template-rows: 3fr 4fr;
-  height: 100vh;
+  height: ${(props) => props.height}vh;
   padding: 0 2rem;
   max-width: ${({theme}) => theme.dimensions.maxWidth};
   margin: 0 auto;
@@ -53,9 +54,15 @@ const Content = styled.div`
   }
 `;
 
-const PageLayout: FC<PageLayoutProps> = ({title, post, color, children}) => {
+const PageLayout: FC<PageLayoutProps> = ({
+  title,
+  post,
+  color,
+  height = 100,
+  children,
+}) => {
   return (
-    <Layout>
+    <Layout height={height}>
       <Title className={`${post ? 'post' : ''} ${color || ''}`}>{title}</Title>
       <TitleBlank />
       <ContentBlank />

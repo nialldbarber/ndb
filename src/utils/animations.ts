@@ -2,9 +2,7 @@ export type Colors = string[];
 
 class CycledColors {
   count: number;
-
   colorChoice: string;
-
   siteColors: Colors;
 
   constructor() {

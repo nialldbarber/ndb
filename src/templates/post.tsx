@@ -12,14 +12,14 @@ type PostProps = {data: any};
 // Dots
 const start = {
   visible: {
-    x: -300,
+    x: -200,
     y: -350,
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.1,
       delay: 0.3,
     },
-    scale: 6,
+    scale: 11,
   },
   hidden: {
     y: -height,
@@ -49,20 +49,20 @@ const middle = {
       staggerChildren: 0.1,
       delay: 0.4,
     },
-    scale: 2,
+    scale: 7,
   },
 };
 const end = {
   ...start,
   visible: {
     x: 350,
-    y: 100,
+    y: 10,
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.1,
       delay: 0.5,
     },
-    scale: 4,
+    scale: 5,
   },
 };
 

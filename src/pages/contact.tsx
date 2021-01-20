@@ -9,7 +9,7 @@ import {list, height} from 'utils/framer';
 // Dots
 const start = {
   visible: {
-    x: -300,
+    x: 300,
     y: -350,
     transition: {
       when: 'beforeChildren',
@@ -39,27 +39,27 @@ const start = {
 const middle = {
   ...start,
   visible: {
-    x: -338,
-    y: 100,
+    x: -38,
+    y: 140,
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.1,
       delay: 0.4,
     },
-    scale: 2,
+    scale: 5,
   },
 };
 const end = {
   ...start,
   visible: {
-    x: 350,
-    y: 100,
+    x: -450,
+    y: -300,
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.1,
       delay: 0.5,
     },
-    scale: 4,
+    scale: 10,
   },
 };
 

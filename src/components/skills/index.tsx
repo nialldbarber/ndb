@@ -78,24 +78,24 @@ const Skills: FC<SkillsProps> = () => {
       <Wrapper>
         <h2 className="front">front end</h2>
         <Grid>
-          {frontEnd.map(({id, icon, name, link}) => (
-            <Skill key={id} icon={icon} name={name} link={link} />
+          {frontEnd.map(({id, icon, name, link, width}) => (
+            <Skill key={id} icon={icon} name={name} link={link} width={width} />
           ))}
         </Grid>
       </Wrapper>
       <Wrapper>
         <h2 className="back">back end</h2>
         <Grid>
-          {backEnd.map(({id, icon, name, link}) => (
-            <Skill key={id} icon={icon} name={name} link={link} />
+          {backEnd.map(({id, icon, name, link, width}) => (
+            <Skill key={id} icon={icon} name={name} link={link} width={width} />
           ))}
         </Grid>
       </Wrapper>
       <Wrapper>
         <h2 className="design">design</h2>
         <Grid>
-          {design.map(({id, icon, name, link}) => (
-            <Skill key={id} icon={icon} name={name} link={link} />
+          {design.map(({id, icon, name, link, width}) => (
+            <Skill key={id} icon={icon} name={name} link={link} width={width} />
           ))}
         </Grid>
       </Wrapper>

@@ -6,6 +6,7 @@ interface SkillProps {
   icon: string;
   name: string;
   link: string;
+  width?: number;
 }
 
 const ImgWrap = styled.div`
@@ -19,7 +20,10 @@ const ImgWrap = styled.div`
   cursor: pointer;
 
   img {
+    display: flex;
+    width: ${(props) => props.width || 100}%;
     max-height: 200px;
+    margin: 0 auto;
     padding: 2rem;
   }
 `;
@@ -38,13 +42,14 @@ const TooltipWrapper = styled.div`
   }
 `;
 
-const Skill: FC<SkillProps> = ({icon, name, link}) => {
+const Skill: FC<SkillProps> = ({icon, name, link, width}) => {
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
   return (
     <ImgWrap
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
+      width={width}
     >
       <a href={link} target="_blank" rel="noreferrer">
         <img src={icon} alt={name} />

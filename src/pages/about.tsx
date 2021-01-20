@@ -17,7 +17,7 @@ const start = {
       staggerChildren: 0.1,
       delay: 0.3,
     },
-    scale: 5,
+    scale: 6,
   },
   hidden: {
     y: -height,
@@ -60,7 +60,7 @@ const end = {
       staggerChildren: 0.1,
       delay: 0.5,
     },
-    scale: 5,
+    scale: 3,
   },
 };
 

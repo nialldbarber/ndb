@@ -49,6 +49,7 @@ export interface Skills {
   icon: string;
   name: string;
   link: string;
+  width?: number;
 }
 
 export const frontEnd: Skills[] = [
@@ -81,6 +82,7 @@ export const frontEnd: Skills[] = [
     icon: '/images/ts.svg',
     name: 'TypeScript',
     link: 'https://www.typescriptlang.org/',
+    width: 85,
   },
   {
     id: 6,
@@ -106,6 +108,7 @@ export const frontEnd: Skills[] = [
     icon: '/images/framer-motion.svg',
     name: 'Framer Motion',
     link: 'https://www.framer.com/motion/',
+    width: 75,
   },
   {id: 11, icon: '/images/git.svg', name: 'Git', link: 'https://git-scm.com/'},
   {
@@ -113,6 +116,33 @@ export const frontEnd: Skills[] = [
     icon: '/images/webpack.svg',
     name: 'Webpack',
     link: 'https://webpack.js.org/',
+  },
+  {
+    id: 13,
+    icon: '/images/gatsbyjs.svg',
+    name: 'Gatsby',
+    link: 'https://www.gatsbyjs.com/',
+    width: 75,
+  },
+  {
+    id: 14,
+    icon: '/images/nextjs.svg',
+    name: 'Next',
+    link: 'https://nextjs.org/',
+    width: 70,
+  },
+  {
+    id: 15,
+    icon: '/images/apollo-client.svg',
+    name: 'Apollo Client',
+    link: 'https://www.apollographql.com/',
+    width: 75,
+  },
+  {
+    id: 6,
+    icon: '/images/react.svg',
+    name: 'React Native',
+    link: 'https://reactnative.dev/',
   },
 ];
 
@@ -128,12 +158,14 @@ export const backEnd: Skills[] = [
     icon: '/images/graphql.svg',
     name: 'GraphQL',
     link: 'https://graphql.org/',
+    width: 85,
   },
   {
     id: 3,
     icon: '/images/apollo.svg',
-    name: 'Apollo',
+    name: 'Apollo Server',
     link: 'https://www.apollographql.com/',
+    width: 75,
   },
   {
     id: 4,
@@ -152,6 +184,20 @@ export const backEnd: Skills[] = [
     icon: '/images/firebase.svg',
     name: 'Firebase',
     link: 'https://firebase.google.com/',
+  },
+  {
+    id: 7,
+    icon: '/images/postgres.svg',
+    name: 'PostgreSQL',
+    link: 'https://www.postgresql.org/',
+    width: 70,
+  },
+  {
+    id: 8,
+    icon: '/images/deno.svg',
+    name: 'Deno',
+    link: 'https://deno.land/',
+    width: 85,
   },
 ];
 

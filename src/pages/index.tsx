@@ -1,13 +1,17 @@
 import React, {FC} from 'react';
 import {motion, Variants} from 'framer-motion';
-import styled from 'styled-components';
 import HomeNavItems from 'components/navigation/home-nav-items';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
 import Socials from 'components/socials';
-import {HomeBg, TitleWrapper, MainTitlesWrap} from 'styles/pages/home';
-import {PageTitle, FirstName, LastName, SubHeader} from 'styles/typography';
 import {width, transition, list} from 'utils/framer';
+import {
+  HomeBg,
+  TitleWrapper,
+  MainTitlesWrap,
+  SocialContainer,
+} from 'styles/pages/home';
+import {PageTitle, FirstName, LastName, SubHeader} from 'styles/typography';
 import {SITE} from 'constants/theme';
 
 const item: Variants | any = {
@@ -94,14 +98,6 @@ const end: Variants | any = {
     },
   },
 };
-
-const SocialContainer = styled(motion.div)`
-  position: fixed;
-  display: flex;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-`;
 
 const Home: FC = () => {
   return (

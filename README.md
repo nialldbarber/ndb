@@ -2,6 +2,8 @@
 
 - [x] Increase scale of hamburger when you hover over it
 
+- [ ] Move styled components out of component files
+
 - [ ] Fix hamburger menu animation
 
   - its disappearing instantly but the nav items are animating correctly

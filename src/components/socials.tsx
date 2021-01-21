@@ -1,44 +1,14 @@
 import React, {FC} from 'react';
-import {motion} from 'framer-motion';
-import styled from 'styled-components';
 import {SITE, socialLinks} from 'constants/theme';
 import {getCurrentYear} from 'utils/config';
+import {
+  SocialContainer,
+  SocialIconContainer,
+  SocialIcon,
+  Copyright,
+} from 'styles/components/socials';
 
-interface SocialsProps {}
-
-const SocialContainer = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-`;
-
-const SocialIconContainer = styled(motion.div)`
-  display: flex;
-`;
-
-const SocialIcon = styled(motion.div)`
-  display: flex;
-  margin: 0 0.5rem;
-  transform: scale(1);
-  transition: all 0.2s ease 0s;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  img {
-    width: 30px;
-  }
-`;
-
-const Copyright = styled.span`
-  font-weight: 400;
-`;
-
-const Socials: FC<SocialsProps> = () => {
+const Socials: FC = () => {
   return (
     <SocialContainer>
       <SocialIconContainer>

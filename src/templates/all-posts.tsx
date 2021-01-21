@@ -1,13 +1,17 @@
 import React, {FC, useState} from 'react';
 import {graphql, Link} from 'gatsby';
 import {motion} from 'framer-motion';
-import styled from 'styled-components';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
 import Badge from 'components/badge';
 import {list, height} from 'utils/framer';
-import {contentMargin} from 'styles/config/mixins';
+import {
+  Grid,
+  Card,
+  BadgeContainer,
+  BadgeSelectContainer,
+} from 'styles/templates/all-posts';
 
 interface PostProps {
   pageContext: any;
@@ -70,50 +74,6 @@ const end = {
     scale: 4,
   },
 };
-
-const Grid = styled.div`
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
-  ${contentMargin};
-  max-width: ${({theme}) => theme.dimensions.maxWidth};
-`;
-
-const Card = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 110px 1fr;
-  height: 250px;
-  padding: 1rem 1.5rem;
-  background: ${({theme}) => theme.colors.darkerBlack};
-  border-bottom-right-radius: 15px;
-  color: ${({theme}) => theme.colors.white};
-  transform: scale(1);
-  transition: transform 0.2s ease;
-
-  &:hover {
-    transform: scale(1.03);
-  }
-
-  h3 {
-    margin: 0;
-    color: ${({theme}) => theme.colors.pink};
-    font-size: 1rem;
-  }
-
-  p {
-    margin: 0;
-    font-size: 1.3rem;
-  }
-`;
-
-const BadgeContainer = styled.div`
-  align-self: center;
-`;
-
-const BadgeSelectContainer = styled.div`
-  margin: 0 auto 150px;
-  max-width: ${({theme}) => theme.dimensions.maxWidth};
-`;
 
 const AllPosts: FC<PostProps> = ({pageContext, data}) => {
   const [selectedTag, setSelectedTag] = useState('all');

@@ -1,16 +1,7 @@
 import React, {FC} from 'react';
-import {motion} from 'framer-motion';
-import styled from 'styled-components';
 import useStore from 'store';
 import Socials from 'components/socials';
-
-const FooterWrapper = styled(motion.footer)`
-  position: fixed;
-  display: flex;
-  bottom: 1rem;
-  right: 1.5rem;
-  z-index: 1;
-`;
+import {FooterWrapper} from 'styles/components/footer';
 
 const Footer: FC = () => {
   const {isMenuOpen} = useStore();

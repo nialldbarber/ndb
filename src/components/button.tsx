@@ -1,5 +1,4 @@
 import React, {FC, ReactChild, useState} from 'react';
-import useStore from 'store';
 import {Btn} from 'styles/components/button';
 import {LoaderSpinner} from 'styles/components/loader';
 
@@ -23,7 +22,6 @@ const Button: FC<ButtonProps> = ({
   children,
 }) => {
   const [active, setActive] = useState<boolean>(false);
-  const {isMenuOpen} = useStore();
 
   return (
     <Btn

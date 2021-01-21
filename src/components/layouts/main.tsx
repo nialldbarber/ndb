@@ -3,7 +3,6 @@ import {PageProps} from 'gatsby';
 import {useLocation} from '@reach/router';
 import {AnimatePresence} from 'framer-motion';
 import {ThemeProvider} from 'styled-components';
-import {ToastProvider} from 'react-toast-notifications';
 import {theme} from 'styles/config/state';
 import Header from 'components/navigation/header';
 import Footer from 'components/footer';
@@ -15,13 +14,11 @@ const MainLayout: FC<PageProps> = ({children}) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <ToastProvider>
-        <GlobalStyle />
-        <Normalise />
-        <Header />
-        <AnimatePresence exitBeforeEnter>{children}</AnimatePresence>
-        {pathname === '/' ? null : <Footer />}
-      </ToastProvider>
+      <GlobalStyle />
+      <Normalise />
+      <Header />
+      <AnimatePresence exitBeforeEnter>{children}</AnimatePresence>
+      {pathname === '/' ? null : <Footer />}
     </ThemeProvider>
   );
 };

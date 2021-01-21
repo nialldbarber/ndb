@@ -3,6 +3,7 @@ import {motion} from 'framer-motion';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
+import Toast from 'components/toast';
 import Form from 'components/form';
 import {list, height} from 'utils/framer';
 
@@ -65,21 +66,24 @@ const end = {
 
 const ContactPage: FC = () => {
   return (
-    <Wrapper>
-      <>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          variants={list}
-        >
-          <PageLayout title="contact">
-            <Form />
-          </PageLayout>
-        </motion.div>
-        <Dots start={start} middle={middle} end={end} />
-      </>
-    </Wrapper>
+    <>
+      <Toast />
+      <Wrapper>
+        <>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={list}
+          >
+            <PageLayout title="contact">
+              <Form />
+            </PageLayout>
+          </motion.div>
+          <Dots start={start} middle={middle} end={end} />
+        </>
+      </Wrapper>
+    </>
   );
 };
 

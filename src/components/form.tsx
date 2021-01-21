@@ -1,6 +1,5 @@
 import React, {FC} from 'react';
 import {TextField, Button} from '@material-ui/core';
-import useStore from 'store';
 import useForm from 'hooks/useForm';
 import {FormContainer} from 'styles/components/form';
 import {theme} from 'styles/config/state';
@@ -9,7 +8,6 @@ import {theme} from 'styles/config/state';
 // toast message for success
 
 const Form: FC = () => {
-  const {error, success} = useStore();
   const {status, inputs, handleOnChange, handleOnSubmit} = useForm();
 
   return (
@@ -49,8 +47,6 @@ const Form: FC = () => {
             : 'Submitting...'}
         </Button>
       </FormContainer>
-      {error ? <p>ERROR!</p> : null}
-      {success ? <p>SUCCESS!</p> : null}
     </div>
   );
 };

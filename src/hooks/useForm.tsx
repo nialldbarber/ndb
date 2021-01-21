@@ -1,5 +1,6 @@
 import {useState, FormEvent} from 'react';
 import axios from 'axios';
+import useStore from 'store';
 import {FORM_ENDPOINT} from 'constants/theme';
 
 interface Status {
@@ -17,6 +18,7 @@ interface Inputs {
 }
 
 const useForm = (): any => {
+  const {showError, showSuccess} = useStore();
   const [honeypot, setHoneypot] = useState<boolean>(true);
   const [status, setStatus] = useState<Status>({
     submitted: false,
@@ -43,10 +45,14 @@ const useForm = (): any => {
         email: '',
         message: '',
       });
+      showSuccess(true);
+      showError(false);
     } else {
       setStatus({
         info: {error: true, msg},
       });
+      showSuccess(false);
+      showError(true);
     }
   };
 

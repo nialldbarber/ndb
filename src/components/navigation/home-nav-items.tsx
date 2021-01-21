@@ -5,6 +5,10 @@ import styled from 'styled-components';
 
 interface HomeNavItemsProps {}
 
+const Items = styled(motion.ul)`
+  z-index: 5;
+`;
+
 const ListItem = styled(motion.li)`
   position: absolute;
 
@@ -59,7 +63,7 @@ const ListItem = styled(motion.li)`
 
 const HomeNavItems: FC<HomeNavItemsProps> = () => {
   return (
-    <motion.ul>
+    <Items>
       {/* bottom left */}
       <ListItem
         initial={{x: -200}}
@@ -96,7 +100,7 @@ const HomeNavItems: FC<HomeNavItemsProps> = () => {
           blog
         </Link>
       </ListItem>
-    </motion.ul>
+    </Items>
   );
 };
 

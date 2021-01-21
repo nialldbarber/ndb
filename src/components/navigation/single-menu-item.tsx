@@ -1,8 +1,12 @@
 import React, {FC} from 'react';
 import {Link} from 'gatsby';
 import {motion} from 'framer-motion';
-import {Items} from 'constants/theme';
 import useStore from 'store';
+import {Items} from 'constants/theme';
+
+interface SingleMenuItemProps extends Items {
+  styleType?: string;
+}
 
 const variants = {
   open: {
@@ -21,11 +25,11 @@ const variants = {
   },
 };
 
-const SingleMenuItem: FC<Items> = ({url, name}) => {
+const SingleMenuItem: FC<SingleMenuItemProps> = ({url, name, styleType}) => {
   const {closeMenu} = useStore();
 
   return (
-    <motion.li variants={variants}>
+    <motion.li variants={variants} className={styleType}>
       <Link to={url || ''} activeClassName="active" onClick={closeMenu}>
         {name}
       </Link>

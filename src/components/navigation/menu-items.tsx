@@ -30,27 +30,36 @@ const List = styled(motion.ul)`
       padding: 0.5rem;
       display: inline-block;
       text-align: center;
-      color: #fff;
+      color: ${({theme}) => theme.colors.white};
       font-size: 4rem;
+      transition: 0.4s ease;
+    }
 
-      &:before {
-        content: '';
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        width: 0px;
-        height: 3px;
-        z-index: -1;
-        border-radius: 2px;
-        transform: translateX(-101%);
-        background: rgb(102, 204, 204);
-        transition: all 0.25s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0s;
+    &.home {
+      a {
+        &:hover {
+          color: ${({theme}) => theme.colors.orange};
+        }
       }
-
-      &:hover {
-        &:before {
-          left: 100%;
-          width: 100%;
+    }
+    &.about {
+      a {
+        &:hover {
+          color: ${({theme}) => theme.colors.green};
+        }
+      }
+    }
+    &.blog {
+      a {
+        &:hover {
+          color: ${({theme}) => theme.colors.pink};
+        }
+      }
+    }
+    &.contact {
+      a {
+        &:hover {
+          color: ${({theme}) => theme.colors.orange};
         }
       }
     }
@@ -67,7 +76,7 @@ const MenuItems: FC = () => {
   return (
     <List variants={variants} className={isMenuOpen ? 'open' : ''}>
       {navItems.map(({id, url, name}) => (
-        <SingleMenuItem key={id} url={url} name={name} />
+        <SingleMenuItem key={id} url={url} name={name} styleType={name} />
       ))}
     </List>
   );

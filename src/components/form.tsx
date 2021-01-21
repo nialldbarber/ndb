@@ -1,41 +1,52 @@
 import React, {FC} from 'react';
+import {TextField, Button} from '@material-ui/core';
 import useForm from 'hooks/useForm';
+import {FormContainer} from 'styles/components/form';
+import {theme} from 'styles/config/state';
+
+// loading spinner for button
+// toast message for success
 
 const Form: FC = () => {
   const {status, inputs, handleOnChange, handleOnSubmit} = useForm();
 
   return (
     <div>
-      <form onSubmit={handleOnSubmit}>
-        <label htmlFor="email">
-          Email
-          <input
-            id="email"
-            type="email"
-            name="_replyto"
-            onChange={handleOnChange}
-            required
-            value={inputs.email}
-          />
-        </label>
-        <label htmlFor="message">
-          Message
-          <textarea
-            id="message"
-            name="message"
-            onChange={handleOnChange}
-            required
-            value={inputs.message}
-          />
-        </label>
-        <button type="submit" disabled={status.submitting}>
+      <FormContainer onSubmit={handleOnSubmit}>
+        <TextField
+          id="email"
+          type="email"
+          name="_replyto"
+          onChange={handleOnChange}
+          label="Email"
+          required
+          value={inputs.email}
+          variant="outlined"
+        />
+        <TextField
+          id="message"
+          name="message"
+          onChange={handleOnChange}
+          label="Enter a message"
+          required
+          multiline
+          rows={7}
+          value={inputs.message}
+          variant="outlined"
+        />
+        <Button
+          type="submit"
+          disabled={status.submitting}
+          variant="outlined"
+          style={{background: theme.colors.green}}
+        >
           {!status.submitting
             ? !status.submitted
               ? 'Submit'
               : 'Submitted'
             : 'Submitting...'}
-        </button>
-      </form>
+        </Button>
+      </FormContainer>
       {status.info.error && (
         <div className="error">Error: {status.info.msg}</div>
       )}

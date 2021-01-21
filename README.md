@@ -2,23 +2,23 @@
 
 - [x] Increase scale of hamburger when you hover over it
 
-- [ ] Move styled components out of component files
+- [x] Move styled components out of component files
+
+- [x] Animate logo
 
 - [ ] Fix hamburger menu animation
 
   - its disappearing instantly but the nav items are animating correctly
 
-- [x] Animate logo
+- [ ] Form styles
 
-- [ ] Complete form styles
+- [ ] Contact page styles
 
-- [ ] Complete contact page styles
+- [ ] About page styles
 
-- [ ] Complete about page styles
+- [ ] Blog page styles
 
-- [ ] Complete blog page styles
-
-- [ ] Complete blog post page styles
+- [ ] Blog post page styles
 
 - [ ] When you click a page and you're on that page - you'll get a toast message
 

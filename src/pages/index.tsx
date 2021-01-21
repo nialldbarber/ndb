@@ -8,6 +8,7 @@ import Socials from 'components/socials';
 import {HomeBg, TitleWrapper, MainTitlesWrap} from 'styles/pages/home';
 import {PageTitle, FirstName, LastName, SubHeader} from 'styles/typography';
 import {width, transition, list} from 'utils/framer';
+import {SITE} from 'constants/theme';
 
 const item: Variants | any = {
   visible: {
@@ -135,7 +136,9 @@ const Home: FC = () => {
               variants={subheader}
             >
               <SubHeader>
-                {'<'}front end developer{' />'}
+                {'<'}
+                {SITE.SUB_TITLE}
+                {' />'}
               </SubHeader>
             </motion.div>
           </MainTitlesWrap>

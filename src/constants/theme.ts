@@ -16,6 +16,11 @@ export enum MENU {
   CLOSED = 'closed',
 }
 
+export enum SITE {
+  TITLE = 'Niall Barber',
+  SUB_TITLE = 'front end developer',
+}
+
 export const navItems: Items[] = [
   {id: 1, url: '/', name: 'home'},
   {id: 2, url: '/about', name: 'about'},

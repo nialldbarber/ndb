@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import {useLocation} from '@reach/router';
 import {SITE, socialLinks} from 'constants/theme';
 import {getCurrentYear} from 'utils/config';
 import {
@@ -9,11 +10,14 @@ import {
 } from 'styles/components/socials';
 
 const Socials: FC = () => {
+  const {pathname} = useLocation();
+  const home = pathname === '/' ? 'home' : '';
+
   return (
-    <SocialContainer>
+    <SocialContainer className={home}>
       <SocialIconContainer>
         {socialLinks.map(({id, link, src, alt}) => (
-          <SocialIcon key={id}>
+          <SocialIcon key={id} className={`${home}-social`}>
             <a href={link} target="_blank" rel="noreferrer">
               <img src={src} alt={alt} />
             </a>

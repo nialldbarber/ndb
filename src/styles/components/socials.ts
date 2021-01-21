@@ -4,6 +4,16 @@ import styled from 'styled-components';
 export const SocialContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
+
+  &.home {
+    text-align: center;
+
+    .home-social {
+      &:last-child {
+        margin-right: 0.5rem;
+      }
+    }
+  }
 `;
 
 export const SocialIconContainer = styled(motion.div)`

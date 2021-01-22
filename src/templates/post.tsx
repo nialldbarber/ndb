@@ -74,10 +74,10 @@ const Post: FC<PostProps> = ({data}) => {
     <Wrapper>
       <>
         <motion.div
+          variants={list}
           initial="hidden"
           animate="visible"
           exit="exit"
-          variants={list}
         >
           <PageLayout title={title} post>
             <h3>{excerpt}</h3>

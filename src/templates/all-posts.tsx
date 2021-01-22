@@ -91,10 +91,10 @@ const AllPosts: FC<PostProps> = ({pageContext, data}) => {
     <Wrapper>
       <>
         <motion.div
+          variants={list}
           initial="hidden"
           animate="visible"
           exit="exit"
-          variants={list}
           style={{marginBottom: -200}}
         >
           <PageLayout title="blog">

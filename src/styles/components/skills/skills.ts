@@ -15,7 +15,7 @@ export const ImgWrap = styled.div`
   img {
     display: flex;
     width: ${(props: Width) => props.width}%;
-    max-height: 200px;
+    height: 200px;
     margin: 0 auto;
     padding: 2rem;
   }

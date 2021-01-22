@@ -21,10 +21,12 @@ export const Btn = styled(motion.button)`
     white-space: nowrap;
     border-radius: 4px;
     transition: 0.2s ${({theme}) => theme.animation.btn};
+
     &:hover {
       background-color: ${lighten(0.1, '#111')};
       border-color: ${lighten(0.1, '#111')};
     }
+
     span {
       padding-right: 0;
       transition: 0.2s ${({theme}) => theme.animation.btn};

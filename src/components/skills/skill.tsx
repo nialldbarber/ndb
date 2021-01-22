@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 import Tooltip from 'components/skills/tooltip';
-import {ImgWrap, TooltipWrapper} from 'styles/components/skills/skill';
+import {ImgWrap, TooltipWrapper} from 'styles/components/skills/skills';
 
 interface SkillProps {
   icon: string;
@@ -9,7 +9,7 @@ interface SkillProps {
   width?: number;
 }
 
-const Skill: FC<SkillProps> = ({icon, name, link, width}) => {
+const Skill: FC<SkillProps> = ({icon, name, link, width = 100}) => {
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
   return (

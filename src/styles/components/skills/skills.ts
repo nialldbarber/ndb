@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+type Width = {width: number};
+
 export const ImgWrap = styled.div`
   position: relative;
   display: flex;
@@ -12,7 +14,7 @@ export const ImgWrap = styled.div`
 
   img {
     display: flex;
-    width: ${(props) => props.width || 100}%;
+    width: ${(props: Width) => props.width}%;
     max-height: 200px;
     margin: 0 auto;
     padding: 2rem;

@@ -19,7 +19,7 @@ interface Inputs {
 
 const useForm = (): any => {
   const {showError, showSuccess} = useStore();
-  const [honeypot, setHoneypot] = useState<boolean>(true);
+  const [honeypot, setHoneypot] = useState<boolean>(false);
   const [status, setStatus] = useState<Status>({
     submitted: false,
     submitting: false,
@@ -71,28 +71,34 @@ const useForm = (): any => {
 
   const handleOnSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    setStatus((prevStatus) => ({...prevStatus, submitting: true}));
-    axios({
-      method: 'POST',
-      url: FORM_ENDPOINT,
-      data: inputs,
-    })
-      .then(() => {
-        handleServerResponse(
-          true,
-          'Thank you, your message has been submitted.'
-        );
+    if (!honeypot) {
+      setStatus((prevStatus) => ({...prevStatus, submitting: true}));
+      axios({
+        method: 'POST',
+        url: FORM_ENDPOINT,
+        data: inputs,
       })
-      .catch((error) => {
-        handleServerResponse(false, error.response.data.error);
-      });
+        .then(() => {
+          handleServerResponse(
+            true,
+            'Thank you, your message has been submitted.'
+          );
+        })
+        .catch((error) => {
+          handleServerResponse(false, error.response.data.error);
+        });
+    }
   };
+
+  const handleHoneyPost = (): void => setHoneypot(!honeypot);
 
   return {
     status,
     inputs,
+    honeypot,
     handleOnChange,
     handleOnSubmit,
+    handleHoneyPost,
   };
 };
 

@@ -1,14 +1,19 @@
 import React, {FC} from 'react';
 import {TextField, Button} from '@material-ui/core';
 import useForm from 'hooks/useForm';
+import LoadingSpinner from 'components/loading-spinner';
 import {FormContainer} from 'styles/components/form';
 import {theme} from 'styles/config/state';
 
-// loading spinner for button
-// toast message for success
-
 const Form: FC = () => {
-  const {status, inputs, handleOnChange, handleOnSubmit} = useForm();
+  const {
+    status,
+    inputs,
+    honeypot,
+    handleOnChange,
+    handleOnSubmit,
+    handleHoneyPost,
+  } = useForm();
 
   return (
     <div>
@@ -34,17 +39,27 @@ const Form: FC = () => {
           value={inputs.message}
           variant="outlined"
         />
+        <input
+          style={{display: 'none'}}
+          type="checkbox"
+          checked={honeypot}
+          onChange={handleHoneyPost}
+        />
         <Button
           type="submit"
           disabled={status.submitting}
           variant="outlined"
-          style={{background: theme.colors.green}}
+          style={{background: theme.colors.green, height: 36}}
         >
-          {!status.submitting
-            ? !status.submitted
-              ? 'Submit'
-              : 'Submitted'
-            : 'Submitting...'}
+          {!status.submitting ? (
+            !status.submitted ? (
+              'Submit'
+            ) : (
+              'Submitted'
+            )
+          ) : (
+            <LoadingSpinner />
+          )}
         </Button>
       </FormContainer>
     </div>

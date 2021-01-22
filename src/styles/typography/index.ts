@@ -1,11 +1,24 @@
 import {motion} from 'framer-motion';
 import styled from 'styled-components';
+import {media} from 'styles/config/media-queries';
 
 export const PageTitle = styled(motion.h1)`
   display: flex;
   margin: 0;
-  font-size: 8.4rem;
+  font-size: 6.5rem;
   text-align: center;
+
+  ${media.lessThan('phablet')`
+    font-size: 3.5rem;
+  `};
+
+  ${media.greaterThan('extraLarge')`
+    font-size: 10rem;
+  `};
+
+  ${media.greaterThan('desktop')`
+    font-size: 8.4rem;
+  `};
 
   p {
     display: flex;
@@ -24,6 +37,19 @@ export const LastName = styled(motion.p)`
 
 export const SubHeader = styled(motion.h3)`
   margin: 0;
-  font-size: 4.1rem;
+  font-size: 3.2rem;
   margin-top: -2.5rem;
+
+  ${media.lessThan('phablet')`
+    font-size: 1.8rem;
+    margin-top: -0.8rem;
+  `};
+
+  ${media.greaterThan('extraLarge')`
+    font-size: 8.4rem;
+  `};
+
+  ${media.greaterThan('desktop')`
+    font-size: 4.1rem;
+  `};
 `;

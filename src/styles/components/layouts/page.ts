@@ -22,6 +22,7 @@ export const Title = styled.h1`
   align-self: end;
   margin: 0;
   max-width: 330px;
+  min-height: 0vw;
   ${titleClamp};
   white-space: nowrap;
 

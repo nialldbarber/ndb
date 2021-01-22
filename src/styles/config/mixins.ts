@@ -35,6 +35,7 @@ export const positionCenter = css`
 `;
 
 export const titleClamp = css`
+  min-height: 0vw;
   font-size: clamp(4rem, 11vw, 10rem);
 `;
 

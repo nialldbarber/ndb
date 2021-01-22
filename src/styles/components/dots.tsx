@@ -1,6 +1,7 @@
 import {motion} from 'framer-motion';
 import styled, {keyframes} from 'styled-components';
 import {dotColors} from 'styles/config/mixins';
+import {media} from 'styles/config/media-queries';
 
 const circleSpinOne = keyframes`
   from {
@@ -35,13 +36,25 @@ const circleSpinThree = keyframes`
 export const DotWrapper = styled(motion.div)`
   position: fixed;
   left: 50%;
-  top: 50%;
+  top: 45%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.5rem;
   margin-top: 0.5rem;
   transform: translateX(-50%) translateY(calc(-50% + 140px));
   z-index: -1;
+
+  ${media.lessThan('phablet')`
+    top: 41%;
+  `};
+
+  ${media.greaterThan('extraLarge')`
+    top: 50%;
+  `};
+
+  ${media.greaterThan('desktop')`
+    top: 50%;
+  `};
 `;
 
 export const PhysicalDot = styled(motion.div)`
@@ -49,6 +62,11 @@ export const PhysicalDot = styled(motion.div)`
   width: 30px;
   border-radius: 50%;
   opacity: 0.3;
+
+  ${media.lessThan('phablet')`
+    height: 20px;
+    width: 20px;
+  `};
 
   ${dotColors};
   &.home {

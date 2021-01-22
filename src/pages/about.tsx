@@ -93,7 +93,7 @@ const AboutPage: FC = () => {
                   related <span>🤙</span>
                 </p>
 
-                <p>Check out some of my skills below!</p>
+                <p>Check out some of the tech I use below!</p>
 
                 <PointDown onClick={handleScroll}>
                   <p>👇</p>

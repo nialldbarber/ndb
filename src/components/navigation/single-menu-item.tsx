@@ -30,7 +30,11 @@ const SingleMenuItem: FC<SingleMenuItemProps> = ({url, name, styleType}) => {
 
   return (
     <SingleItem variants={variants} className={styleType}>
-      <Link to={`${url || ''}/`} activeClassName="active" onClick={closeMenu}>
+      <Link
+        to={`${url === '/' ? '/' : url + '/' || ''}`}
+        activeClassName="active"
+        onClick={closeMenu}
+      >
         {name}
       </Link>
     </SingleItem>

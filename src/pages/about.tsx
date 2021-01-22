@@ -76,10 +76,10 @@ const AboutPage: FC = () => {
       <Wrapper>
         <section>
           <motion.div
+            variants={list}
             initial="hidden"
             animate="visible"
             exit="exit"
-            variants={list}
           >
             <PageLayout title="about">
               <>

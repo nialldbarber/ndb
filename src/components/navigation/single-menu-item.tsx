@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {Link} from 'gatsby';
-import {motion} from 'framer-motion';
 import useStore from 'store';
+import {SingleItem} from 'styles/components/navigation/single-menu-item';
 import {Items} from 'constants/theme';
 
 interface SingleMenuItemProps extends Items {
@@ -29,11 +29,11 @@ const SingleMenuItem: FC<SingleMenuItemProps> = ({url, name, styleType}) => {
   const {closeMenu} = useStore();
 
   return (
-    <motion.li variants={variants} className={styleType}>
-      <Link to={url || ''} activeClassName="active" onClick={closeMenu}>
+    <SingleItem variants={variants} className={styleType}>
+      <Link to={`${url || ''}/`} activeClassName="active" onClick={closeMenu}>
         {name}
       </Link>
-    </motion.li>
+    </SingleItem>
   );
 };
 

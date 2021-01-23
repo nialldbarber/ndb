@@ -7,6 +7,8 @@ import Skills from 'components/skills';
 import {PointDown, SkillName} from 'styles/pages/about';
 import {height, list} from 'utils/framer';
 
+import useStore from 'store';
+
 // Dots
 const start = {
   visible: {
@@ -66,6 +68,7 @@ const end = {
 
 const AboutPage: FC = () => {
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
+  const {samePageToast} = useStore();
 
   const handleScroll = () => {
     ref.current.scrollIntoView({behavior: 'smooth'});
@@ -92,6 +95,8 @@ const AboutPage: FC = () => {
                   <SkillName className="ts">Typescript </SkillName>
                   related <span>🤙</span>
                 </p>
+
+                <p>Outcome: {samePageToast}</p>
 
                 <p>Check out some of the tech I use below!</p>
 

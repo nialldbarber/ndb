@@ -10,6 +10,8 @@ type State = {
   success: boolean;
   showError: (error: boolean) => void;
   showSuccess: (success: boolean) => void;
+  samePageToast: boolean;
+  showSamePageToast: (samePageToast: boolean) => void;
 };
 
 const useStore = create<State>((set) => ({
@@ -25,6 +27,9 @@ const useStore = create<State>((set) => ({
   success: false,
   showError: (error) => set(() => ({error})),
   showSuccess: (success) => set(() => ({success})),
+  // Same page message
+  samePageToast: false,
+  showSamePageToast: (samePageToast) => set(() => ({samePageToast})),
 }));
 
 export default useStore;

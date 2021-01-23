@@ -10,7 +10,7 @@ const Navigation: FC = () => {
   const [color, setColor] = useState('');
 
   return (
-    <>
+    <header>
       <Logo
         onMouseEnter={() => setColor(getCycledColors.increment())}
         className={color || ''}
@@ -20,7 +20,7 @@ const Navigation: FC = () => {
         </Link>
       </Logo>
       {pathname === '/' ? null : <Hamburger />}
-    </>
+    </header>
   );
 };
 

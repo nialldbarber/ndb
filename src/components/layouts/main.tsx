@@ -4,7 +4,7 @@ import {useLocation} from '@reach/router';
 import {AnimatePresence} from 'framer-motion';
 import {ThemeProvider} from 'styled-components';
 import {theme} from 'styles/config/state';
-import Header from 'components/navigation/header';
+import Navigation from 'components/navigation';
 import Footer from 'components/footer';
 import {GlobalStyle, Normalise} from 'styles/base';
 import 'typeface-cabin';
@@ -16,7 +16,7 @@ const MainLayout: FC<PageProps> = ({children}) => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Normalise />
-      <Header />
+      <Navigation />
       <AnimatePresence exitBeforeEnter>{children}</AnimatePresence>
       {pathname === '/' ? null : <Footer />}
     </ThemeProvider>

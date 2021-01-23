@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import useStore from 'store';
-import SingleMenuItem from 'components/navigation/single-menu-item';
+import SingleMenuItem from 'components/navigation/menu-items/single-menu-item';
 import {List} from 'styles/components/navigation/menu-items';
 import {navItems} from 'constants/theme';
 

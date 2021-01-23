@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {motion, Variants} from 'framer-motion';
-import HomeNavItems from 'components/navigation/home-nav-items';
+import HomeNavItems from 'components/navigation/menu-items/home-nav-items';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
 import Socials from 'components/socials';

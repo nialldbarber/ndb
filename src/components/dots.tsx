@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import {Variants} from 'framer-motion';
 import {
   DotWrapper,
   PhysicalDot,
@@ -15,7 +16,7 @@ interface DotsProps {
 
 interface AnimatedDotsProps extends DotsProps {
   position: string;
-  variant: any;
+  variant: Variants;
 }
 
 const AnimatedDots: FC<AnimatedDotsProps> = ({

@@ -7,11 +7,35 @@ import {
 } from 'styles/components/dots';
 
 interface DotsProps {
-  start: any;
-  middle: any;
-  end: any;
+  start?: any;
+  middle?: any;
+  end?: any;
   styleType?: string;
 }
+
+interface RippleDotsProps extends DotsProps {
+  position: string;
+  variant: any;
+}
+
+const RippleDots: FC<RippleDotsProps> = ({position, variant, styleType}) => {
+  return (
+    <PhysicalDot
+      className={`${position} ${styleType || ''}`}
+      variants={variant}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      <DotInner>
+        <DotRipples className={position} />
+        <DotRipples className={position} />
+        <DotRipples className={position} />
+        <DotRipples className={position} />
+      </DotInner>
+    </PhysicalDot>
+  );
+};
 
 const Dots: FC<DotsProps> = ({start, middle, end, styleType}) => {
   return styleType === 'home' ? (
@@ -40,48 +64,9 @@ const Dots: FC<DotsProps> = ({start, middle, end, styleType}) => {
     </DotWrapper>
   ) : (
     <DotWrapper>
-      <PhysicalDot
-        className={`start ${styleType || ''}`}
-        variants={start}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
-        <DotInner>
-          <DotRipples className="start" />
-          <DotRipples className="start" />
-          <DotRipples className="start" />
-          <DotRipples className="start" />
-        </DotInner>
-      </PhysicalDot>
-      <PhysicalDot
-        className={`middle ${styleType || ''}`}
-        variants={middle}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
-        <DotInner>
-          <DotRipples className="middle" />
-          <DotRipples className="middle" />
-          <DotRipples className="middle" />
-          <DotRipples className="middle" />
-        </DotInner>
-      </PhysicalDot>
-      <PhysicalDot
-        className={`end ${styleType || ''}`}
-        variants={end}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
-        <DotInner>
-          <DotRipples className="end" />
-          <DotRipples className="end" />
-          <DotRipples className="end" />
-          <DotRipples className="end" />
-        </DotInner>
-      </PhysicalDot>
+      <RippleDots position="start" variant={start} styleType={styleType} />
+      <RippleDots position="middle" variant={middle} styleType={styleType} />
+      <RippleDots position="end" variant={end} styleType={styleType} />
     </DotWrapper>
   );
 };

@@ -13,12 +13,16 @@ interface DotsProps {
   styleType?: string;
 }
 
-interface RippleDotsProps extends DotsProps {
+interface AnimatedDotsProps extends DotsProps {
   position: string;
   variant: any;
 }
 
-const RippleDots: FC<RippleDotsProps> = ({position, variant, styleType}) => {
+const AnimatedDots: FC<AnimatedDotsProps> = ({
+  position,
+  variant,
+  styleType,
+}) => {
   return (
     <PhysicalDot
       className={`${position} ${styleType || ''}`}
@@ -64,9 +68,9 @@ const Dots: FC<DotsProps> = ({start, middle, end, styleType}) => {
     </DotWrapper>
   ) : (
     <DotWrapper>
-      <RippleDots position="start" variant={start} styleType={styleType} />
-      <RippleDots position="middle" variant={middle} styleType={styleType} />
-      <RippleDots position="end" variant={end} styleType={styleType} />
+      <AnimatedDots position="start" variant={start} styleType={styleType} />
+      <AnimatedDots position="middle" variant={middle} styleType={styleType} />
+      <AnimatedDots position="end" variant={end} styleType={styleType} />
     </DotWrapper>
   );
 };

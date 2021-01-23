@@ -28,6 +28,8 @@
 
 - [ ] Responsive design
 
+- [ ] Add tests
+
 ---
 
 - [x] Add next js, gatsby to front end skills

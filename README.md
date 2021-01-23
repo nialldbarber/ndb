@@ -18,6 +18,10 @@
 
 - [ ] When you click a page and you're on that page - you'll get a toast message
 
+- [ ] Blog page filter option
+
+  - Should be able to filter blog posts by a tag
+
 ### Styling
 
 - [ ] Form styles

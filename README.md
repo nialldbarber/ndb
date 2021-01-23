@@ -1,5 +1,7 @@
 # 🚧 👀👀👀 🚧
 
+### Functionality
+
 - [x] Increase scale of hamburger when you hover over it
 
 - [x] Move styled components out of component files
@@ -10,6 +12,14 @@
 
   - its disappearing instantly but the nav items are animating correctly
 
+- [ ] Loading spinner on page transition
+
+  - But only after say 3 or 4 seconds
+
+- [ ] When you click a page and you're on that page - you'll get a toast message
+
+### Styling
+
 - [ ] Form styles
 
 - [ ] Contact page styles
@@ -18,17 +28,17 @@
 
 - [ ] Blog page styles
 
-- [ ] Blog post page styles
-
-- [ ] When you click a page and you're on that page - you'll get a toast message
-
-- [ ] Loading spinner on page transition
-
-  - But only after say 3 or 4 seconds
+- [ ] Single blog post page styles
 
 - [ ] Responsive design
 
+### Testing
+
 - [ ] Add tests
+
+  - [ ] Utils
+
+  - [ ] Components
 
 ---
 

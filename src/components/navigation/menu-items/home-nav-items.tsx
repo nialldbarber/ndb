@@ -1,8 +1,8 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {Link} from 'gatsby';
 import {Items, ListItem} from 'styles/components/navigation/home-nav-items';
 
-const HomeNavItems: FC = () => {
+function HomeNavItems() {
   return (
     <Items>
       {/* bottom left */}
@@ -43,6 +43,6 @@ const HomeNavItems: FC = () => {
       </ListItem>
     </Items>
   );
-};
+}
 
 export default HomeNavItems;

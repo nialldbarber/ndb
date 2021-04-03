@@ -1,11 +1,11 @@
-import React, {FC, useState} from 'react';
+import React, {useState} from 'react';
 import {Link} from 'gatsby';
 import {useLocation} from '@reach/router';
 import Hamburger from 'components/navigation/hamburger';
 import {getCycledColors} from 'utils/animations';
 import {Logo} from 'styles/components/navigation';
 
-const Navigation: FC = () => {
+function Navigation() {
   const {pathname} = useLocation();
   const [color, setColor] = useState('');
 
@@ -22,6 +22,6 @@ const Navigation: FC = () => {
       {pathname === '/' ? null : <Hamburger />}
     </header>
   );
-};
+}
 
 export default Navigation;

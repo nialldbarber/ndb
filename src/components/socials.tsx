@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {useLocation} from '@reach/router';
 import {SITE, socialLinks} from 'constants/theme';
 import {getCurrentYear} from 'utils/config';
@@ -9,7 +9,7 @@ import {
   Copyright,
 } from 'styles/components/socials';
 
-const Socials: FC = () => {
+function Socials() {
   const {pathname} = useLocation();
   const home = pathname === '/' ? 'home' : '';
 
@@ -29,6 +29,6 @@ const Socials: FC = () => {
       </Copyright>
     </SocialContainer>
   );
-};
+}
 
 export default Socials;

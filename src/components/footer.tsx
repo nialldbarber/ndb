@@ -1,9 +1,9 @@
-import React, {FC} from 'react';
+import React from 'react';
 import useStore from 'store';
 import Socials from 'components/socials';
 import {FooterWrapper} from 'styles/components/footer';
 
-const Footer: FC = () => {
+function Footer() {
   const {isMenuOpen} = useStore();
 
   return !isMenuOpen ? (
@@ -15,6 +15,6 @@ const Footer: FC = () => {
       <Socials />
     </FooterWrapper>
   ) : null;
-};
+}
 
 export default Footer;

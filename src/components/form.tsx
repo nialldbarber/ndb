@@ -1,11 +1,11 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {TextField, Button} from '@material-ui/core';
 import useForm from 'hooks/useForm';
 import LoadingSpinner from 'components/loading-spinner';
 import {FormContainer} from 'styles/components/form';
 import {theme} from 'styles/config/state';
 
-const Form: FC = () => {
+function Form() {
   const {
     status,
     inputs,
@@ -64,6 +64,6 @@ const Form: FC = () => {
       </FormContainer>
     </div>
   );
-};
+}
 
 export default Form;

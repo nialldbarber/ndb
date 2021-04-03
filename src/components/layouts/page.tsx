@@ -1,4 +1,4 @@
-import React, {FC, ReactChild} from 'react';
+import React, {ReactChild} from 'react';
 import {
   Layout,
   Title,
@@ -14,7 +14,7 @@ interface PageLayoutProps {
   children: ReactChild;
 }
 
-const PageLayout: FC<PageLayoutProps> = ({title, post, color, children}) => {
+function PageLayout({title, post, color, children}: PageLayoutProps) {
   return (
     <Layout>
       <Title className={`${post ? 'post' : ''} ${color || ''}`}>{title}</Title>
@@ -23,6 +23,6 @@ const PageLayout: FC<PageLayoutProps> = ({title, post, color, children}) => {
       <Content>{children}</Content>
     </Layout>
   );
-};
+}
 
 export default PageLayout;

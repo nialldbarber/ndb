@@ -1,4 +1,4 @@
-import React, {FC, ReactChild, useState} from 'react';
+import React, {ReactChild, useState} from 'react';
 import {Btn} from 'styles/components/button';
 import {LoaderSpinner} from 'styles/components/loader';
 
@@ -12,7 +12,7 @@ interface ButtonProps {
   children?: ReactChild;
 }
 
-const Button: FC<ButtonProps> = ({
+function Button({
   text,
   type,
   className,
@@ -20,7 +20,7 @@ const Button: FC<ButtonProps> = ({
   toggledState = false,
   action,
   children,
-}) => {
+}: ButtonProps) {
   const [active, setActive] = useState<boolean>(false);
 
   return (
@@ -39,6 +39,6 @@ const Button: FC<ButtonProps> = ({
       {active && standardBtn ? <LoaderSpinner className="loader" /> : null}
     </Btn>
   );
-};
+}
 
 export default Button;

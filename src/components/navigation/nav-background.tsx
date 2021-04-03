@@ -1,11 +1,10 @@
-import React, {FC} from 'react';
+import React from 'react';
 import useLockBodyScroll from 'hooks/useLockBodyScroll';
 import {MenuBg} from 'styles/components/navigation/nav-background';
 
-const NavBg: FC = () => {
+function NavBg() {
   useLockBodyScroll();
-
   return <MenuBg />;
-};
+}
 
 export default NavBg;

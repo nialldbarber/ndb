@@ -1,4 +1,4 @@
-import React, {FC, useRef} from 'react';
+import React, {useRef} from 'react';
 import {motion} from 'framer-motion';
 import useStore from 'store';
 import useDimensions from 'hooks/useDimensions';
@@ -7,7 +7,7 @@ import NavBg from 'components/navigation/nav-background';
 import {Burger, SpanBurger} from 'styles/components/navigation/hamburger';
 import {MENU} from 'constants/theme';
 
-const Hamburger: FC = () => {
+function Hamburger() {
   const containerRef = useRef<HTMLInputElement>(null);
   const {isMenuOpen, toggleMenu} = useStore();
   const {height} = useDimensions(containerRef);
@@ -32,6 +32,6 @@ const Hamburger: FC = () => {
       <MenuItems />
     </motion.nav>
   );
-};
+}
 
 export default Hamburger;

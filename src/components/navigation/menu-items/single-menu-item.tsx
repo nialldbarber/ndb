@@ -1,4 +1,4 @@
-import React, {FC, useEffect, MouseEvent} from 'react';
+import React, {MouseEvent} from 'react';
 import {Link} from 'gatsby';
 import {useLocation} from '@reach/router';
 import useStore from 'store';
@@ -27,7 +27,7 @@ const variants = {
   },
 };
 
-const SingleMenuItem: FC<SingleMenuItemProps> = ({url, name, styleType}) => {
+function SingleMenuItem({url, name, styleType}: SingleMenuItemProps) {
   const {closeMenu, showSamePageToast} = useStore();
   const {pathname} = useLocation();
   const currentPath = removeForwardSlash(pathname);
@@ -45,7 +45,7 @@ const SingleMenuItem: FC<SingleMenuItemProps> = ({url, name, styleType}) => {
   return (
     <SingleItem variants={variants} className={styleType}>
       <Link
-        to={`${url === '/' ? '/' : url + '/' || ''}`}
+        to={`${url === '/' ? '/' : `${url}/` || ''}`}
         activeClassName="active"
         onClick={handleClick}
       >
@@ -53,6 +53,6 @@ const SingleMenuItem: FC<SingleMenuItemProps> = ({url, name, styleType}) => {
       </Link>
     </SingleItem>
   );
-};
+}
 
 export default SingleMenuItem;

@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {PageProps} from 'gatsby';
 import {useLocation} from '@reach/router';
 import {AnimatePresence} from 'framer-motion';
@@ -9,7 +9,7 @@ import Footer from 'components/footer';
 import {GlobalStyle, Normalise} from 'styles/base';
 import 'typeface-cabin';
 
-const MainLayout: FC<PageProps> = ({children}) => {
+function MainLayout({children}: PageProps) {
   const {pathname} = useLocation();
 
   return (
@@ -21,6 +21,6 @@ const MainLayout: FC<PageProps> = ({children}) => {
       {pathname === '/' ? null : <Footer />}
     </ThemeProvider>
   );
-};
+}
 
 export default MainLayout;

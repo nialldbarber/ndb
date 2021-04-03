@@ -1,12 +1,8 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {Spinner} from 'styles/components/loading-spinner';
 
-const LoadingSpinner: FC = () => {
-  return (
-    <>
-      <Spinner />
-    </>
-  );
-};
+function LoadingSpinner() {
+  return <Spinner />;
+}
 
 export default LoadingSpinner;

@@ -1,15 +1,15 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {TooltipWrap, DownArrow} from 'styles/components/skills/tooltip';
 
 type TooltipProps = {text: string};
 
-const Tooltip: FC<TooltipProps> = ({text}) => {
+function Tooltip({text}: TooltipProps) {
   return (
     <TooltipWrap>
       <span>{text}</span>
       <DownArrow />
     </TooltipWrap>
   );
-};
+}
 
 export default Tooltip;

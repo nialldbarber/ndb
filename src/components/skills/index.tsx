@@ -1,9 +1,9 @@
-import React, {FC} from 'react';
+import React from 'react';
 import Skill from 'components/skills/skill';
 import {Wrapper, Grid} from 'styles/components/skills';
 import {frontEnd, backEnd, design} from 'constants/theme';
 
-const Skills: FC = () => {
+function Skills() {
   return (
     <>
       <Wrapper>
@@ -32,6 +32,6 @@ const Skills: FC = () => {
       </Wrapper>
     </>
   );
-};
+}
 
 export default Skills;

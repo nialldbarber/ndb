@@ -112,8 +112,7 @@ const AboutPage: FC = () => {
                 <p>Check out some of the tech I use below!</p>
 
                 <Sideways>
-                  Coding since <p>{age || 'xyzxyzxyz.xyz'}</p> seconds ago{' '}
-                  <span>!</span>
+                  Coding for <p>{age || 'xyzxyzxyz.xyz'}</p> seconds!
                 </Sideways>
 
                 <PointDown onClick={handleScroll}>

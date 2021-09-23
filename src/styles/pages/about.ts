@@ -45,3 +45,18 @@ export const PointDown = styled.div`
     transform: translateX(-50%);
   }
 `;
+
+export const Sideways = styled.div`
+  position: fixed;
+  display: flex;
+  align-items: center;
+  left: -170px;
+  bottom: 240px;
+  transform: rotate(-90deg);
+
+  p {
+    margin: 0;
+    width: 240px;
+    text-align: center;
+  }
+`;

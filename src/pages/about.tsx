@@ -1,10 +1,10 @@
-import React, {FC, useRef, MutableRefObject} from 'react';
+import React, {FC, useState, useEffect, useRef, MutableRefObject} from 'react';
 import {motion} from 'framer-motion';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
 import Skills from 'components/skills';
-import {PointDown, SkillName} from 'styles/pages/about';
+import {PointDown, SkillName, Sideways} from 'styles/pages/about';
 import {height, list} from 'utils/framer';
 
 // Dots
@@ -66,10 +66,24 @@ const end = {
 
 const AboutPage: FC = () => {
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
+  const [age, setAge] = useState<Date | number | null>(null);
 
   const handleScroll = () => {
     ref.current.scrollIntoView({behavior: 'smooth'});
   };
+
+  useEffect(() => {
+    function whatsMyAgeAgain() {
+      const now = new Date();
+      const then = new Date('04/04/2016');
+      setAge((now - then) / 1000);
+    }
+
+    const interval = setInterval(() => {
+      whatsMyAgeAgain();
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -94,6 +108,10 @@ const AboutPage: FC = () => {
                 </p>
 
                 <p>Check out some of the tech I use below!</p>
+
+                <Sideways>
+                  Coding since <p>{age}</p> seconds ago
+                </Sideways>
 
                 <PointDown onClick={handleScroll}>
                   <p>👇</p>

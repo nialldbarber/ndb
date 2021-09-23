@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
+import {media} from 'styles/config/media-queries';
+
+export const Nav = styled(motion.nav)`
+  &.home {
+    ${media.greaterThan('tablet')`
+      display: none;
+    `};
+  }
+`;
 
 export const Burger = styled(motion.div)`
   position: fixed;

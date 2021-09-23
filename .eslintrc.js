@@ -18,6 +18,7 @@ module.exports = {
     '@typescript-eslint/lines-between-class-members': 0,
     '@typescript-eslint/no-unsafe-member-access': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
+    '@typescript-eslint/no-unsafe-call': 0,
   },
   parserOptions: {
     project: './tsconfig.json',

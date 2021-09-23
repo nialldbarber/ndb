@@ -1,11 +1,5 @@
 import React, {ReactChild} from 'react';
-import {
-  Layout,
-  Title,
-  TitleBlank,
-  ContentBlank,
-  Content,
-} from 'styles/components/layouts/page';
+import {Layout, Title, Content} from 'styles/components/layouts/page';
 
 interface PageLayoutProps {
   title: string;
@@ -18,8 +12,6 @@ function PageLayout({title, post, color, children}: PageLayoutProps) {
   return (
     <Layout>
       <Title className={`${post ? 'post' : ''} ${color || ''}`}>{title}</Title>
-      <TitleBlank />
-      <ContentBlank />
       <Content>{children}</Content>
     </Layout>
   );

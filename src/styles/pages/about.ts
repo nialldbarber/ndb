@@ -1,18 +1,32 @@
-import styled, {keyframes} from 'styled-components';
+import styled, {css, keyframes} from 'styled-components';
 import {media} from 'styles/config/media-queries';
+
+const skillDefaults = css`
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  margin: 0 2px;
+`;
 
 export const SkillName = styled.span`
   &.react {
-    color: ${({theme}) => theme.colors.react};
+    background: ${({theme}) => theme.colors.react};
+    color: ${({theme}) => theme.colors.white};
+    ${skillDefaults};
   }
   &.vue {
-    color: ${({theme}) => theme.colors.vue};
+    background: ${({theme}) => theme.colors.vue};
+    color: ${({theme}) => theme.colors.black};
+    ${skillDefaults};
   }
   &.js {
-    color: ${({theme}) => theme.colors.js};
+    background: ${({theme}) => theme.colors.js};
+    color: ${({theme}) => theme.colors.black};
+    ${skillDefaults};
   }
   &.ts {
-    color: ${({theme}) => theme.colors.ts};
+    background: ${({theme}) => theme.colors.ts};
+    color: ${({theme}) => theme.colors.white};
+    ${skillDefaults};
   }
 `;
 
@@ -47,6 +61,14 @@ export const PointDown = styled.div`
   }
 `;
 
+const filterBlur = keyframes`
+  0% { filter: blur(0) }
+  25% { filter: blur(2px) }
+  50% { filter: blur(0) }
+  75% { filter: blur(3px) }
+  100% { filter: blur(0) }
+`;
+
 export const Sideways = styled.div`
   position: fixed;
   display: flex;
@@ -65,5 +87,8 @@ export const Sideways = styled.div`
     width: 240px;
     text-align: center;
     color: ${({theme}) => theme.colors.pink};
+    animation-name: ${filterBlur};
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
   }
 `;

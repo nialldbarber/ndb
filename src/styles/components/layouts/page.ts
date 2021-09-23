@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {titleClamp} from 'styles/config/mixins';
+import {media} from 'styles/config/media-queries';
 
 export const Layout = styled.section`
   display: grid;
@@ -11,6 +12,17 @@ export const Layout = styled.section`
   padding: 0 2rem;
   max-width: ${({theme}) => theme.dimensions.maxWidth};
   margin: 0 auto;
+
+  ${media.lessThan('tablet')`
+    grid-template-areas:
+      'title'
+      'content';
+  `};
+
+  ${media.lessThan('phablet')`
+    margin-top: -2rem;
+    padding: 0 1.5rem;
+  `};
 
   p {
     font-weight: 400;
@@ -48,5 +60,13 @@ export const Content = styled.div`
 
   p {
     font-size: 2rem;
+
+    ${media.lessThan('tablet')`
+      font-size: 1.5rem;
+    `};
+
+    ${media.lessThan('phablet')`
+      font-size: 1.3rem;
+    `};
   }
 `;

@@ -1,4 +1,5 @@
 import styled, {keyframes} from 'styled-components';
+import {media} from 'styles/config/media-queries';
 
 export const SkillName = styled.span`
   &.react {
@@ -53,6 +54,11 @@ export const Sideways = styled.div`
   left: -170px;
   bottom: 240px;
   transform: rotate(-90deg);
+  z-index: 3;
+
+  ${media.lessThan('tablet')`
+    display: none;
+  `};
 
   p {
     margin: 0;

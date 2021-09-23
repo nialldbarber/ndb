@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {media} from 'styles/config/media-queries';
 
 type Width = {width: number};
 
@@ -11,6 +12,11 @@ export const ImgWrap = styled.div`
   margin: 0;
   padding: 0;
   cursor: pointer;
+
+  ${media.lessThan('almostTablet')`
+    width: 50%;
+    pointer-events: none;
+  `};
 
   img {
     display: flex;

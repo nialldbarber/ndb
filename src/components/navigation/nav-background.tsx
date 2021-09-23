@@ -3,7 +3,7 @@ import useLockBodyScroll from 'hooks/useLockBodyScroll';
 import {MenuBg} from 'styles/components/navigation/nav-background';
 
 function NavBg({className}: {className: string}) {
-  useLockBodyScroll();
+  // useLockBodyScroll();
   return <MenuBg className={className} />;
 }
 

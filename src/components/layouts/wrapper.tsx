@@ -1,8 +1,6 @@
 import React, {ReactChild} from 'react';
 
-type WrapperProps = {children: ReactChild};
-
-function Wrapper({children}: WrapperProps) {
+function Wrapper({children}: {children: ReactChild}) {
   return <main>{children}</main>;
 }
 

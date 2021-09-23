@@ -4,7 +4,7 @@ import {media} from 'styles/config/media-queries';
 
 export const Nav = styled(motion.nav)`
   &.home {
-    ${media.greaterThan('tablet')`
+    ${media.greaterThan('phablet')`
       display: none;
     `};
   }
@@ -12,9 +12,14 @@ export const Nav = styled(motion.nav)`
 
 export const Burger = styled(motion.div)`
   position: fixed;
-  top: 1.5rem;
+  top: 2.125rem;
   right: 1.5rem;
   z-index: 4;
+
+  ${media.lessThan('phablet')`
+    top: 1.7rem;
+    right: 1rem;
+  `};
 `;
 
 export const SpanBurger = styled.div`

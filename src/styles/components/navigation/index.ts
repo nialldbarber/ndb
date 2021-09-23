@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {media} from 'styles/config/media-queries';
 
 export const Logo = styled.div`
   position: fixed;
@@ -26,6 +27,10 @@ export const Logo = styled.div`
     position: relative;
     font-size: 2.5rem;
     transition: 0.2s ease;
+
+    ${media.lessThan('phablet')`
+      font-size: 2rem;
+    `};
 
     &:after {
       content: '';

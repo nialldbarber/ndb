@@ -1,5 +1,6 @@
 import {motion} from 'framer-motion';
 import styled from 'styled-components';
+import {media} from 'styles/config/media-queries';
 
 export const Items = styled(motion.ul)`
   z-index: 5;
@@ -7,6 +8,10 @@ export const Items = styled(motion.ul)`
 
 export const ListItem = styled(motion.li)`
   position: absolute;
+
+  ${media.lessThan('phablet')`
+    display: none;
+  `};
 
   a {
     position: relative;

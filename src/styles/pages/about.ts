@@ -58,5 +58,6 @@ export const Sideways = styled.div`
     margin: 0;
     width: 240px;
     text-align: center;
+    color: ${({theme}) => theme.colors.pink};
   }
 `;

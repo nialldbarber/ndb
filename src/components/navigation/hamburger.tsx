@@ -31,7 +31,7 @@ function Hamburger() {
           <span />
         </SpanBurger>
       </Burger>
-      {isMenuOpen && <NavBg />}
+      <NavBg className={isMenuOpen ? 'active' : ''} />
       <MenuItems />
     </Nav>
   );

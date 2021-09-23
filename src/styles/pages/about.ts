@@ -54,7 +54,7 @@ export const Sideways = styled.div`
   left: -170px;
   bottom: 240px;
   transform: rotate(-90deg);
-  z-index: 3;
+  z-index: 2;
 
   ${media.lessThan('tablet')`
     display: none;

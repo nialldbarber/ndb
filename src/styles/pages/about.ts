@@ -74,7 +74,7 @@ export const Sideways = styled.div`
   display: flex;
   align-items: center;
   left: -170px;
-  bottom: 240px;
+  bottom: 210px;
   transform: rotate(-90deg);
   z-index: 2;
 

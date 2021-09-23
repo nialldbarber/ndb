@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
+import {media} from 'styles/config/media-queries';
 
 export const ToastWrapper = styled(motion.div)`
   display: flex;
@@ -24,7 +25,11 @@ export const ToastContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  top: 1.6rem;
+  top: 2.275rem;
   right: 6rem;
   gap: 30px;
+
+  ${media.lessThan('phablet')`
+    top: 3.775rem;
+  `};
 `;

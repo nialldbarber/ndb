@@ -5,6 +5,12 @@ module.exports = {
     description: 'Front End Developer',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: 'src/images/site.png',
+      },
+    },
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
     '@mdx-js/react',

@@ -238,4 +238,13 @@ export const Normalise = createGlobalStyle`
   [hidden] {
     display: none;
   }
+
+  // hard material-ui overrides
+  .MuiFormLabel-root.Mui-focused {
+    color: ${({theme}) => theme.colors.green} !important;
+  }
+
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: ${({theme}) => theme.colors.green} !important;
+  }
 `;

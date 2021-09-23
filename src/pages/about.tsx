@@ -4,6 +4,7 @@ import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
 import Skills from 'components/skills';
+import Meta from 'components/helmet';
 import {PointDown, SkillName, Sideways} from 'styles/pages/about';
 import {height, list} from 'utils/framer';
 
@@ -87,6 +88,7 @@ const AboutPage: FC = () => {
 
   return (
     <>
+      <Meta title="Niall Barber | About" />
       <Wrapper>
         <section>
           <motion.div

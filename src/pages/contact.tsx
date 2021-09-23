@@ -5,6 +5,7 @@ import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
 import Toast from 'components/toast';
 import Form from 'components/form';
+import Meta from 'components/helmet';
 import {list, height} from 'utils/framer';
 
 // Dots
@@ -67,6 +68,7 @@ const end = {
 const ContactPage: FC = () => {
   return (
     <>
+      <Meta title="Niall Barber | Contact" />
       <Toast />
       <Wrapper>
         <>

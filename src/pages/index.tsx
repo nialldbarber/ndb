@@ -4,6 +4,7 @@ import HomeNavItems from 'components/navigation/menu-items/home-nav-items';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
 import Socials from 'components/socials';
+import Meta from 'components/helmet';
 import {width, transition, list} from 'utils/framer';
 import {
   HomeBg,
@@ -101,55 +102,58 @@ const end: Variants | any = {
 
 const Home: FC = () => {
   return (
-    <Wrapper>
-      <>
-        <HomeNavItems />
-        <HomeBg>
-          <MainTitlesWrap>
-            <TitleWrapper>
-              <PageTitle>
-                <motion.span
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  variants={list}
-                  style={{display: 'flex', margin: 0}}
-                >
-                  <FirstName variants={item} style={{margin: 0}}>
-                    niall
-                  </FirstName>
-                  <motion.p> </motion.p>
-                  <LastName variants={item} style={{margin: 0}}>
-                    barber
-                  </LastName>
-                </motion.span>
-              </PageTitle>
-            </TitleWrapper>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              variants={subheader}
-            >
-              <SubHeader>
-                {'<'}
-                {SITE.SUB_TITLE}
-                {' />'}
-              </SubHeader>
-            </motion.div>
-          </MainTitlesWrap>
-        </HomeBg>
-        <Dots start={start} middle={middle} end={end} styleType="home" />
-        <SocialContainer
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          variants={subheader}
-        >
-          <Socials />
-        </SocialContainer>
-      </>
-    </Wrapper>
+    <>
+      <Meta title="Niall Barber" />
+      <Wrapper>
+        <>
+          <HomeNavItems />
+          <HomeBg>
+            <MainTitlesWrap>
+              <TitleWrapper>
+                <PageTitle>
+                  <motion.span
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    variants={list}
+                    style={{display: 'flex', margin: 0}}
+                  >
+                    <FirstName variants={item} style={{margin: 0}}>
+                      niall
+                    </FirstName>
+                    <motion.p> </motion.p>
+                    <LastName variants={item} style={{margin: 0}}>
+                      barber
+                    </LastName>
+                  </motion.span>
+                </PageTitle>
+              </TitleWrapper>
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                variants={subheader}
+              >
+                <SubHeader>
+                  {'<'}
+                  {SITE.SUB_TITLE}
+                  {' />'}
+                </SubHeader>
+              </motion.div>
+            </MainTitlesWrap>
+          </HomeBg>
+          <Dots start={start} middle={middle} end={end} styleType="home" />
+          <SocialContainer
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={subheader}
+          >
+            <Socials />
+          </SocialContainer>
+        </>
+      </Wrapper>
+    </>
   );
 };
 

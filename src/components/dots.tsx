@@ -1,4 +1,3 @@
-import React, {FC} from 'react';
 import {Variants} from 'framer-motion';
 import {
   DotWrapper,

@@ -1,4 +1,3 @@
-import React from 'react';
 import {useLocation} from '@reach/router';
 import {SITE, socialLinks} from 'constants/theme';
 import {getCurrentYear} from 'utils/config';

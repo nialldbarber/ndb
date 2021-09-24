@@ -1,4 +1,3 @@
-import React from 'react';
 import {PageProps} from 'gatsby';
 import {useLocation} from '@reach/router';
 import {AnimatePresence} from 'framer-motion';

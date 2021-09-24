@@ -1,4 +1,4 @@
-import React, {MouseEvent} from 'react';
+import {MouseEvent} from 'react';
 import {Link} from 'gatsby';
 import {useLocation} from '@reach/router';
 import useStore from 'store';

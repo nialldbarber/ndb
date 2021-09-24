@@ -1,4 +1,3 @@
-import React from 'react';
 import useStore from 'store';
 import SingleMenuItem from 'components/navigation/menu-items/single-menu-item';
 import {List} from 'styles/components/navigation/menu-items';

@@ -1,4 +1,4 @@
-import React, {ReactChild} from 'react';
+import {ReactChild} from 'react';
 import {Layout, Title, Content} from 'styles/components/layouts/page';
 
 interface PageLayoutProps {

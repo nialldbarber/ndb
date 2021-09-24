@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import useMobileDetect from 'hooks/getMobileDetect';
 import Tooltip from 'components/skills/tooltip';
 import {ImgWrap, TooltipWrapper} from 'styles/components/skills/skills';

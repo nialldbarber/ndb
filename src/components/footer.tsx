@@ -1,4 +1,3 @@
-import React from 'react';
 import useStore from 'store';
 import Socials from 'components/socials';
 import {FooterWrapper} from 'styles/components/footer';

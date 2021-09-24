@@ -1,4 +1,3 @@
-import React from 'react';
 import {TooltipWrap, DownArrow} from 'styles/components/skills/tooltip';
 
 type TooltipProps = {text: string};

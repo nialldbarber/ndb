@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import {AnimatePresence} from 'framer-motion';
 import useStore from 'store';
 import {ToastWrapper, ToastContainer} from 'styles/components/toast';

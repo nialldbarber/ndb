@@ -1,4 +1,4 @@
-import React, {ReactChild, useState} from 'react';
+import {ReactChild, useState} from 'react';
 import {Btn} from 'styles/components/button';
 import {LoaderSpinner} from 'styles/components/loader';
 

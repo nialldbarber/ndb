@@ -1,4 +1,3 @@
-import React from 'react';
 import {BadgeContainer} from 'styles/components/badge';
 
 interface BadgeProps {

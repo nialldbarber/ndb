@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import {useRef} from 'react';
 import {useLocation} from '@reach/router';
 import useStore from 'store';
 import useDimensions from 'hooks/useDimensions';

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {Link} from 'gatsby';
 import Hamburger from 'components/navigation/hamburger';
 import {getCycledColors} from 'utils/animations';

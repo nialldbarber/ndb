@@ -1,4 +1,3 @@
-import React from 'react';
 import Skill from 'components/skills/skill';
 import {Wrapper, Grid} from 'styles/components/skills';
 import {frontEnd, backEnd, design} from 'constants/theme';

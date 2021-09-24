@@ -1,4 +1,3 @@
-import React from 'react';
 import {Link} from 'gatsby';
 import {Items, ListItem} from 'styles/components/navigation/home-nav-items';
 

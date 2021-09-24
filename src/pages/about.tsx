@@ -101,8 +101,9 @@ export default function AboutPage() {
               <>
                 <p>
                   Hey there! I’m a front end developer, specialising in{' '}
-                  <SkillName className="react">React</SkillName>
-                  and <SkillName className="vue">Vue</SkillName>...well,
+                  <SkillName className="react">React</SkillName>,
+                  <SkillName className="vue">Vue</SkillName>,
+                  <SkillName className="svelte">Svelte</SkillName> and...well,
                   actually really anything{' '}
                   <SkillName className="js">JavaScript</SkillName>/
                   <SkillName className="ts">Typescript</SkillName>

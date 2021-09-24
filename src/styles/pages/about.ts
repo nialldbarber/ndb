@@ -19,6 +19,11 @@ export const SkillName = styled.span`
     color: var(--black);
     ${skillDefaults};
   }
+  &.svelte {
+    background: var(--svelte);
+    color: var(--white);
+    ${skillDefaults};
+  }
   &.js {
     background: var(--js);
     color: var(--black);

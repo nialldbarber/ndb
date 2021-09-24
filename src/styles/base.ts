@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     --orange: rgb(248, 155, 14);
     --react: #31A6FA;
     --vue: #57EB64;
+    --svelte: #FF3E00;
     --js: #FFF208;
     --ts: #0D63F8;
     // font

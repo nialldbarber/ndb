@@ -9,23 +9,23 @@ const skillDefaults = css`
 
 export const SkillName = styled.span`
   &.react {
-    background: ${({theme}) => theme.colors.react};
-    color: ${({theme}) => theme.colors.white};
+    background: var(--react);
+    color: var(--white);
     ${skillDefaults};
   }
   &.vue {
-    background: ${({theme}) => theme.colors.vue};
-    color: ${({theme}) => theme.colors.black};
+    background: var(--vue);
+    color: var(--black);
     ${skillDefaults};
   }
   &.js {
-    background: ${({theme}) => theme.colors.js};
-    color: ${({theme}) => theme.colors.black};
+    background: var(--js);
+    color: var(--black);
     ${skillDefaults};
   }
   &.ts {
-    background: ${({theme}) => theme.colors.ts};
-    color: ${({theme}) => theme.colors.white};
+    background: var(--ts);
+    color: var(--white);
     ${skillDefaults};
   }
 `;
@@ -86,7 +86,7 @@ export const Sideways = styled.div`
     margin: 0;
     width: 240px;
     text-align: center;
-    color: ${({theme}) => theme.colors.pink};
+    color: var(--pink);
     animation-name: ${filterBlur};
     animation-duration: 4s;
     animation-iteration-count: infinite;

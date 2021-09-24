@@ -6,7 +6,7 @@ export const Grid = styled.div`
   grid-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
   ${contentMargin};
-  max-width: ${({theme}) => theme.dimensions.maxWidth};
+  max-width: var(--max-width);
 `;
 
 export const Card = styled.div`
@@ -14,9 +14,9 @@ export const Card = styled.div`
   grid-template-rows: 1fr 110px 1fr;
   height: 250px;
   padding: 1rem 1.5rem;
-  background: ${({theme}) => theme.colors.darkerBlack};
+  background: var(--darker-black);
   border-bottom-right-radius: 15px;
-  color: ${({theme}) => theme.colors.white};
+  color: var(--white);
   transform: scale(1);
   transition: transform 0.2s ease;
 
@@ -26,7 +26,7 @@ export const Card = styled.div`
 
   h3 {
     margin: 0;
-    color: ${({theme}) => theme.colors.pink};
+    color: var(--pink);
     font-size: 1rem;
   }
 
@@ -42,5 +42,5 @@ export const BadgeContainer = styled.div`
 
 export const BadgeSelectContainer = styled.div`
   margin: 0 auto 150px;
-  max-width: ${({theme}) => theme.dimensions.maxWidth};
+  max-width: var(--max-width);
 `;

@@ -1,24 +1,21 @@
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, RefObject} from 'react';
 
 export interface Dimensions {
-  width: number | null;
-  height: number | null;
+  width: number | undefined;
+  height: number | undefined;
 }
 
 export interface Ref {
   current: HTMLElement;
 }
 
-// https://codesandbox.io/s/framer-motion-side-menu-mx2rw?fontsize=14&module=/src/Example.tsx&file=/src/use-dimensions.ts
-const useDimensions = (ref: Ref): Dimensions => {
+export default function useDimensions(ref: RefObject<HTMLElement>): Dimensions {
   const dimensions = useRef<Dimensions>({width: 0, height: 0});
 
   useEffect(() => {
-    dimensions.current.width = ref.current.offsetWidth;
-    dimensions.current.height = ref.current.offsetHeight;
-  }, []);
+    dimensions.current.width = ref?.current?.offsetWidth;
+    dimensions.current.height = ref?.current?.offsetHeight;
+  }, [ref]);
 
   return dimensions.current;
-};
-
-export default useDimensions;
+}

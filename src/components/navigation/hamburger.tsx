@@ -8,9 +8,9 @@ import NavBg from 'components/navigation/nav-background';
 import {Nav, Burger, SpanBurger} from 'styles/components/navigation/hamburger';
 import {MENU} from 'constants/theme';
 
-function Hamburger() {
+export default function Hamburger() {
   const {pathname} = useLocation();
-  const containerRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLElement>(null);
   const {isMenuOpen, toggleMenu} = useStore();
   const {height} = useDimensions(containerRef);
   const menuOpen: string = isMenuOpen ? MENU.OPEN : MENU.CLOSED;
@@ -36,5 +36,3 @@ function Hamburger() {
     </Nav>
   );
 }
-
-export default Hamburger;

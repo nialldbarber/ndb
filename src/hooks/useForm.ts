@@ -17,7 +17,21 @@ interface Inputs {
   message: string;
 }
 
-const useForm = (): any => {
+type HTMLElementEvent<T extends HTMLElement> = Event & {
+  target: T;
+  persist: () => void;
+};
+
+interface FormT {
+  handleHoneyPost: () => void;
+  handleOnChange: (e: HTMLElementEvent<HTMLInputElement>) => void;
+  handleOnSubmit: (e: FormEvent<HTMLFormElement>) => void;
+  honeypot: boolean;
+  inputs: Inputs;
+  status: Status;
+}
+
+export default function useForm(): FormT {
   const {showError, showSuccess} = useStore();
   const [honeypot, setHoneypot] = useState<boolean>(false);
   const [status, setStatus] = useState<Status>({
@@ -56,7 +70,7 @@ const useForm = (): any => {
     }
   };
 
-  const handleOnChange = (e: FormEvent<HTMLInputElement>): void => {
+  const handleOnChange = (e: HTMLElementEvent<HTMLInputElement>): void => {
     e.persist();
     setInputs((prev) => ({
       ...prev,
@@ -92,6 +106,15 @@ const useForm = (): any => {
 
   const handleHoneyPost = (): void => setHoneypot(!honeypot);
 
+  console.log({
+    status,
+    inputs,
+    honeypot,
+    handleOnChange,
+    handleOnSubmit,
+    handleHoneyPost,
+  });
+
   return {
     status,
     inputs,
@@ -100,6 +123,4 @@ const useForm = (): any => {
     handleOnSubmit,
     handleHoneyPost,
   };
-};
-
-export default useForm;
+}

@@ -8,7 +8,12 @@ interface PageLayoutProps {
   children: ReactChild;
 }
 
-function PageLayout({title, post, color, children}: PageLayoutProps) {
+export default function PageLayout({
+  title,
+  post,
+  color,
+  children,
+}: PageLayoutProps) {
   return (
     <Layout>
       <Title className={`${post ? 'post' : ''} ${color || ''}`}>{title}</Title>
@@ -16,5 +21,3 @@ function PageLayout({title, post, color, children}: PageLayoutProps) {
     </Layout>
   );
 }
-
-export default PageLayout;

@@ -9,7 +9,7 @@ interface SkillProps {
   width?: number;
 }
 
-function Skill({icon, name, link, width = 100}: SkillProps) {
+export default function Skill({icon, name, link, width = 100}: SkillProps) {
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
   return (
@@ -27,5 +27,3 @@ function Skill({icon, name, link, width = 100}: SkillProps) {
     </ImgWrap>
   );
 }
-
-export default Skill;

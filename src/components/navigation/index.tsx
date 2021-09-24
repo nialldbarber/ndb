@@ -4,8 +4,8 @@ import Hamburger from 'components/navigation/hamburger';
 import {getCycledColors} from 'utils/animations';
 import {Logo} from 'styles/components/navigation';
 
-function Navigation() {
-  const [color, setColor] = useState('');
+export default function Navigation() {
+  const [color, setColor] = useState<string>('');
 
   return (
     <header>
@@ -21,5 +21,3 @@ function Navigation() {
     </header>
   );
 }
-
-export default Navigation;

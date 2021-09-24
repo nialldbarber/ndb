@@ -3,7 +3,7 @@ import useStore from 'store';
 import Socials from 'components/socials';
 import {FooterWrapper} from 'styles/components/footer';
 
-function Footer() {
+export default function Footer() {
   const {isMenuOpen} = useStore();
 
   return !isMenuOpen ? (
@@ -16,5 +16,3 @@ function Footer() {
     </FooterWrapper>
   ) : null;
 }
-
-export default Footer;

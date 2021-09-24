@@ -12,7 +12,7 @@ interface ButtonProps {
   children?: ReactChild;
 }
 
-function Button({
+export default function Button({
   text,
   type,
   className,
@@ -40,5 +40,3 @@ function Button({
     </Btn>
   );
 }
-
-export default Button;

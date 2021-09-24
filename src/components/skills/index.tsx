@@ -3,7 +3,7 @@ import Skill from 'components/skills/skill';
 import {Wrapper, Grid} from 'styles/components/skills';
 import {frontEnd, backEnd, design} from 'constants/theme';
 
-function Skills() {
+export default function Skills() {
   return (
     <>
       <Wrapper>
@@ -33,5 +33,3 @@ function Skills() {
     </>
   );
 }
-
-export default Skills;

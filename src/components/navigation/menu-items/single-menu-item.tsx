@@ -27,7 +27,11 @@ const variants = {
   },
 };
 
-function SingleMenuItem({url, name, styleType}: SingleMenuItemProps) {
+export default function SingleMenuItem({
+  url,
+  name,
+  styleType,
+}: SingleMenuItemProps) {
   const {closeMenu, showSamePageToast} = useStore();
   const {pathname} = useLocation();
   const currentPath = removeForwardSlash(pathname);
@@ -54,5 +58,3 @@ function SingleMenuItem({url, name, styleType}: SingleMenuItemProps) {
     </SingleItem>
   );
 }
-
-export default SingleMenuItem;

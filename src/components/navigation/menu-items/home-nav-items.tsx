@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'gatsby';
 import {Items, ListItem} from 'styles/components/navigation/home-nav-items';
 
-function HomeNavItems() {
+export default function HomeNavItems() {
   return (
     <Items>
       {/* bottom left */}
@@ -44,5 +44,3 @@ function HomeNavItems() {
     </Items>
   );
 }
-
-export default HomeNavItems;

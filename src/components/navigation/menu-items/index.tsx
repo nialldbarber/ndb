@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import useStore from 'store';
 import SingleMenuItem from 'components/navigation/menu-items/single-menu-item';
 import {List} from 'styles/components/navigation/menu-items';
@@ -15,7 +15,7 @@ const variants = {
   },
 };
 
-const MenuItems: FC = () => {
+export default function MenuItems() {
   const {isMenuOpen} = useStore();
 
   return (
@@ -25,6 +25,4 @@ const MenuItems: FC = () => {
       ))}
     </List>
   );
-};
-
-export default MenuItems;
+}

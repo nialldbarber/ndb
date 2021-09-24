@@ -9,7 +9,7 @@ import Footer from 'components/footer';
 import {GlobalStyle, Normalise} from 'styles/base';
 import 'typeface-cabin';
 
-function MainLayout({children}: PageProps) {
+export default function MainLayout({children}: PageProps) {
   const {pathname} = useLocation();
 
   return (
@@ -22,5 +22,3 @@ function MainLayout({children}: PageProps) {
     </ThemeProvider>
   );
 }
-
-export default MainLayout;

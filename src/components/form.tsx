@@ -5,7 +5,7 @@ import LoadingSpinner from 'components/loading-spinner';
 import {FormContainer} from 'styles/components/form';
 import {theme} from 'styles/config/state';
 
-function Form() {
+export default function Form() {
   const {
     status,
     inputs,
@@ -65,5 +65,3 @@ function Form() {
     </div>
   );
 }
-
-export default Form;

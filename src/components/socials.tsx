@@ -9,7 +9,7 @@ import {
   Copyright,
 } from 'styles/components/socials';
 
-function Socials() {
+export default function Socials() {
   const {pathname} = useLocation();
   const home = pathname === '/' ? 'home' : '';
 
@@ -30,5 +30,3 @@ function Socials() {
     </SocialContainer>
   );
 }
-
-export default Socials;

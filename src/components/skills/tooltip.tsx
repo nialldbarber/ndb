@@ -3,7 +3,7 @@ import {TooltipWrap, DownArrow} from 'styles/components/skills/tooltip';
 
 type TooltipProps = {text: string};
 
-function Tooltip({text}: TooltipProps) {
+export default function Tooltip({text}: TooltipProps) {
   return (
     <TooltipWrap>
       <span>{text}</span>
@@ -11,5 +11,3 @@ function Tooltip({text}: TooltipProps) {
     </TooltipWrap>
   );
 }
-
-export default Tooltip;

@@ -1,12 +1,12 @@
 import styled, {keyframes} from 'styled-components';
 
 export const spinner = keyframes`
-from {
-  transform: rotate(0);
-}
-to {
-  transform: rotate(360deg);
-}
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 `;
 
 export const Spinner = styled.div`

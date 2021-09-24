@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
 import {media} from 'styles/config/media-queries';
+import {flexCenterMixin} from 'styles/config/mixins';
 
 export const ToastWrapper = styled(motion.div)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${flexCenterMixin};
   width: 140px;
   height: 40px;
   padding: 1rem;
@@ -14,6 +13,7 @@ export const ToastWrapper = styled(motion.div)`
   &.success {
     background: ${({theme}) => theme.colors.green};
   }
+
   &.error {
     background: ${({theme}) => theme.colors.pink};
     width: 260px;

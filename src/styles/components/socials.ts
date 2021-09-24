@@ -1,5 +1,6 @@
 import {motion} from 'framer-motion';
 import styled from 'styled-components';
+import {transition} from 'styles/config/vars';
 
 export const SocialContainer = styled(motion.div)`
   display: flex;
@@ -24,7 +25,7 @@ export const SocialIcon = styled(motion.div)`
   display: flex;
   margin: 0 0.5rem;
   transform: scale(1);
-  transition: all 0.2s ease 0s;
+  transition: ${transition};
 
   &:hover {
     transform: scale(1.1);

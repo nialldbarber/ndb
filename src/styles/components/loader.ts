@@ -13,6 +13,7 @@ export const LoaderSpinner = styled.div`
   border-radius: 50%;
   background-color: ${rgba('#111', 0.2)};
   margin: 0 auto;
+
   &.loader {
     border: 2px solid ${rgba('#111', 0.4)};
     border-top-color: ${({theme}) => theme.colors.white};

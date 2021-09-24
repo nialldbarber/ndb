@@ -19,11 +19,7 @@ interface AnimatedDotsProps extends DotsProps {
   variant: Variants;
 }
 
-export default function AnimatedDots({
-  position,
-  variant,
-  styleType,
-}: AnimatedDotsProps) {
+function AnimatedDots({position, variant, styleType}: AnimatedDotsProps) {
   return (
     <PhysicalDot
       className={`${position} ${styleType || ''}`}
@@ -42,7 +38,7 @@ export default function AnimatedDots({
   );
 }
 
-function Dots({start, middle, end, styleType}: DotsProps) {
+export default function Dots({start, middle, end, styleType}: DotsProps) {
   return styleType === 'home' ? (
     <DotWrapper>
       <PhysicalDot

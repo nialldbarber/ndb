@@ -106,15 +106,6 @@ export default function useForm(): FormT {
 
   const handleHoneyPost = (): void => setHoneypot(!honeypot);
 
-  console.log({
-    status,
-    inputs,
-    honeypot,
-    handleOnChange,
-    handleOnSubmit,
-    handleHoneyPost,
-  });
-
   return {
     status,
     inputs,

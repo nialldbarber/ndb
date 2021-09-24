@@ -21,7 +21,7 @@ const variants = {
   },
 };
 
-function Toast() {
+export default function Toast() {
   const {success, error, showSuccess, showError} = useStore();
 
   useEffect(() => {
@@ -65,5 +65,3 @@ function Toast() {
     </ToastContainer>
   );
 }
-
-export default Toast;

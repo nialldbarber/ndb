@@ -1,4 +1,5 @@
 import React from 'react';
+import {useLocation} from '@reach/router';
 import {motion, Variants} from 'framer-motion';
 import HomeNavItems from 'components/navigation/menu-items/home-nav-items';
 import Wrapper from 'components/layouts/wrapper';
@@ -101,6 +102,12 @@ const end: Variants | any = {
 };
 
 export default function Home() {
+  const {pathname} = useLocation();
+  const dots =
+    pathname === '/' ? (
+      <Dots start={start} middle={middle} end={end} styleType="home" />
+    ) : null;
+
   return (
     <>
       <Meta title="Niall Barber" />
@@ -142,7 +149,7 @@ export default function Home() {
               </motion.div>
             </MainTitlesWrap>
           </HomeBg>
-          <Dots start={start} middle={middle} end={end} styleType="home" />
+          {dots}
           <SocialContainer
             initial="hidden"
             animate="visible"

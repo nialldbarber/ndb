@@ -40,7 +40,7 @@ export const SpanBurger = styled.div`
     position: absolute;
     height: 5px;
     width: 100%;
-    background: ${({theme}) => theme.colors.pink};
+    background: var(--pink);
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -65,7 +65,7 @@ export const SpanBurger = styled.div`
 
   &.open {
     span {
-      background: ${({theme}) => theme.colors.white};
+      background: var(--white);
 
       &:nth-child(1) {
         transform: rotate(45deg);

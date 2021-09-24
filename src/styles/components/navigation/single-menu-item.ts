@@ -5,10 +5,10 @@ export const SingleItem = styled(motion.li)`
   &.home {
     a {
       &.active {
-        color: ${({theme}) => theme.colors.orange};
+        color: var(--orange);
 
         &:hover {
-          color: ${({theme}) => theme.colors.white};
+          color: var(--white);
         }
       }
     }
@@ -16,10 +16,10 @@ export const SingleItem = styled(motion.li)`
   &.about {
     a {
       &.active {
-        color: ${({theme}) => theme.colors.green};
+        color: var(--green);
 
         &:hover {
-          color: ${({theme}) => theme.colors.white};
+          color: var(--white);
         }
       }
     }
@@ -27,10 +27,10 @@ export const SingleItem = styled(motion.li)`
   &.blog {
     a {
       &.active {
-        color: ${({theme}) => theme.colors.pink};
+        color: var(--pink);
 
         &:hover {
-          color: ${({theme}) => theme.colors.white};
+          color: var(--white);
         }
       }
     }
@@ -38,10 +38,10 @@ export const SingleItem = styled(motion.li)`
   &.contact {
     a {
       &.active {
-        color: ${({theme}) => theme.colors.orange};
+        color: var(--orange);
 
         &:hover {
-          color: ${({theme}) => theme.colors.white};
+          color: var(--white);
         }
       }
     }

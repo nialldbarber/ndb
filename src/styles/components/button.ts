@@ -11,25 +11,25 @@ export const Btn = styled(motion.button)`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid ${({theme}) => theme.colors.black};
+    border: 2px solid var(--black);
     padding: 0.5em 1em;
     font-weight: 500;
     line-height: 1.4;
     font-size: 1em;
-    background-color: ${({theme}) => theme.colors.black};
-    color: ${({theme}) => theme.colors.white};
+    background-color: var(--black);
+    color: var(--white);
     white-space: nowrap;
     border-radius: 4px;
-    transition: 0.2s ${({theme}) => theme.animation.btn};
+    transition: 0.2s var(--btn-animation);
 
     &:hover {
-      background-color: ${lighten(0.1, '#111')};
-      border-color: ${lighten(0.1, '#111')};
+      background-color: ${lighten(0.1, 'var(--black)')};
+      border-color: ${lighten(0.1, 'var(--black)')};
     }
 
     span {
       padding-right: 0;
-      transition: 0.2s ${({theme}) => theme.animation.btn};
+      transition: 0.2s var(--btn-animation);
       &.active {
         padding-right: 1rem;
       }

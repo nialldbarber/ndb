@@ -41,12 +41,12 @@ export const titleClamp = css`
 
 export const dotColors = css`
   &.start {
-    background: ${({theme}) => theme.colors.green};
+    background: var(--green);
   }
   &.middle {
-    background: ${({theme}) => theme.colors.orange};
+    background: var(--orange);
   }
   &.end {
-    background: ${({theme}) => theme.colors.pink};
+    background: var(--pink);
   }
 `;

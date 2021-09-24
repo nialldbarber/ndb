@@ -17,8 +17,8 @@ export const Spinner = styled.div`
     content: '';
     width: 12px;
     height: 12px;
-    border: 3px solid ${({theme}) => theme.colors.white};
-    border-top-color: ${({theme}) => theme.colors.green};
+    border: 3px solid var(--white);
+    border-top-color: var(--green);
     border-radius: 50%;
     animation: ${spinner} 0.6s 0.1s ease-in-out infinite both;
   }

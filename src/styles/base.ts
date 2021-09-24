@@ -2,6 +2,30 @@ import {createGlobalStyle} from 'styled-components';
 import {noMarginOrPaddingMixin} from 'styles/config/mixins';
 
 export const GlobalStyle = createGlobalStyle`
+  :root {
+    // colours
+    --white: #FFFFFF;
+    --faded-white: rgba(238, 238, 238, 0.6);
+    --black: #111111;
+    --dark-black: #222831;
+    --darker-black: #1A1D24;
+    --green: rgb(102, 204, 204);
+    --pink: rgb(249, 85, 132);
+    --orange: rgb(248, 155, 14);
+    --react: #31A6FA;
+    --vue: #57EB64;
+    --js: #FFF208;
+    --ts: #0D63F8;
+    // font
+    --main-font: 'Cabin', sans-serif;
+    // dimensions
+    --max-width: 1150px;
+    // animations
+    --base-transition: 0.2s ease;
+    --swoop-animation: cubic-bezier(.215, .61, .355, 1);
+    --btn-animation: cubic-bezier(0, 0, 1, 1);
+  }
+
   * {
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
@@ -17,10 +41,10 @@ export const GlobalStyle = createGlobalStyle`
     ${noMarginOrPaddingMixin};
     font-size: 16px;
     font-weight: bold;
-    font-family: ${({theme}) => theme.font.main};
+    font-family: var(--main-font);
     line-height: 1.5;
-    background-color: ${({theme}) => theme.colors.darkBlack};
-    color: ${({theme}) => theme.colors.white};
+    background-color: var(--dark-black);
+    color: var(--white);
     min-height: 100vh;
 
     &:before {
@@ -241,10 +265,10 @@ export const Normalise = createGlobalStyle`
 
   // hard material-ui overrides
   .MuiFormLabel-root.Mui-focused {
-    color: ${({theme}) => theme.colors.green} !important;
+    color: var(--green) !important;
   }
 
   .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border-color: ${({theme}) => theme.colors.green} !important;
+    border-color: var(--green) !important;
   }
 `;

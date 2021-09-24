@@ -11,11 +11,11 @@ export const ToastWrapper = styled(motion.div)`
   border-radius: 5px;
 
   &.success {
-    background: ${({theme}) => theme.colors.green};
+    background: var(--green);
   }
 
   &.error {
-    background: ${({theme}) => theme.colors.pink};
+    background: var(--pink);
     width: 260px;
   }
 `;

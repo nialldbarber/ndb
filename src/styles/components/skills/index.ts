@@ -9,8 +9,8 @@ export const Wrapper = styled.div`
   padding-top: 7rem;
   padding-left: 3rem;
   padding-right: 3rem;
-  max-width: ${({theme}) => theme.dimensions.maxWidth};
-  background: ${({theme}) => theme.colors.darkBlack};
+  max-width: var(--max-width);
+  background: var(--dark-black);
 
   ${media.lessThan('tablet')`
     width: 100%;
@@ -53,7 +53,7 @@ export const Wrapper = styled.div`
     display: inline-block;
     margin: 0 auto 5rem 5rem;
     padding: 0 1rem;
-    color: ${({theme}) => theme.colors.white};
+    color: var(--white);
     border-radius: 5px;
     font-size: 3.5rem;
 
@@ -67,13 +67,13 @@ export const Wrapper = styled.div`
     `};
 
     &.front {
-      background: ${({theme}) => theme.colors.green};
+      background: var(--green);
     }
     &.back {
-      background: ${({theme}) => theme.colors.pink};
+      background: var(--pink);
     }
     &.design {
-      background: ${({theme}) => theme.colors.orange};
+      background: var(--orange);
     }
   }
 `;
@@ -82,5 +82,5 @@ export const Grid = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  background: ${({theme}) => theme.colors.darkBlack};
+  background: var(--dark-black);
 `;

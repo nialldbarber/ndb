@@ -39,7 +39,7 @@ export const ListItem = styled(motion.li)`
     left: 1.5rem;
 
     &:hover {
-      color: ${({theme}) => theme.colors.green};
+      color: var(--green);
     }
   }
 
@@ -48,7 +48,7 @@ export const ListItem = styled(motion.li)`
     right: 1.5rem;
 
     &:hover {
-      color: ${({theme}) => theme.colors.orange};
+      color: var(--orange);
     }
   }
 
@@ -57,7 +57,7 @@ export const ListItem = styled(motion.li)`
     right: 1.5rem;
 
     &:hover {
-      color: ${({theme}) => theme.colors.pink};
+      color: var(--pink);
     }
   }
 `;

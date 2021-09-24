@@ -16,7 +16,7 @@ export const List = styled(motion.ul)`
       padding: 0.5rem 0;
       display: inline-block;
       text-align: center;
-      color: ${({theme}) => theme.colors.white};
+      color: var(--white);
       font-size: 4rem;
       transition: 0.4s ease;
 
@@ -29,28 +29,28 @@ export const List = styled(motion.ul)`
     &.home {
       a {
         &:hover {
-          color: ${({theme}) => theme.colors.orange};
+          color: var(--orange);
         }
       }
     }
     &.about {
       a {
         &:hover {
-          color: ${({theme}) => theme.colors.green};
+          color: var(--green);
         }
       }
     }
     &.blog {
       a {
         &:hover {
-          color: ${({theme}) => theme.colors.pink};
+          color: var(--pink);
         }
       }
     }
     &.contact {
       a {
         &:hover {
-          color: ${({theme}) => theme.colors.orange};
+          color: var(--orange);
         }
       }
     }

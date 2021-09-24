@@ -62,13 +62,13 @@ export const PhysicalDot = styled(motion.div)`
   width: 30px;
   border-radius: 50%;
   opacity: 0.3;
+  ${dotColors};
 
   ${media.lessThan('phablet')`
     height: 20px;
     width: 20px;
   `};
 
-  ${dotColors};
   &.home {
     opacity: 1;
   }
@@ -89,7 +89,6 @@ export const DotRipples = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 115% 132% 125% 124% / 125% 120% 127% 125%;
-
   ${dotColors};
 
   &:nth-child(1) {

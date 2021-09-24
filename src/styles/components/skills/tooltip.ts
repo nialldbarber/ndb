@@ -7,7 +7,7 @@ export const TooltipWrap = styled.div`
   margin: 0;
   padding: 1rem 1.5rem;
   border-radius: 5px;
-  background: ${({theme}) => theme.colors.darkerBlack};
+  background: var(--darker-black);
   text-align: center;
 
   img {
@@ -30,14 +30,14 @@ export const DownArrow = styled.div`
   transform: translateX(-50%);
   overflow: hidden;
 
-  &::after {
+  &:after {
     content: '';
     position: absolute;
     top: 0;
     left: 50%;
     width: 10px;
     height: 10px;
-    background: ${({theme}) => theme.colors.darkerBlack};
+    background: var(--darker-black);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
   }
 `;

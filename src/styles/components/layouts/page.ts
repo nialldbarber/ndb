@@ -10,7 +10,7 @@ export const Layout = styled.section`
   grid-template-rows: 3fr 4fr;
   height: calc(100vh - 30px);
   padding: 0 2rem;
-  max-width: ${({theme}) => theme.dimensions.maxWidth};
+  max-width: var(--max-width);
   margin: 0 auto;
 
   ${media.lessThan('tablet')`
@@ -43,7 +43,7 @@ export const Title = styled.h1`
   }
 
   &.pink {
-    color: ${({theme}) => theme.colors.pink};
+    color: var(--pink);
   }
 `;
 

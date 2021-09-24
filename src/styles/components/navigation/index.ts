@@ -16,17 +16,17 @@ export const Logo = styled.div`
 
   &.green {
     span {
-      color: ${({theme}) => theme.colors.green};
+      color: var(--green);
     }
   }
   &.orange {
     span {
-      color: ${({theme}) => theme.colors.orange};
+      color: var(--orange);
     }
   }
   &.pink {
     span {
-      color: ${({theme}) => theme.colors.pink};
+      color: var(--pink);
     }
   }
 
@@ -50,7 +50,7 @@ export const Logo = styled.div`
 
     span {
       position: relative;
-      color: ${({theme}) => theme.colors.white};
+      color: var(--white);
       transition: ${transition};
     }
   }

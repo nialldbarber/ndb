@@ -1,11 +1,18 @@
 import styled from 'styled-components';
 import {media} from 'styles/config/media-queries';
+import {transition} from 'styles/config/vars';
 
 export const Logo = styled.div`
   position: fixed;
   top: 1.5rem;
   left: 1.5rem;
   z-index: 2;
+  transition: ${transition};
+  transform: scale(1);
+
+  &:active {
+    transform: scale(1.1);
+  }
 
   &.green {
     span {
@@ -26,7 +33,7 @@ export const Logo = styled.div`
   a {
     position: relative;
     font-size: 2.5rem;
-    transition: 0.2s ease;
+    transition: ${transition};
 
     ${media.lessThan('phablet')`
       font-size: 2rem;
@@ -44,7 +51,7 @@ export const Logo = styled.div`
     span {
       position: relative;
       color: ${({theme}) => theme.colors.white};
-      transition: 0.2s ease;
+      transition: ${transition};
     }
   }
 `;

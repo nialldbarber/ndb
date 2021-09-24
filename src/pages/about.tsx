@@ -111,7 +111,11 @@ export default function AboutPage() {
 
                 <p>Check out some of the tech I use below!</p>
 
-                <Sideways>
+                <Sideways
+                  initial={{x: -200, opacity: 0}}
+                  animate={{x: 0, rotate: -90, opacity: 1}}
+                  transition={{delay: 0.9}}
+                >
                   Coding since <p>{age || 'xyzxyzxyz.xyz'}</p> seconds ago{' '}
                   <span>!</span>
                 </Sideways>

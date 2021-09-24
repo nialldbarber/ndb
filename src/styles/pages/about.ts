@@ -1,4 +1,5 @@
 import styled, {css, keyframes} from 'styled-components';
+import {motion} from 'framer-motion';
 import {media} from 'styles/config/media-queries';
 
 const skillDefaults = css`
@@ -69,7 +70,7 @@ const filterBlur = keyframes`
   100% { filter: blur(0) }
 `;
 
-export const Sideways = styled.div`
+export const Sideways = styled(motion.div)`
   position: fixed;
   display: flex;
   align-items: center;

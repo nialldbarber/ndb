@@ -8,7 +8,7 @@ export const Layout = styled.section`
     'title title title-blank title-blank title-blank'
     'content-blank content-blank content content content';
   grid-template-rows: 3fr 4fr;
-  height: 100vh;
+  height: calc(100vh - 30px);
   padding: 0 2rem;
   max-width: ${({theme}) => theme.dimensions.maxWidth};
   margin: 0 auto;

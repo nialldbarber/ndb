@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {motion} from 'framer-motion';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
@@ -65,7 +65,7 @@ const end = {
   },
 };
 
-const ContactPage: FC = () => {
+export default function ContactPage() {
   return (
     <>
       <Meta title="Niall Barber | Contact" />
@@ -87,6 +87,4 @@ const ContactPage: FC = () => {
       </Wrapper>
     </>
   );
-};
-
-export default ContactPage;
+}

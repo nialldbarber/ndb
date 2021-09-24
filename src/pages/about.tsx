@@ -1,4 +1,4 @@
-import React, {FC, useState, useEffect, useRef, MutableRefObject} from 'react';
+import React, {useState, useEffect, useRef, MutableRefObject} from 'react';
 import {motion} from 'framer-motion';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
@@ -65,7 +65,7 @@ const end = {
   },
 };
 
-const AboutPage: FC = () => {
+export default function AboutPage() {
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
   const [age, setAge] = useState<Date | number | null>(null);
 
@@ -139,6 +139,4 @@ const AboutPage: FC = () => {
       </div>
     </>
   );
-};
-
-export default AboutPage;
+}

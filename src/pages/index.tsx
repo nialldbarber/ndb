@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {motion, Variants} from 'framer-motion';
 import HomeNavItems from 'components/navigation/menu-items/home-nav-items';
 import Wrapper from 'components/layouts/wrapper';
@@ -100,7 +100,7 @@ const end: Variants | any = {
   },
 };
 
-const Home: FC = () => {
+export default function Home() {
   return (
     <>
       <Meta title="Niall Barber" />
@@ -155,6 +155,4 @@ const Home: FC = () => {
       </Wrapper>
     </>
   );
-};
-
-export default Home;
+}

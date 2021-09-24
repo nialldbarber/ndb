@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import useMobileDetect from 'hooks/getMobileDetect';
 import Tooltip from 'components/skills/tooltip';
 import {ImgWrap, TooltipWrapper} from 'styles/components/skills/skills';
 
@@ -11,6 +12,7 @@ interface SkillProps {
 
 export default function Skill({icon, name, link, width = 100}: SkillProps) {
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
+  const {isMobile} = useMobileDetect();
 
   return (
     <ImgWrap
@@ -18,9 +20,14 @@ export default function Skill({icon, name, link, width = 100}: SkillProps) {
       onMouseLeave={() => setShowTooltip(false)}
       width={width}
     >
-      <a href={link} target="_blank" rel="noreferrer">
+      {isMobile() ? (
         <img src={icon} alt={name} />
-      </a>
+      ) : (
+        <a href={link} target="_blank" rel="noreferrer">
+          <img src={icon} alt={name} />
+        </a>
+      )}
+
       <TooltipWrapper className={showTooltip ? 'active' : ''}>
         <Tooltip text={name} />
       </TooltipWrapper>

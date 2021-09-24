@@ -15,7 +15,6 @@ export const ImgWrap = styled.div`
 
   ${media.lessThan('almostTablet')`
     width: 50%;
-    pointer-events: none;
   `};
 
   img {

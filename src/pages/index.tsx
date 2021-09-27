@@ -1,4 +1,3 @@
-import React from 'react';
 import {useLocation} from '@reach/router';
 import {motion, Variants} from 'framer-motion';
 import HomeNavItems from 'components/navigation/menu-items/home-nav-items';

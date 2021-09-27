@@ -1,4 +1,6 @@
+import {useEffect} from 'react';
 import {PageProps} from 'gatsby';
+import ReactGa from 'react-ga';
 import {useLocation} from '@reach/router';
 import {AnimatePresence} from 'framer-motion';
 import {ThemeProvider} from 'styled-components';
@@ -10,6 +12,11 @@ import 'typeface-cabin';
 
 export default function MainLayout({children}: PageProps) {
   const {pathname} = useLocation();
+
+  useEffect(() => {
+    ReactGa.initialize('UA-131583512-1');
+    ReactGa.pageview('/');
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>

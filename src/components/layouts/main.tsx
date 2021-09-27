@@ -1,4 +1,4 @@
-import {useEffect, useLayoutEffect} from 'react';
+import {useEffect} from 'react';
 import {PageProps} from 'gatsby';
 import ReactGa from 'react-ga';
 import {useLocation} from '@reach/router';
@@ -17,14 +17,6 @@ export default function MainLayout({children}: PageProps) {
     ReactGa.initialize(process.env.GA_CODE);
     ReactGa.pageview('/');
   }, []);
-
-  useLayoutEffect(() => {
-    if (pathname === '/') {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-  }, [pathname]);
 
   return (
     <ThemeProvider theme={theme}>

@@ -1,5 +1,6 @@
 import {useLocation} from '@reach/router';
 import {motion, Variants} from 'framer-motion';
+import useLockBodyScroll from 'hooks/useLockBodyScroll';
 import HomeNavItems from 'components/navigation/menu-items/home-nav-items';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
@@ -101,6 +102,7 @@ const end: Variants | any = {
 };
 
 export default function Home() {
+  useLockBodyScroll();
   const {pathname} = useLocation();
   const dots =
     pathname === '/' ? (

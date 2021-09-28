@@ -1,12 +1,16 @@
 import {useState, useEffect, useRef, MutableRefObject} from 'react';
 import {motion} from 'framer-motion';
+import useGoToTop from 'hooks/useGoToTop';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
 import Skills from 'components/skills';
 import Meta from 'components/helmet';
-import {PointDown, SkillName, Sideways} from 'styles/pages/about';
+import Button from 'components/button';
+import {PointDown, SkillName, Sideways, BackToTop} from 'styles/pages/about';
 import {height, list} from 'utils/framer';
+import {classNames} from 'utils/classNames';
+import upArrow from '../../static/images/up.svg';
 
 // Dots
 const start = {
@@ -68,6 +72,7 @@ const end = {
 export default function AboutPage() {
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
   const [age, setAge] = useState<Date | number | null>(null);
+  const {isVisible, scrollToTop} = useGoToTop();
 
   const handleScroll = () => {
     ref.current.scrollIntoView({behavior: 'smooth'});
@@ -141,6 +146,11 @@ export default function AboutPage() {
             <Skills />
           </motion.div>
         </Wrapper>
+        <BackToTop className={classNames(isVisible ? 'visible' : '')}>
+          <Button action={() => scrollToTop()}>
+            <img src={upArrow} alt="" />
+          </Button>
+        </BackToTop>
       </div>
     </>
   );

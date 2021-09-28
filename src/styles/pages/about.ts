@@ -98,3 +98,27 @@ export const Sideways = styled(motion.div)`
     animation-iteration-count: infinite;
   }
 `;
+
+export const BackToTop = styled.div`
+  position: fixed;
+  right: 1.7rem;
+  bottom: 5.5rem;
+  opacity: 0;
+  z-index: -1;
+  transition: var(--swoop-animation);
+
+  &.visible {
+    opacity: 1;
+    z-index: 3;
+  }
+
+  button {
+    background: var(--pink);
+    border-radius: 5px;
+  }
+
+  img {
+    width: 50px;
+    height: auto;
+  }
+`;

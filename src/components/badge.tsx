@@ -5,12 +5,10 @@ interface BadgeProps {
   action?: () => void;
 }
 
-function Badge({text, action}: BadgeProps) {
+export default function Badge({text, action}: BadgeProps) {
   return (
     <BadgeContainer onClick={action}>
       <span>{text}</span>
     </BadgeContainer>
   );
 }
-
-export default Badge;

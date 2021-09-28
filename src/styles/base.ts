@@ -1,5 +1,14 @@
-import {createGlobalStyle} from 'styled-components';
+import {css, createGlobalStyle} from 'styled-components';
 import {noMarginOrPaddingMixin} from 'styles/config/mixins';
+
+export const coloredLine = css`
+  background-image: linear-gradient(
+    to right,
+    rgba(102, 204, 204, 0.8),
+    rgba(249, 85, 132, 0.8),
+    rgba(248, 155, 14, 0.8)
+  );
+`;
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -11,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     --darker-black: #1A1D24;
     --green: rgb(102, 204, 204);
     --pink: rgb(249, 85, 132);
-    --faded-pink: rgba(249, 85, 132, 0.7);
+    --faded-pink: rgba(249, 85, 132, 0.85);
     --orange: rgb(248, 155, 14);
     --react: #31A6FA;
     --vue: #57EB64;
@@ -61,7 +70,7 @@ export const GlobalStyle = createGlobalStyle`
       left: 0;
       right: 0;
       height: 7px;
-      background-image: linear-gradient(to right, rgba(102, 204, 204, 0.8), rgba(249, 85, 132, 0.8), rgba(248, 155, 14, 0.8));
+      ${coloredLine};
       background-color: rgb(30, 39, 45);
       z-index: 2;
     }

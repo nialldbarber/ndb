@@ -1,6 +1,18 @@
 import {motion} from 'framer-motion';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {media} from 'styles/config/media-queries';
+import {coloredLine} from 'styles/base';
+
+const navUnderline = css`
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  height: 2px;
+  ${coloredLine};
+  transition: 0.35s ease;
+`;
 
 export const List = styled(motion.ul)`
   position: fixed;
@@ -20,10 +32,26 @@ export const List = styled(motion.ul)`
       font-size: 4rem;
       transition: 0.4s ease;
 
+      &:after {
+        ${navUnderline};
+      }
+
+      &:hover {
+        &:after {
+          right: 0;
+        }
+      }
+
       ${media.lessThan('phablet')`
         font-size: 2.5rem;
         padding: 0.3rem 0;
       `};
+    }
+
+    &.mobile {
+      &:after {
+        display: none;
+      }
     }
 
     &.home {

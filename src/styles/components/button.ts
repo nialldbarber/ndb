@@ -10,6 +10,7 @@ export const Btn = styled(motion.button)`
     outline: none;
     border: none;
     color: inherit;
+    cursor: default;
   }
 
   &.standard {

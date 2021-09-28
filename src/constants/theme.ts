@@ -2,6 +2,11 @@ export type Items = {
   id?: number;
   url?: string;
   name?: string;
+  initial?: {x: number};
+  animate?: {x: number};
+  transition?: {delay: number};
+  exit?: {x: number};
+  className?: string;
 };
 
 export type Social = {
@@ -22,10 +27,41 @@ export enum SITE {
 }
 
 export const navItems: Items[] = [
-  {id: 1, url: '/', name: 'home'},
-  {id: 2, url: '/about', name: 'about'},
-  // {id: 3, url: '/all-posts', name: 'blog'},
-  {id: 4, url: '/contact', name: 'contact'},
+  {
+    id: 1,
+    url: '/',
+    name: 'home',
+  },
+  {
+    id: 2,
+    url: '/about',
+    name: 'about',
+    initial: {x: -200},
+    animate: {x: 0},
+    transition: {delay: 0.2},
+    exit: {x: -200},
+    className: 'bottom-left',
+  },
+  // {
+  //   id: 3,
+  //   url: '/all-posts',
+  //   name: 'blog',
+  //   initial: {x: 200},
+  //   animate: {x: 0},
+  //   transition: {delay: 0.2},
+  //   exit: {x: 200},
+  //   className: 'top-right',
+  // },
+  {
+    id: 4,
+    url: '/contact',
+    name: 'contact',
+    initial: {x: 200},
+    animate: {x: 0},
+    transition: {delay: 0.2},
+    exit: {x: 200},
+    className: 'bottom-right',
+  },
 ];
 
 export const socialLinks: Social[] = [

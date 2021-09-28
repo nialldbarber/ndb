@@ -81,6 +81,27 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: auto;
   }
+
+  // hard material-ui overrides
+  .MuiFormLabel-root {
+    &.Mui-focused {
+      color: var(--green) !important;
+    }
+  }
+
+  .MuiOutlinedInput-root {
+    &.Mui-focused {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: var(--green) !important;
+      }
+    }
+
+    &:hover {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: var(--green) !important;
+      }
+    }
+  }
 `;
 
 export const Normalise = createGlobalStyle`
@@ -262,14 +283,5 @@ export const Normalise = createGlobalStyle`
 
   [hidden] {
     display: none;
-  }
-
-  // hard material-ui overrides
-  .MuiFormLabel-root.Mui-focused {
-    color: var(--green) !important;
-  }
-
-  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border-color: var(--green) !important;
   }
 `;

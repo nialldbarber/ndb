@@ -9,11 +9,12 @@ module.exports = {
     'no-use-before-define': 0,
     'lines-between-class-members': 0,
     'import/no-mutable-exports': 0,
+    'no-shadow': 'off',
     'no-nested-ternary': 0,
     // react
     'react/jsx-filename-extension': 0,
-    "react/jsx-uses-react": 0,
-    "react/react-in-jsx-scope": 0,
+    'react/jsx-uses-react': 0,
+    'react/react-in-jsx-scope': 0,
     // Typescript
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-unsafe-assignment': 0,
@@ -22,6 +23,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
     '@typescript-eslint/no-unsafe-call': 0,
+    '@typescript-eslint/no-shadow': ['error'],
   },
   parserOptions: {
     project: './tsconfig.json',

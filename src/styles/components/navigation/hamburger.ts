@@ -12,7 +12,7 @@ export const Nav = styled(motion.nav)`
   .burger {
     position: fixed;
     top: 2.125rem;
-    right: 1.5rem;
+    right: 1rem;
     z-index: 4;
 
     ${media.lessThan('phablet')`

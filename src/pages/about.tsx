@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, MutableRefObject} from 'react';
+import {useState, useEffect, useRef, MutableRefObject} from 'react';
 import {motion} from 'framer-motion';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';

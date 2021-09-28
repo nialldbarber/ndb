@@ -14,7 +14,7 @@ export default function MainLayout({children}: PageProps) {
   const {pathname} = useLocation();
 
   useEffect(() => {
-    ReactGa.initialize(process.env.GA_CODE);
+    ReactGa.initialize('131583512-1');
     ReactGa.pageview('/');
   }, []);
 

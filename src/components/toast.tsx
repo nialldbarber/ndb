@@ -51,14 +51,14 @@ export default function Toast() {
   const {success, error, samePageToast, showSuccess, showError} = useStore();
 
   useEffect(() => {
-    if (success || error) {
+    if (success || error || samePageToast) {
       const timeout = setTimeout(() => {
         showSuccess(false);
         showError(false);
       }, 5000);
       return () => clearTimeout(timeout);
     }
-  }, [success, error, showSuccess, showError]);
+  }, [success, error, samePageToast, showSuccess, showError]);
 
   return (
     <ToastContainer>

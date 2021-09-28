@@ -17,7 +17,7 @@ export const Nav = styled(motion.nav)`
 
     ${media.lessThan('phablet')`
       top: 1.7rem;
-      right: 1rem;
+      right: 0;
     `};
   }
 `;

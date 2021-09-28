@@ -1,4 +1,4 @@
-import {isArrayType} from './is-type';
+import {isArrayType} from 'utils/is-type';
 
 /**
  * Return list of class names as a string

@@ -20,7 +20,7 @@ export const Layout = styled.section`
   `};
 
   ${media.lessThan('phablet')`
-    margin-top: -2rem;
+    margin-top: -4rem;
     padding: 0 1.5rem;
   `};
 

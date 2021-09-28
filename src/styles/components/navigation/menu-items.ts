@@ -6,7 +6,7 @@ import {coloredLine} from 'styles/base';
 const navUnderline = css`
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   left: 0;
   right: 100%;
   height: 2px;

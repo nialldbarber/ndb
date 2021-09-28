@@ -5,6 +5,7 @@ import {transition} from 'styles/config/vars';
 export const SocialContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  width: 138px;
 
   &.home {
     text-align: center;
@@ -42,4 +43,5 @@ export const SocialIcon = styled(motion.div)`
 
 export const Copyright = styled.span`
   font-weight: 400;
+  text-align: center;
 `;

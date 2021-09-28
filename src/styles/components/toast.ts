@@ -18,6 +18,11 @@ export const ToastWrapper = styled(motion.div)`
     background: var(--pink);
     width: 260px;
   }
+
+  &.same-page {
+    background: var(--orange);
+    width: auto;
+  }
 `;
 
 export const ToastContainer = styled.div`

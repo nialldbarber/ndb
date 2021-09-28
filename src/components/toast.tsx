@@ -21,8 +21,34 @@ const variants = {
   },
 };
 
+function ToastInner({
+  toastState,
+  type,
+  message,
+}: {
+  toastState: boolean;
+  type: string;
+  message: string;
+}) {
+  return (
+    <AnimatePresence>
+      {toastState && (
+        <ToastWrapper
+          variants={variants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          className={type}
+        >
+          {message || ''}
+        </ToastWrapper>
+      )}
+    </AnimatePresence>
+  );
+}
+
 export default function Toast() {
-  const {success, error, showSuccess, showError} = useStore();
+  const {success, error, samePageToast, showSuccess, showError} = useStore();
 
   useEffect(() => {
     if (success || error) {
@@ -36,32 +62,17 @@ export default function Toast() {
 
   return (
     <ToastContainer>
-      <AnimatePresence>
-        {success && (
-          <ToastWrapper
-            variants={variants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            className="success"
-          >
-            Message sent!
-          </ToastWrapper>
-        )}
-      </AnimatePresence>
-      <AnimatePresence>
-        {error && (
-          <ToastWrapper
-            variants={variants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            className="error"
-          >
-            Oh no! Something went wrong
-          </ToastWrapper>
-        )}
-      </AnimatePresence>
+      <ToastInner toastState={success} type="success" message="Message sent!" />
+      <ToastInner
+        toastState={error}
+        type="error"
+        message="Oh no! Something went wrong"
+      />
+      <ToastInner
+        toastState={samePageToast}
+        type="same-page"
+        message="Ooops same page doofus!"
+      />
     </ToastContainer>
   );
 }

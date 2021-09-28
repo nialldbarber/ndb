@@ -37,11 +37,12 @@ export default function SingleMenuItem({
   const currentPath = removeForwardSlash(pathname);
 
   function handleClick(e: MouseEvent): void {
-    if (currentPath === e.target.innerText) {
+    const input = e.target as HTMLElement;
+    if (currentPath === input.innerText) {
       showSamePageToast(true);
       setTimeout(() => {
         showSamePageToast(false);
-      }, 5000);
+      }, 2000);
     }
     closeMenu();
   }
@@ -51,7 +52,7 @@ export default function SingleMenuItem({
       <Link
         to={`${url === '/' ? '/' : `${url}/` || ''}`}
         activeClassName="active"
-        onClick={handleClick}
+        onClick={(e) => handleClick(e)}
       >
         {name}
       </Link>

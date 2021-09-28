@@ -29,7 +29,7 @@ export default function HomeNavItems() {
         </Link>
       </ListItem>
       {/* top right */}
-      {/* <ListItem
+      <ListItem
         initial={{x: 200}}
         animate={{x: 0}}
         transition={{delay: 0.2}}
@@ -39,7 +39,7 @@ export default function HomeNavItems() {
         <Link to="/all-posts" activeClassName="active">
           blog
         </Link>
-      </ListItem> */}
+      </ListItem>
     </Items>
   );
 }

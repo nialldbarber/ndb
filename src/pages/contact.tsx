@@ -1,9 +1,7 @@
-import React from 'react';
 import {motion} from 'framer-motion';
 import PageLayout from 'components/layouts/page';
 import Wrapper from 'components/layouts/wrapper';
 import Dots from 'components/dots';
-import Toast from 'components/toast';
 import Form from 'components/form';
 import Meta from 'components/helmet';
 import {list, height} from 'utils/framer';
@@ -69,7 +67,6 @@ export default function ContactPage() {
   return (
     <>
       <Meta title="Niall Barber | Contact" />
-      <Toast />
       <Wrapper>
         <>
           <motion.div

@@ -1,5 +1,11 @@
 import {ReactChild} from 'react';
+import Toast from 'components/toast';
 
 export default function Wrapper({children}: {children: ReactChild}) {
-  return <main>{children}</main>;
+  return (
+    <>
+      <Toast />
+      <main>{children}</main>
+    </>
+  );
 }

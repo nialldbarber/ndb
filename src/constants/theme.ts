@@ -24,8 +24,8 @@ export enum SITE {
 export const navItems: Items[] = [
   {id: 1, url: '/', name: 'home'},
   {id: 2, url: '/about', name: 'about'},
-  {id: 3, url: '/all-posts', name: 'blog'},
-  // {id: 4, url: '/contact', name: 'contact'},
+  // {id: 3, url: '/all-posts', name: 'blog'},
+  {id: 4, url: '/contact', name: 'contact'},
 ];
 
 export const socialLinks: Social[] = [

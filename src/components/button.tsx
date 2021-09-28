@@ -1,4 +1,5 @@
 import {ReactChild, useState} from 'react';
+import {classNames} from 'utils/classNames';
 import {Btn} from 'styles/components/button';
 
 interface ButtonProps {
@@ -10,6 +11,7 @@ interface ButtonProps {
   toggledState: boolean;
   action: () => void;
   children: ReactChild;
+  strippedStyled: boolean;
 }
 
 export default function Button({
@@ -21,13 +23,16 @@ export default function Button({
   toggledState = false,
   action,
   children,
+  strippedStyled,
 }: Partial<ButtonProps>) {
   const [active, setActive] = useState<boolean>(false);
+  const btnType = standardBtn ? 'standard' : '';
+  const stripped = strippedStyled ? 'stripped' : '';
 
   return (
     <Btn
       type={type ?? 'button'}
-      className={`${className || ''} ${standardBtn ? 'standard' : ''}`}
+      className={classNames(className, btnType, stripped)}
       aria-label={label || ''}
       aria-pressed={toggledState}
       aria-expanded={toggledState}

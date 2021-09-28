@@ -1,12 +1,13 @@
 import {useRef} from 'react';
 import {useLocation} from '@reach/router';
+import {motion} from 'framer-motion';
 import useStore from 'store';
 import useDimensions from 'hooks/useDimensions';
 import {classNames} from 'utils/classNames';
 import Button from 'components/button';
 import MenuItems from 'components/navigation/menu-items';
 import NavBg from 'components/navigation/nav-background';
-import {Nav, Burger, SpanBurger} from 'styles/components/navigation/hamburger';
+import {Nav, SpanBurger} from 'styles/components/navigation/hamburger';
 import {MENU} from 'constants/theme';
 
 export default function Hamburger() {
@@ -25,18 +26,21 @@ export default function Hamburger() {
       ref={containerRef}
       className={classNames(menuOpen, isHomePage)}
     >
-      <Button label="Open menu">
-        <Burger initial={{x: 200}} animate={{x: 0}} transition={{delay: 0.2}}>
+      <Button className="burger" label="Open menu" strippedStyled>
+        <motion.div
+          initial={{x: 200}}
+          animate={{x: 0}}
+          transition={{delay: 0.2}}
+        >
           <SpanBurger className={menuOpen} onClick={toggleMenu}>
             <span />
             <span />
             <span />
           </SpanBurger>
-        </Burger>
+        </motion.div>
       </Button>
       <NavBg className={isMenuOpen ? 'active' : ''} />
       <MenuItems />
-      <Button text="hello" />
     </Nav>
   );
 }

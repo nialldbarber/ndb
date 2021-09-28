@@ -5,6 +5,13 @@ import {flexCenterMixin} from 'styles/config/mixins';
 export const Btn = styled(motion.button)`
   border: none;
 
+  &.stripped {
+    background: none;
+    outline: none;
+    border: none;
+    color: inherit;
+  }
+
   &.standard {
     position: relative;
     display: flex;

@@ -8,18 +8,18 @@ export const Nav = styled(motion.nav)`
       display: none;
     `};
   }
-`;
 
-export const Burger = styled(motion.div)`
-  position: fixed;
-  top: 2.125rem;
-  right: 1.5rem;
-  z-index: 4;
+  .burger {
+    position: fixed;
+    top: 2.125rem;
+    right: 1.5rem;
+    z-index: 4;
 
-  ${media.lessThan('phablet')`
-    top: 1.7rem;
-    right: 1rem;
-  `};
+    ${media.lessThan('phablet')`
+      top: 1.7rem;
+      right: 1rem;
+    `};
+  }
 `;
 
 export const SpanBurger = styled.div`

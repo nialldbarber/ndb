@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     --darker-black: #1A1D24;
     --green: rgb(102, 204, 204);
     --pink: rgb(249, 85, 132);
+    --faded-pink: rgba(249, 85, 132, 0.7);
     --orange: rgb(248, 155, 14);
     --react: #31A6FA;
     --vue: #57EB64;
@@ -31,6 +32,11 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--faded-pink);
+    color: white;
   }
 
   html {

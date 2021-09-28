@@ -29,6 +29,10 @@ export const PageTitle = styled(motion.h1)`
 export const FirstName = styled(motion.p)`
   margin: 0;
   padding-right: 1.3rem;
+
+  ${media.lessThan('phablet')`
+  padding-right: 0.7rem;
+  `};
 `;
 
 export const LastName = styled(motion.p)`
@@ -41,7 +45,7 @@ export const SubHeader = styled(motion.h3)`
   margin-top: -2.5rem;
 
   ${media.lessThan('phablet')`
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin-top: -0.8rem;
   `};
 

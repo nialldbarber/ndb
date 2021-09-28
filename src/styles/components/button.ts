@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
-import {lighten} from 'polished';
 import {flexCenterMixin} from 'styles/config/mixins';
 
 export const Btn = styled(motion.button)`
@@ -23,8 +22,8 @@ export const Btn = styled(motion.button)`
     transition: 0.2s var(--btn-animation);
 
     &:hover {
-      background-color: ${lighten(0.1, 'var(--black)')};
-      border-color: ${lighten(0.1, 'var(--black)')};
+      background-color: var(--black);
+      border-color: var(--black);
     }
 
     span {

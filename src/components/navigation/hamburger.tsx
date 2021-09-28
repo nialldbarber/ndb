@@ -3,6 +3,7 @@ import {useLocation} from '@reach/router';
 import useStore from 'store';
 import useDimensions from 'hooks/useDimensions';
 import {classNames} from 'utils/classNames';
+import Button from 'components/button';
 import MenuItems from 'components/navigation/menu-items';
 import NavBg from 'components/navigation/nav-background';
 import {Nav, Burger, SpanBurger} from 'styles/components/navigation/hamburger';
@@ -24,15 +25,18 @@ export default function Hamburger() {
       ref={containerRef}
       className={classNames(menuOpen, isHomePage)}
     >
-      <Burger initial={{x: 200}} animate={{x: 0}} transition={{delay: 0.2}}>
-        <SpanBurger className={menuOpen} onClick={toggleMenu}>
-          <span />
-          <span />
-          <span />
-        </SpanBurger>
-      </Burger>
+      <Button label="Open menu">
+        <Burger initial={{x: 200}} animate={{x: 0}} transition={{delay: 0.2}}>
+          <SpanBurger className={menuOpen} onClick={toggleMenu}>
+            <span />
+            <span />
+            <span />
+          </SpanBurger>
+        </Burger>
+      </Button>
       <NavBg className={isMenuOpen ? 'active' : ''} />
       <MenuItems />
+      <Button text="hello" />
     </Nav>
   );
 }

@@ -35,6 +35,7 @@ export const ToastContainer = styled.div`
   gap: 30px;
 
   ${media.lessThan('phablet')`
-    top: 3.775rem;
+    top: 5.975rem;
+    right: 4.5rem;
   `};
 `;

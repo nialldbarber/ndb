@@ -12,7 +12,7 @@ interface SkillProps {
 
 export default function Skill({icon, name, link, width = 100}: SkillProps) {
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
-  const {isMobile} = useMobileDetect();
+  const detect = useMobileDetect();
 
   return (
     <ImgWrap
@@ -20,14 +20,13 @@ export default function Skill({icon, name, link, width = 100}: SkillProps) {
       onMouseLeave={() => setShowTooltip(false)}
       width={width}
     >
-      {isMobile() ? (
+      {detect.isMobile() ? (
         <img src={icon} alt={name} />
       ) : (
         <a href={link} target="_blank" rel="noreferrer">
           <img src={icon} alt={name} />
         </a>
       )}
-
       <TooltipWrapper className={showTooltip ? 'active' : ''}>
         <Tooltip text={name} />
       </TooltipWrapper>

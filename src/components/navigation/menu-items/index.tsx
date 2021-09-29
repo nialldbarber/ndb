@@ -18,14 +18,14 @@ const variants = {
 
 export default function MenuItems() {
   const {isMenuOpen} = useStore();
-  const {isMobile} = useMobileDetect();
+  const detect = useMobileDetect();
 
   return (
     <List
       variants={variants}
       className={classNames(
         isMenuOpen ? 'open' : '',
-        isMobile() ? 'mobile' : ''
+        detect.isMobile() ? 'mobile' : ''
       )}
     >
       {navItems.map(({id, url, name}) => (

@@ -115,7 +115,7 @@ export default function AboutPage() {
                   related <span>🤙</span>
                 </p>
 
-                <p>Check out some of the tech I use below!</p>
+                <p>Check out some of the tech I've used in the past below!</p>
 
                 <Sideways
                   initial={{x: -200, opacity: 0}}

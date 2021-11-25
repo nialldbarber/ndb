@@ -26,7 +26,7 @@ export const PageTitle = styled(motion.h1)`
   }
 `;
 
-export const FirstName = styled(motion.p)`
+export const FirstName = styled(motion.span)`
   margin: 0;
   padding-right: 1.3rem;
 
@@ -35,7 +35,7 @@ export const FirstName = styled(motion.p)`
   `};
 `;
 
-export const LastName = styled(motion.p)`
+export const LastName = styled(motion.span)`
   margin: 0;
 `;
 

@@ -2,12 +2,11 @@ import {Helmet} from 'react-helmet';
 
 export default function Meta({title}: {title: string}) {
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{lang: 'en'}}>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="utf-8" />
       <meta
         name="description"
-        content="Front End Developer making the internets an awesome place."
+        content="A front end developer making the internet look and function well."
       />
       <meta
         name="keywords"
